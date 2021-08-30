@@ -9,7 +9,6 @@ class CreateGames < ActiveRecord::Migration[6.1]
       t.string :category
       t.string :play_style
       
-
       t.timestamps
     end
   end
