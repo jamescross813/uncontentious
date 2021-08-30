@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2021_08_30_014411) do
   create_table "games", force: :cascade do |t|
     t.string "title"
     t.integer "min_players"
-    t.integer "max_player"
+    t.integer "max_players"
     t.text "description"
     t.string "game_type"
     t.string "category"
