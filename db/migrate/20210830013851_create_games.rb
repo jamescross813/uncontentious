@@ -8,7 +8,7 @@ class CreateGames < ActiveRecord::Migration[6.1]
       t.string :game_type
       t.string :category
       t.string :play_style
-      t.references :user, null: false, foreign_key: true
+      
 
       t.timestamps
     end
