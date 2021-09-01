@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const searchForButton = document.getElementById("search-for")
     const addButton = document.getElementById("add")
     const searchForm = document.getElementById("search-games")
-    
+    const addForm = document.getElementById("add-game-form")
     
    
     searchForButton.addEventListener('click', ()=> {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     addButton.addEventListener('click', function () {
-        
+        addForm.hidden = !addForm.hidden
     })
 
 }); 
