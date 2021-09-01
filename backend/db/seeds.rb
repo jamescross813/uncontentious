@@ -9,6 +9,21 @@
 user_one = User.create(username: "James", password_digest: "1234")
 user_two = User.create(username: "Jason", password_digest: "1234")
 
+category_worker = Category.create(category_name: "worker placement")
+category_chance = Category.create(category_name: "chance")
+category_horror = Category.create(category_name: "horror")
+category_escape = Category.create(category_name: "escape")
+category_puzzle = Category.create(category_name: "puzzle")
+category_family = Category.create(category_name: "family")
+category_humor = Category.create(category_name: "humor")
+category_language = Category.create(category_name: "language")
+category_mystery = Category.create(category_name: "mystery")
+category_rpg = Category.create(category_name: "rpg")
+
+type_card = Mode.create(mode_name: "card")
+type_tile = Mode.create(mode_name: "tile")
+type_board = Mode.create(mode_name: "board")
+
 game_phase_10 = Game.create(title: "Phase 10", 
     min_players: 2,
     max_players: 600, 
