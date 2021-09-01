@@ -25,9 +25,13 @@
 
         <div class="top-left">
             <form id='link-to-search'>
-                <button type="search" id="search">Search for games</button>
+                <button type="button" id="search-for">Search for games</button>
             </form>
-            <form id="search-games">
+        </div>
+        <div class="search-form" id="search-form">
+            <form id="search-games" hidden>
+                <input type="text" id="search-input" name="search" placeholder="category, type, time....">
+                <button type="search">Search</button>
             </form>
         </div>
 

@@ -18,3 +18,7 @@ h1 {
 .top-right {
   text-align: left;
 }
+
+body {
+  padding: 0 20px;
+}
