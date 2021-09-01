@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const addButton = document.getElementById("add")
     const searchForm = document.getElementById("search-games")
     
+    
    
     searchForButton.addEventListener('click', ()=> {
         searchForm.hidden = !searchForm.hidden
