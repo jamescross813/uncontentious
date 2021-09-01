@@ -7,10 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
     
    
     searchForButton.addEventListener('click', ()=> {
+        if(!addForm.hidden){
+            addForm.hidden = !addForm.hidden 
+           console.log("done")
+        } 
         searchForm.hidden = !searchForm.hidden
     });
 
     addButton.addEventListener('click', function () {
+        if(!searchForm.hidden){
+            searchForm.hidden = !searchForm.hidden 
+        } 
         addForm.hidden = !addForm.hidden
     })
 

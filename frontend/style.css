@@ -4,7 +4,7 @@ h1 {
 }
 
 .top-right {
-  text-align: right;
+  float: right;
 }
 
 .bottom-right {
