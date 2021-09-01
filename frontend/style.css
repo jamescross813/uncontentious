@@ -1,5 +1,20 @@
 h1 {
   text-align: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: chartreuse;
+}
+
+.top-right {
+  text-align: right;
+}
+
+.bottom-right {
+  text-align: right;
+}
+
+.top-left {
+  text-align: left;
+}
+
+.top-right {
+  text-align: left;
 }
