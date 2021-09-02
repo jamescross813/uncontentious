@@ -1,2 +1,0 @@
-class ModesController < ApplicationController
-end
