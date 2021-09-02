@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const addForm = document.getElementById("add-game-form");
     const viewButton = document.getElementById("all-games-view");
     const searchButton = document.getElementById("submit-search")
+    const addSubmit = document.getElementById("add-submit")
     
     searchFormButton.addEventListener('click', ()=> {
         if(!addForm.hidden){
@@ -32,7 +33,8 @@ document.addEventListener("DOMContentLoaded", function() {
         searchGames()
     })
 
-
-
+    addSubmit.addEventListener('click', function(){
+        newGamePost()
+    })
 
 }); 
