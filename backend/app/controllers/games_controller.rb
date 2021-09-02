@@ -30,6 +30,18 @@ class GamesController < ApplicationController
         end
     end
 
+    def updated
+        game = Game.find(parmas[:id])
+        game.update(game_params)
+        if game.save
+            render json: game,
+            except: [:created_at, :updated_at]
+        else 
+            render json: {message: "Unable to edit game"}
+        end
+    end
+
+
     private
 
     def game_params
