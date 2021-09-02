@@ -16,6 +16,15 @@ class NotesController < ApplicationController
         end
     end
 
+    def create
+        note = Note.new(note_params)
+        if note.save
+            render json: note
+        else
+            render json: {messgae: "Try again!"}
+        end
+    end
+
     private
 
     def note_params
