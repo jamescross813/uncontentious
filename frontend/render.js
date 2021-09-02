@@ -2,6 +2,7 @@ const basicUrl= "http://localhost:3000/"
 const gameList = document.getElementById('game-list');
 const searchForm = document.getElementById("search-games");
 const addForm = document.getElementById("add-game-form");
+const gameCard = document.getElementById('game-card')
 
 function fetchGames() {
     fetch(`${basicUrl}/games`)
@@ -10,11 +11,6 @@ function fetchGames() {
   };
 
 function renderGames(data){
-    const gameCard = document.createElement('div');
-    document.body.appendChild(gameCard)
-    gameCard.elementId = 'game-card';
-    gameCard.hidden = true
-
     data.map(r => {
         let gameTitle = document.createElement('h3')
         gameTitle.innerHTML = r.title

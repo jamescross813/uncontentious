@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const addButton = document.getElementById("add");
     const searchForm = document.getElementById("search-games");
     const addForm = document.getElementById("add-game-form");
-    
+    const viewButton = document.getElementById("all-games-view");
    
     searchForButton.addEventListener('click', ()=> {
         if(!addForm.hidden){
@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", function() {
         } 
         addForm.hidden = !addForm.hidden
         
+    })
+
+    viewButton.addEventListener('click', () =>{
+        gameCard.hidden = !gameCard.hidden
     })
 
 }); 
