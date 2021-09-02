@@ -1,7 +1,7 @@
 class CreateGames < ActiveRecord::Migration[6.1]
   def change
     create_table :games do |t|
-      t.string :title
+      t.string :game_title
       t.integer :min_players
       t.integer :max_players
       t.text :description

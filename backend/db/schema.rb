@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_09_01_235046) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.string "title"
+    t.string "game_title"
     t.integer "min_players"
     t.integer "max_players"
     t.text "description"
