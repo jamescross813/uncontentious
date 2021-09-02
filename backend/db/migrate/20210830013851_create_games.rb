@@ -7,7 +7,7 @@ class CreateGames < ActiveRecord::Migration[6.1]
       t.text :description
       t.string :play_style
       t.integer :max_time
-      t.string :type
+      t.string :game_type
       t.timestamps
     end
   end
