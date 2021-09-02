@@ -1,3 +1,9 @@
+function fetchGames() {
+    fetch(`${basicUrl}/games`)
+    .then(resp =>resp.json())
+    .then(data =>renderGames(data))
+  };
+
 async function newGamePost(){
 
     let inputValue = document.getElementsByClassName("input-text");
