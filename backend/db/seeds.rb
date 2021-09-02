@@ -19,6 +19,7 @@ category_humor = Category.create(category_name: "humor")
 category_language = Category.create(category_name: "language")
 category_mystery = Category.create(category_name: "mystery")
 category_rpg = Category.create(category_name: "rpg")
+category_strategy = Category.create(category_name: "strategy")
 
 
 game_phase_10 = Game.create(
@@ -205,3 +206,34 @@ game_azul = Game.create(
     play_style: "competitive",
     game_type: "tile",
     max_time: 45)
+
+    game_category_phase_10 = GameCategory.create(game: game_phase_10, category: category_family)
+    game_category_farkle = GameCategory.create(game: game_farkle, category: category_chance)
+    game_category_bananagrams = GameCategory.create(game: game_bananagrams, category: category_language)
+    game_category_arkham_horror = GameCategory.create(game: game_arkham_horror, category: category_rpg)
+    game_category_love_letter = GameCategory.create(game: game_love_letter, category: category_strategy)
+    game_category_wingspan = GameCategory.create(game: game_wingspan, category: category_rpg)
+    game_category_ticket_to_ride = GameCategory.create(game: game_ticket_to_ride, category: category_strategy)
+    game_category_exit = GameCategory.create(game: game_exit, category: category_puzzle)
+    game_category_exit_two = GameCategory.create(game: game_exit, category: category_mystery)
+    game_category_exit_three = GameCategory.create(game: game_exit, category: category_escape)
+    game_category_unlock = GameCategory.create(game: game_unlock, category: category_puzzle)
+    game_category_unlock_two = GameCategory.create(game: game_unlock, category: category_mystery)
+    game_category_unlock_three = GameCategory.create(game: game_unlock, category: category_escape)
+    game_category_carcasonne = GameCategory.create(game: game_carcasonne, category: category_strategy)
+    game_category_monopoly = GameCategory.create(game: game_monopoly, category: category_family)
+    game_category_oregon_trail = GameCategory.create(game: game_oregon_trail, category: category_chance)
+    game_category_cards_against_humanity = GameCategory.create(game: game_cards_against_humanity, category: category_humor)
+    game_category_splendor = GameCategory.create(game: game_splendor, category: category_strategy)
+    game_category_five_crowns = GameCategory.create(game: game_five_crowns, category: category_family)  
+    game_category_quiddler = GameCategory.create(game: game_quiddler, category: category_language)
+    game_category_shady_pets = GameCategory.create(game: game_shady_pets, category: category_humor)
+    game_category_dracula = GameCategory.create(game: game_dracula, category: category_horror)
+    game_category_betrayal = GameCategory.create(game: game_betrayal, category: category_horror)
+    game_category_gloom = GameCategory.create(game: game_gloom, category: category_family)
+    game_category_mysterium = GameCategory.create(game: game_mysterium, category: category_puzzle)
+    game_category_mysterium_two = GameCategory.create(game: game_mysterium, category: category_mystery)
+    game_category_pandemic = GameCategory.create(game: game_pandemic, category: category_strategy)
+    game_category_azul = GameCategory.create(game: game_azul, category: category_puzzle)
+
+    
