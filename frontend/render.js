@@ -33,9 +33,11 @@ function renderGames(data){
         gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType)
 
     })
+
 }
-  
+ 
 document.addEventListener("DOMContentLoaded", function() {
     fetchGames()
     renderGames()
+    
 })
