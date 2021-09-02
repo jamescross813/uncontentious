@@ -12,7 +12,7 @@ function renderGames(data){
 
 function renderGame(data){
     let gameTitle = document.createElement('h3')
-    gameTitle.innerHTML = data.game_title
+    gameTitle.innerHTML = titleCase(data.game_title)
                 
     let gameDescription = document.createElement('p')
     gameDescription.innerHTML = data.description
@@ -39,6 +39,14 @@ function searchGames(data, input){
         
     }
 }
+
+function titleCase(title){
+        let words = title.split(" ")
+        let newWords = words.map(word => word[0].toUpperCase() + word.substring(1))
+        let upCaseWords = newWords.join(" ")
+          return upCaseWords
+}
+
  
 document.addEventListener("DOMContentLoaded", function() {
     fetchGames()
