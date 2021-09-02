@@ -13,9 +13,8 @@ function fetchGames() {
 function renderGames(data){
     data.map(r => {
         let gameTitle = document.createElement('h3')
-        gameTitle.innerHTML = r.title
-        
-        
+        gameTitle.innerHTML = r.game_title
+                
         let gameDescription = document.createElement('p')
         gameDescription.innerHTML = r.description
 
