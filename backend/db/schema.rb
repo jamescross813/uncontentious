@@ -10,26 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_30_013939) do
+ActiveRecord::Schema.define(version: 0) do
 
-  create_table "games", force: :cascade do |t|
-    t.string "title"
-    t.integer "min_players"
-    t.integer "max_players"
-    t.text "description"
-    t.string "play_style"
-    t.integer "mode_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["mode_id"], name: "index_games_on_mode_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  add_foreign_key "games", "modes"
 end
