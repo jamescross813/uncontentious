@@ -32,6 +32,12 @@ class NotesController < ApplicationController
             render json: {message: "Unable to edit game"}
         end
     end
+
+    def destrpy
+        note = Note.find(params[:id])
+        note.destroy
+    end
+    
     private
 
     def note_params
