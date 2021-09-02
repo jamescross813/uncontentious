@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         searchForm.hidden = !searchForm.hidden
     });
 
-    addFromButton.addEventListener('click', function () {
+    addFormButton.addEventListener('click', function () {
         if(!searchForm.hidden){
             searchForm.hidden = !searchForm.hidden 
         } 
