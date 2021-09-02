@@ -19,13 +19,14 @@ class GamesController < ApplicationController
     def create
         
         game = Game.new(game_params)
-        
-        if game.save 
-            render json: game,
-            except: [:created_at, :updated_at]
-        else
-            render json: {message: "Try again!"}
-        end
+
+            if game.save
+                render json: game,
+                except: [:created_at, :updated_at]
+            else
+                render json: {message: "Try again!"}
+            end
+
     end
 
     def update
