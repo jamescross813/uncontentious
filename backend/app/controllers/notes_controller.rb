@@ -23,6 +23,15 @@ class NotesController < ApplicationController
         end
     end
 
+    def update
+        note = Note.find(params[:id])
+        note.update(note_params)
+        if note.save
+            render json: note,
+        else
+            render json: {message: "Unable to edit game"}
+        end
+    end
     private
 
     def note_params
