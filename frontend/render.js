@@ -34,7 +34,14 @@ function renderGames(data){
         gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType)
 
     })
+}
 
+function searchGames(data, input){
+    let typeOfGame = ["card", "dice", "board"]
+    console.log("you're looking for a type of game")
+    if (typeOfGame.includes(input)){
+        
+    }
 }
  
 document.addEventListener("DOMContentLoaded", function() {
