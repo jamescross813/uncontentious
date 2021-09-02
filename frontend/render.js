@@ -1,4 +1,4 @@
-const basicUrl= "http://localhost:3000/"
+const basicUrl= "http://localhost:3000"
 const gameList = document.getElementById('game-list');
 const searchForm = document.getElementById("search-games");
 const addForm = document.getElementById("add-game-form");

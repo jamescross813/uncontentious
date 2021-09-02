@@ -1,11 +1,13 @@
-function newGamePost(){
+async function newGamePost(){
+let inputValue = document.getElementsByClassName("input-text")
+console.log(inputValue[0])
 let gameFormData = {
-title: titleInput.value,
-description: descriptionInput.value,
-minPlayers: minPlayersInput.value,
-maxPlayers: maxPlayersInput.value,
-playTime: playTimeInput.value,
-gameType: gameTypeInput.value
+title: inputValue[0].value,
+// description: descriptionInput.value,
+// minPlayers: minPlayersInput.value,
+// maxPlayers: maxPlayersInput.value,
+// playTime: playTimeInput.value,
+// gameType: gameTypeInput.value
 }
 
 let configObj = {
