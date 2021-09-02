@@ -17,6 +17,19 @@ class GamesController < ApplicationController
         end
     end
 
+    def create
+        game = Game.new(game_params)
+        already_game = Game.find_by(params[:title])
+        if game == already_game 
+            render json: {message: "This game is already in our database!"}
+        elsif game.save
+            render json: game,
+            except: [:created_at, :updated_at]
+        else
+            render json: {message: "Try again!"}
+        end
+    end
+
     private
 
     def game_params
