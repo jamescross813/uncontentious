@@ -16,5 +16,9 @@ class NotesController < ApplicationController
         end
     end
 
-    
+    private
+
+    def note_params
+        params.require(:note).permit(:content, :game_id, :user_id)
+    end
 end
