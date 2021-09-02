@@ -21,13 +21,13 @@ function renderGame(data){
     gamePlayers.innerHTML = `Number of players: ${data.min_players} - ${data.max_players}`
 
     let gamePlayStyle = document.createElement('li')
-    gamePlayStyle.innerHTML = `Play Style: ${data.play_style}`
+    gamePlayStyle.innerHTML = `Play Style: ${titleCase(data.play_style)}`
 
     let gameTime = document.createElement('li')
     gameTime.innerHTML = `Max Time: ${data.max_time}`
 
     let gameType = document.createElement('li')
-    gameType.innerHTML = `Game Type: ${data.game_type}`
+    gameType.innerHTML = `Game Type: ${titleCase(data.game_type)}`
 
     gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType)
 }
