@@ -6,7 +6,7 @@ class CreateGames < ActiveRecord::Migration[6.1]
       t.integer :max_players
       t.text :description
       t.string :play_style
-      t.integer :max_time
+      t.integer :play_time
       t.references :mode, null: false, foreign_key: true
       t.timestamps
     end
