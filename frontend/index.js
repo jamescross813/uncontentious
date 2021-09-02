@@ -1,12 +1,13 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    const searchForButton = document.getElementById("search-for");
-    const addButton = document.getElementById("add");
+    const searchFormButton = document.getElementById("search-for");
+    const addFormButton = document.getElementById("add");
     const searchForm = document.getElementById("search-games");
     const addForm = document.getElementById("add-game-form");
     const viewButton = document.getElementById("all-games-view");
     const searchButton = document.getElementById("submit-search")
-    searchForButton.addEventListener('click', ()=> {
+    
+    searchFormButton.addEventListener('click', ()=> {
         if(!addForm.hidden){
             addForm.hidden = !addForm.hidden 
            console.log("done")
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         searchForm.hidden = !searchForm.hidden
     });
 
-    addButton.addEventListener('click', function () {
+    addFromButton.addEventListener('click', function () {
         if(!searchForm.hidden){
             searchForm.hidden = !searchForm.hidden 
         } 
