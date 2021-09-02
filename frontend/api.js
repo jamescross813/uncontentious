@@ -30,6 +30,6 @@ async function newGamePost(){
 
     fetch(`${basicUrl}/games`, configObj)
     .then(resp => resp.json())
-    .then(data => console.log(data))
+    .then(data => renderGame(data))
 
 }
