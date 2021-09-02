@@ -29,7 +29,7 @@ class GamesController < ApplicationController
         end
     end
 
-    def updated
+    def update
         game = Game.find(parmas[:id])
         game.update(game_params)
         if game.save
