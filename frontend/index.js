@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     viewButton.addEventListener('click', () =>{
         gameCard.hidden = !gameCard.hidden
+        renderGames()
     })
 
 

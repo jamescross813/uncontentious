@@ -15,6 +15,7 @@ function renderGames(data){
         let gameTitle = document.createElement('h3')
         gameTitle.innerHTML = r.title
         
+        
         let gameDescription = document.createElement('p')
         gameDescription.innerHTML = r.description
 
@@ -38,6 +39,6 @@ function renderGames(data){
  
 document.addEventListener("DOMContentLoaded", function() {
     fetchGames()
-    renderGames()
+    
     
 })
