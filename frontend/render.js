@@ -7,8 +7,6 @@ function fetchGames() {
     fetch(`${basicUrl}/games`)
     .then(resp =>resp.json())
     .then(data=>console.log(data))
-    
-    
   };
   
 document.addEventListener("DOMContentLoaded", function() {
