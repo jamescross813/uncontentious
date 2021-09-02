@@ -17,10 +17,9 @@ class GamesController < ApplicationController
     end
 
     def create
-        # binding.pry
+        
         game = Game.new(game_params)
         
-        already_game = Game.find_by(params[:game_title])
         if game.save 
             render json: game,
             except: [:created_at, :updated_at]
