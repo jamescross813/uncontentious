@@ -1,2 +1,0 @@
-class UserGamesController < ApplicationController
-end

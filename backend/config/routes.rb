@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  resources :game_categories
   resources :categories
-  resources :user_games
   resources :notes
   resources :users
   resources :games
