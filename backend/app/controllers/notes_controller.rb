@@ -33,11 +33,11 @@ class NotesController < ApplicationController
         end
     end
 
-    def destrpy
+    def destroy
         note = Note.find(params[:id])
         note.destroy
     end
-    
+
     private
 
     def note_params
