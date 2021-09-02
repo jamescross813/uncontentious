@@ -176,7 +176,8 @@ game_pandemic = Game.create(
     min_players: 2, 
     max_players: 4, 
     description: "Players must work together playing to their characters' strengths as they plan their strategy of eradicating the diseases before they overwhelm the world with ever-increasing outbreaks. A truly cooperative game where you win or lose together.", 
-    play_style: "cooperative")
+    play_style: "cooperative",
+    play_time: 45)
 game_azul = Game.create(
     title: "Azul", 
     min_players: 2, 
