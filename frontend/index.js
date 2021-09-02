@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const searchForm = document.getElementById("search-games");
     const addForm = document.getElementById("add-game-form");
     const viewButton = document.getElementById("all-games-view");
-   
+    const listByCategoryButton = document.getElementById("games-by-category");
+    const listByTypeButton = document.getElementById("games-by-type")
+    
     searchForButton.addEventListener('click', ()=> {
         if(!addForm.hidden){
             addForm.hidden = !addForm.hidden 
@@ -25,5 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     viewButton.addEventListener('click', () =>{
         gameCard.hidden = !gameCard.hidden
     })
+
+
 
 }); 
