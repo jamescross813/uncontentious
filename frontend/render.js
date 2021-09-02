@@ -13,6 +13,7 @@ function renderGames(data){
     const gameCard = document.createElement('div');
     document.body.appendChild(gameCard)
     gameCard.elementId = 'game-card';
+    gameCard.hidden = true
 
     data.map(r => {
         let gameTitle = document.createElement('h3')
