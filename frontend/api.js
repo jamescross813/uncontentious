@@ -2,7 +2,7 @@ async function newGamePost(){
 
     let inputValue = document.getElementsByClassName("input-text");
     let titleInput = document.getElementById('title-input');
-    
+
     let gameFormData = {
         description: inputValue[3].value,
         min_players: inputValue[1].value,
@@ -13,8 +13,6 @@ async function newGamePost(){
         game_title: titleInput.value
         };
 
-    console.log(gameFormData);
-
     let configObj = {
         method: "POST",
         headers:{
@@ -23,8 +21,6 @@ async function newGamePost(){
         },
         body: JSON.stringify(gameFormData)
     };
-
-
 
     fetch(`${basicUrl}/games`, configObj)
     .then(resp => resp.json())
