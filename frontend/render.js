@@ -41,7 +41,7 @@ function renderGame(data){
 
 function searchGames(data, input){
     let typeOfGame = ["card", "dice", "board"]
-    console.log("you're looking for a type of game")
+        console.log("you're looking for a type of game")
     if (typeOfGame.includes(input)){
         
     }
