@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const viewButton = document.getElementById("all-games-view");
     const searchButton = document.getElementById("submit-search")
     const addSubmit = document.getElementById("add-submit")
-    const titles = document.getElementById("titles")
+    const titlesOfGames = document.getElementById("title")
     
     searchFormButton.addEventListener('click', ()=> {
         if(!addForm.hidden){
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     viewButton.addEventListener('click', () =>{
         gameCard.hidden = !gameCard.hidden
-        renderGames()
+        fetchGames()
     })
 
     searchButton.addEventListener('click', function(){
@@ -38,10 +38,9 @@ document.addEventListener("DOMContentLoaded", function() {
         newGamePost()
     })
 
-    console.log(titles)
-
-    titles.addEventListener('mouseover', function(){
-        console.log("so this works")
+    titlesOfGames.addEventListener('mouseover', function(){
+        console.log("thing is happening")
     })
+    
 
 }); 

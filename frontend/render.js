@@ -4,14 +4,18 @@ const searchForm = document.getElementById("search-games");
 const addForm = document.getElementById("add-game-form");
 const gameCard = document.getElementById('game-card')
 
-function renderGames(data){
+function renderGames(data){   
     data.map(r => {
-        renderGame(r)
+        console.log(r)
+        let gameTitle = document.createElement('h3')
+        gameTitle.innerHTML = titleCase(r.game_title)
+        gameTitle.id = "title"
+        gameCard.append(gameTitle)
     })
 }
 
 function renderGame(data){
-    let gameTitle = document.createElement('h3')
+    gameTitle = document.createElement('h3')
     gameTitle.innerHTML = titleCase(data.game_title)
     gameTitle.id = "titles"
                 
@@ -50,7 +54,7 @@ function titleCase(title){
 
  
 document.addEventListener("DOMContentLoaded", function() {
-    fetchGames()
+    // fetchGames()
     
     
 })
