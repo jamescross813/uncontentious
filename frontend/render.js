@@ -3,13 +3,13 @@ const gameList = document.getElementById('game-list');
 const searchForm = document.getElementById("search-games");
 const addForm = document.getElementById("add-game-form");
 const gameCard = document.getElementById('game-card')
+let gameTitle = document.createElement('h3')
 
 function renderGames(data){   
     data.map(r => {
         console.log(r)
-        let gameTitle = document.createElement('h3')
         gameTitle.innerHTML = titleCase(r.game_title)
-        gameTitle.id = "title"
+        gameTitle.className = "title"
         gameCard.append(gameTitle)
     })
 }

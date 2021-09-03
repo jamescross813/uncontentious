@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const viewButton = document.getElementById("all-games-view");
     const searchButton = document.getElementById("submit-search")
     const addSubmit = document.getElementById("add-submit")
-    const titlesOfGames = document.getElementById("title")
+    const titlesOfGames = document.getElementsByClassName("title")
     
     searchFormButton.addEventListener('click', ()=> {
         if(!addForm.hidden){
