@@ -36,3 +36,9 @@ async function newGamePost(){
     })
 
 }
+
+function fetchGame(game){
+    gameCard.innerHTML = ""
+    fetch(`${basicUrl}/games/${game}`)
+    .then(resp => console.log(resp))
+}

@@ -17,9 +17,7 @@ class GamesController < ApplicationController
     end
 
     def create
-        
         game = Game.new(game_params)
-
             if game.save
                 render json: game,
                 except: [:created_at, :updated_at]
