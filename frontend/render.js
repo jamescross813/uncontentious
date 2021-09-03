@@ -18,9 +18,9 @@ function renderGames(data){
 function renderGame(data){
     gamesCard.hidden
     gameTitle = document.createElement('h3')
-    gameTitle.innerHTML = titleCase(data.game_title)
+    gameTitle.innerHTML = data.game_title
     gameTitle.id = "titles"
-                
+    gameCard.hidden = false            
     let gameDescription = document.createElement('p')
     gameDescription.innerHTML = data.description
 
