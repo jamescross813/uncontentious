@@ -13,6 +13,7 @@ function renderGames(data){
 function renderGame(data){
     let gameTitle = document.createElement('h3')
     gameTitle.innerHTML = titleCase(data.game_title)
+    gameTitle.id = "titles"
                 
     let gameDescription = document.createElement('p')
     gameDescription.innerHTML = data.description

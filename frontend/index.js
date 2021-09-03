@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const viewButton = document.getElementById("all-games-view");
     const searchButton = document.getElementById("submit-search")
     const addSubmit = document.getElementById("add-submit")
+    const titles = document.getElementById("titles")
     
     searchFormButton.addEventListener('click', ()=> {
         if(!addForm.hidden){
@@ -35,6 +36,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     addSubmit.addEventListener('click', function(){
         newGamePost()
+    })
+
+    console.log(titles)
+
+    titles.addEventListener('mouseover', function(){
+        console.log("so this works")
     })
 
 }); 
