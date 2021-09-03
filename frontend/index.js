@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", function() {
         newGamePost()
     })
 
-    titlesOfGames.addEventListener('mouseover', function(){
-        console.log("thing is happening")
-    })
+    // titlesOfGames.addEventListener('mouseover', function(){
+    //     console.log("thing is happening")
+    // })
     
 
 }); 
