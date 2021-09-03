@@ -4,6 +4,12 @@ function fetchGames() {
     .then(data =>renderGames(data))
   };
 
+  function fetchGame(id) {
+    fetch(`${basicUrl}/games/${id}`)
+    .then(resp =>resp.json())
+    .then(data =>renderGame(data))
+  };
+
 async function newGamePost(){
 
     let inputValue = document.getElementsByClassName("input-text");
@@ -31,7 +37,7 @@ async function newGamePost(){
     fetch(`${basicUrl}/games`, configObj)
     .then(resp => resp.json())
     .then(data => {
-        renderGame(data);
+        fetchGame(data.id);
         
     })
 
