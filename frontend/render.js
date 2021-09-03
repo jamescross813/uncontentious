@@ -2,19 +2,21 @@ const basicUrl= "http://localhost:3000"
 const gameList = document.getElementById('game-list');
 const searchForm = document.getElementById("search-games");
 const addForm = document.getElementById("add-game-form");
-const gameCard = document.getElementById('game-card')
-let gameTitle = document.createElement('h3')
+const gamesCard = document.getElementById('game-card');
+
+const gameCard = document.getElementById('game-card');
 
 function renderGames(data){   
     data.map(r => {
-        console.log(r)
+        let gameTitle = document.createElement('h3')
         gameTitle.innerHTML = titleCase(r.game_title)
         gameTitle.className = "title"
-        gameCard.append(gameTitle)
+        gamesCard.append(gameTitle)
     })
 }
 
 function renderGame(data){
+    gamesCard.hidden
     gameTitle = document.createElement('h3')
     gameTitle.innerHTML = titleCase(data.game_title)
     gameTitle.id = "titles"
