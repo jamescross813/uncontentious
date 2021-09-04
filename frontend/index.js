@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const viewButton = document.getElementById("all-games-view");
     const searchButton = document.getElementById("submit-search")
     const addSubmit = document.getElementById("add-submit")
-    // const titleOne = document.getElementById("title-1")
+    const titleOne = document.querySelector('h3')
     const randomize = document.getElementById("random-game")
     
     searchFormButton.addEventListener('click', ()=> {
@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", function() {
         newGamePost()
     })
 
-    // titleOne.addEventListener('mouseover', function(){
-    //     console.log("thing is happening")
-    // })
+    titleOne.addEventListener('mouseover', function(){
+        console.log("thing is happening")
+    })
 
     randomize.addEventListener('click', () =>{
         let randomNum
