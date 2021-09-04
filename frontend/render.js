@@ -8,7 +8,7 @@ const gameCard = document.getElementById('game-card');
 
 function renderGames(data){   
     data.map(r => {
-        let gameTitle = document.createElement('h3')
+        let gameTitle = document.createElement('link')
         gameTitle.innerHTML = titleCase(r.game_title)
         gameTitle.className = `title-${r.id}`
         gamesCard.append(gameTitle)
@@ -17,7 +17,7 @@ function renderGames(data){
 
 function renderGame(data){
     gamesCard.hidden
-    gameTitle = document.createElement('h3')
+    gameTitle = document.createElement('a')
     gameTitle.innerHTML = data.game_title
     gameTitle.id = "titles"
     gameCard.hidden = false            

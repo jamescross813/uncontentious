@@ -9,9 +9,9 @@
 
 <body>
     <main>
-        <div class="header" id="header">
+        <header>
             <h1>Uncontentious</h1>
-        </div>
+        </header>
 
         <div class="top-right">
 
@@ -24,25 +24,28 @@
         </div>
 
         <div class="top-left">
-            <form id='view-all'>
-                <button type="button" id="all-games-view">View All Games</button>
-            </form>
+            <nav>
+                <form id='view-all'>
+                    <button type="button" id="all-games-view">View All Games</button>
+                </form>
 
-            <form id='random'>
-                <button type="button" id="random-game">Randomizer</button>
-            </form>
+                <form id='random'>
+                    <button type="button" id="random-game">Randomizer</button>
+                </form>
 
-            <form id='link-to-search'>
-                <button type="button" id="search-for">Search for games</button>
-            </form>
+                <form id='link-to-search'>
+                    <button type="button" id="search-for">Search for games</button>
+                </form>
+
+                <form id='link-to-add'>
+                    <button type="button" id="add">Add Games</button>
+                </form>
+
+            </nav>
 
             <form id="search-games" hidden>
                 <input type="text" id="search-input" name="search" placeholder="category, type, time....">
                 <button type="button" id="submit-search">Search</button>
-            </form>
-
-            <form id='link-to-add'>
-                <button type="button" id="add">Add Games</button>
             </form>
 
             <form id="add-game-form" hidden>
