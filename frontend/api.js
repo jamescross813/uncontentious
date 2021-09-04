@@ -8,8 +8,14 @@ function fetchGames() {
     gameCard.innerHTML = ""
     fetch(`${basicUrl}/games/${id}`)
     .then(resp =>resp.json())
-    .then(data =>console.log(data))
-  };
+    .then(data =>{
+        if(data === 'message: "Game not found, please try again or add the game to the records"'){
+            renderError(data)
+        }else{
+            renderGame(data)
+        }
+    })
+};
 
   function fetchCategory(id) {
     fetch(`${basicUrl}/categories/${id}`)
