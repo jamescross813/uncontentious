@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const searchButton = document.getElementById("submit-search")
     const addSubmit = document.getElementById("add-submit")
     const titlesOfGames = document.getElementsByClassName("title")
+    const randomize = document.getElementById("random-game")
     
     searchFormButton.addEventListener('click', ()=> {
         if(!addForm.hidden){
@@ -41,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // titlesOfGames.addEventListener('mouseover', function(){
     //     console.log("thing is happening")
     // })
+
+  
     
 
 }); 
