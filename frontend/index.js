@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     randomize.addEventListener('click', () =>{
         let randomNum
         function randomNumGen(){
-        return randomNum = Math.floor(Math.random()* 100) -7 
+            return randomNum = Math.floor(Math.random()* 100) -7 
         }
        
         if(fetchGame(randomNum)===true){

@@ -54,6 +54,11 @@ function titleCase(title){
           return upCaseWords
 }
 
+function renderError(data){
+    let error = createElement('h2')
+    error.innerHTML = data.value
+}
+
  
 document.addEventListener("DOMContentLoaded", function() {
     // fetchGames()
