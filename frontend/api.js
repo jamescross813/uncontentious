@@ -11,6 +11,12 @@ function fetchGames() {
     .then(data =>renderGame(data))
   };
 
+  function fetchCategory(id) {
+    fetch(`${basicUrl}/categories/${id}`)
+    .then(resp =>resp.json())
+    .then(data =>renderGame(data))
+  }
+
 async function newGamePost(){
 
     let inputValue = document.getElementsByClassName("input-text");
