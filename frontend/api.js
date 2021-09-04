@@ -1,13 +1,7 @@
 function fetchGames() {
     fetch(`${basicUrl}/games`)
     .then(resp =>resp.json())
-    .then(data =>{
-        if(data === 'message: "Game not found, please try again or add the game to the records"'){
-            renderError(data)
-        }else{
-            renderGame(data)
-        }
-    })
+    .then(data =>renderGames(data))
   };
 
   function fetchGame(id) {
