@@ -10,7 +10,7 @@ function renderGames(data){
     data.map(r => {
         let gameTitle = document.createElement('h3')
         gameTitle.innerHTML = titleCase(r.game_title)
-        gameTitle.className = "title"
+        gameTitle.className = `title-${r.id}`
         gamesCard.append(gameTitle)
     })
 }
