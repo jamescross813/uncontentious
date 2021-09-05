@@ -10,15 +10,16 @@ document.addEventListener("DOMContentLoaded", function() {
     //     searchForm.hidden = !searchForm.hidden
     // });
 
-    // addFormButton.addEventListener('click', function () {
-    //     if(!searchForm.hidden){
-    //         searchForm.hidden = !searchForm.hidden 
-    //     } 
-    //     addForm.hidden = !addForm.hidden
+    addFormButton.addEventListener('click', function () {
+        if(!searchForm.hidden){
+            searchForm.hidden = !searchForm.hidden 
+        } 
+        addForm.hidden = !addForm.hidden
         
-    // })
+    })
 
     viewButton.addEventListener('click', () =>{
+        gameCard.hidden = !gameCard.hidden
         gameApi.fetchGames()
     })
 
