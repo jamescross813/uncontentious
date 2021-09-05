@@ -3,7 +3,9 @@ class GamesController < ApplicationController
     def index
         games = Game.all
         render json: games, 
-            except: [:created_at, :updated_at]
+            except: [:created_at, :updated_at],
+            include: [:game_categories]
+            
     end
     
     def show
