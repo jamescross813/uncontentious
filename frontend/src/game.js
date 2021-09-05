@@ -1,14 +1,16 @@
 class Game{
 static all = []
 
-    constructor(title, minPlayer, maxPlayer, description, gameType, gameStyle, time){
-        this.title = title;
+    constructor(info){
+       console.log(info)
+        this.title = r.title;
         this.minPlayer = minPlayer;
         this.maxPlayer = maxPlayer;
         this.description = description;
-        this.gameType = gameType;
         this.gameStyle = gameStyle;
+        this.gameType = gameType;
         this.time = time;
+        this.categories = gameCategories
         Game.all.push(this)
     }
 
@@ -32,36 +34,34 @@ static all = []
     };
 
     renderGames(data){ 
-        console.log(gameCard)
-        // data.map(r => {
-        //     let gameName = document.createElement('h2')
-        //     gameName.innerHTML = r.gameTitle
-        //     gameCard.append(gameName)
-        // })
+        return data.map(r => {
+            const newGame = new Game(r)
+            newGame.renderGame(r)
+        })
     }
     
     renderGame(data){
-        gamesCard.hidden
-        gameTitle = document.createElement('a')
-        gameTitle.innerHTML = data.game_title
-        gameTitle.id = "titles"
-        gameCard.hidden = false            
-        let gameDescription = document.createElement('p')
-        gameDescription.innerHTML = data.description
+        // console.log(this)
+        // let gameTitle = document.createElement('h2')
+        // gameTitle.innerHTML = data.game-title
+     
+        // gameCard.hidden = false            
+        // let gameDescription = document.createElement('p')
+        // gameDescription.innerHTML = data.description
     
-        let gamePlayers = document.createElement('li')
-        gamePlayers.innerHTML = `Number of players: ${data.min_players} - ${data.max_players}`
+        // let gamePlayers = document.createElement('li')
+        // gamePlayers.innerHTML = `Number of players: ${data.min_players} - ${data.max_players}`
     
-        let gamePlayStyle = document.createElement('li')
-        gamePlayStyle.innerHTML = `Play Style: ${data.play_style}`
+        // let gamePlayStyle = document.createElement('li')
+        // gamePlayStyle.innerHTML = `Play Style: ${data.play_style}`
     
-        let gameTime = document.createElement('li')
-        gameTime.innerHTML = `Max Time: ${data.max_time}`
+        // let gameTime = document.createElement('li')
+        // gameTime.innerHTML = `Max Time: ${data.max_time}`
     
-        let gameType = document.createElement('li')
-        gameType.innerHTML = `Game Type: ${data.game_type}`
-    
-        gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType)
+        // let gameType = document.createElement('li')
+        // gameType.innerHTML = `Game Type: ${data.game_type}`
+        gameCard.append(gameTitle)
+        // gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType)
     }
 
     async newGamePost(){
