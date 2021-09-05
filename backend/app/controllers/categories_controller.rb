@@ -2,7 +2,8 @@ class CategoriesController < ApplicationController
     def index
         categories = Category.all
         render json: categories, 
-            except: [:created_at, :updated_at]
+            except: [:created_at, :updated_at],
+            include: [:game_categories]
     end
     
     def show
