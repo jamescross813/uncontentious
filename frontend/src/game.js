@@ -1,9 +1,9 @@
 class Game{
 static all = []
 
-    constructor(title, minPlayer, maxPlayer, description, gameStyle, gameType, time, gameCategories){
-      
-        this.title = title;
+    constructor(gameTitle, minPlayer, maxPlayer, description, gameStyle, gameType, time, gameCategories){
+     
+        this.gameTitle = gameTitle;
         this.minPlayer = minPlayer;
         this.maxPlayer = maxPlayer;
         this.description = description;
@@ -12,26 +12,10 @@ static all = []
         this.time = time;
         this.categories = gameCategories
         Game.all.push(this)
+        
     }
 
-    fetchGames() {
-        fetch(`${basicUrl}/games`)
-        .then(resp =>resp.json())
-        .then(data =>Game.renderGames(data))
-      };
     
-    fetchGame(id) {
-        gameCard.innerHTML = ""
-        fetch(`${basicUrl}/games/${id}`)
-        .then(resp =>resp.json())
-        .then(data =>{
-            if(data === 'message: "Game not found, please try again or add the game to the records"'){
-                renderError(data)
-            }else{
-                renderGame(data)
-            }
-        })
-    };
 
     static renderGames(data){ 
         return data.map(r => {
@@ -40,16 +24,17 @@ static all = []
         })
     }
     
-    renderGame(data){
-        console.log(data)
+    renderGame(){
+        // console.log(this.description)
         // console.log(this)
         // let gameTitle = document.createElement('h2')
-        // gameTitle.innerHTML = data.gameTitle
+        // gameTitle.innerHTML = this.gameTitle
+        
      
         // gameCard.hidden = false            
         // let gameDescription = document.createElement('p')
-        // gameDescription.innerHTML = data.description
-    
+        // gameDescription.innerHTML = this.description
+        // console.log(gameDescription)
         // let gamePlayers = document.createElement('li')
         // gamePlayers.innerHTML = `Number of players: ${data.min_players} - ${data.max_players}`
     

@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    const game = new Game(`${basicUrl}/game`)
+    const game = new Game(`${basicUrl}/games`)
     
     // searchFormButton.addEventListener('click', ()=> {
     //     if(!addForm.hidden){
