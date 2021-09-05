@@ -8,10 +8,9 @@ const gameCard = document.getElementById('game-card');
 
 function renderGames(data){   
     data.map(r => {
-        let gameTitle = document.createElement('link')
-        gameTitle.innerHTML = titleCase(r.game_title)
-        gameTitle.className = `title-${r.id}`
-        gamesCard.append(gameTitle)
+        let gameName 
+        gameName.innerHTML = `<option value="${r.gameTitle}">${r.gameTitle}</option>`
+        
     })
 }
 
@@ -87,7 +86,7 @@ function renderError(data){
 
  
 document.addEventListener("DOMContentLoaded", function() {
-    // fetchGames()
+    fetchGames()
     
     
 })

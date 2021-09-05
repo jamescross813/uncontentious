@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const addFormButton = document.getElementById("add");
     const searchForm = document.getElementById("search-games");
     const addForm = document.getElementById("add-game-form");
-    const viewButton = document.getElementById("all-games-view");
+    const viewButton = document.getElementById("games-list");
     const searchButton = document.getElementById("submit-search")
     const addSubmit = document.getElementById("add-submit")
     const titleOne = document.querySelector('h3')
@@ -27,8 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     viewButton.addEventListener('click', () =>{
-        gameCard.hidden = !gameCard.hidden
-        fetchGames()
+        console.log("clicked")
     })
 
     searchButton.addEventListener('click', function(){
