@@ -15,7 +15,7 @@ static all = []
     fetchGames() {
         fetch(`${basicUrl}/games`)
         .then(resp =>resp.json())
-        .then(data =>renderGames(data))
+        .then(data =>this.renderGames(data))
       };
     
     fetchGame(id) {
@@ -31,12 +31,13 @@ static all = []
         })
     };
 
-    renderGames(data){   
-        data.map(r => {
-            let gameName 
-            gameName.innerHTML = `<option value="${r.gameTitle}">${r.gameTitle}</option>`
-            
-        })
+    renderGames(data){ 
+        console.log(gameCard)
+        // data.map(r => {
+        //     let gameName = document.createElement('h2')
+        //     gameName.innerHTML = r.gameTitle
+        //     gameCard.append(gameName)
+        // })
     }
     
     renderGame(data){

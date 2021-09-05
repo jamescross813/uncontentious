@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    
+    const game = new Game(`${basicUrl}/game`)
     
     // searchFormButton.addEventListener('click', ()=> {
     //     if(!addForm.hidden){
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // })
 
     viewButton.addEventListener('click', () =>{
-        console.log("clicked")
+        game.fetchGames()
     })
 
     // searchButton.addEventListener('click', function(){
