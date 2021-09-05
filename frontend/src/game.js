@@ -12,9 +12,7 @@ static all = []
         this.categories = gameCategories
         Game.all.push(this)
         
-    }
-
-    
+    }  
 
     static renderGames(data){ 
         return data.map(r => {
