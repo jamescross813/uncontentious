@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // fetchGames()
+    
+    
+
+
 const searchFormButton = document.getElementById("search-for");
 const addFormButton = document.getElementById("add");
 const viewButton = document.getElementById("games-list");
@@ -12,3 +18,5 @@ const basicUrl= "http://localhost:3000"
 const gameList = document.getElementById('game-list');
 const gamesCard = document.getElementById('game-card');
 const gameCard = document.getElementById('game-card');
+
+})
