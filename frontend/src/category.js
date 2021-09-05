@@ -7,5 +7,9 @@ class Category{
         Category.all.push(this)
     }
 
-    
+    fetchCategory(id) {
+        fetch(`${basicUrl}/categories/${id}`)
+        .then(resp =>resp.json())
+        .then(data =>renderGame(data))
+      }
 }
