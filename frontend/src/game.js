@@ -1,9 +1,9 @@
 class Game{
 static all = []
 
-    constructor(info){
-       console.log(info)
-        this.title = r.title;
+    constructor(title, minPlayer, maxPlayer, description, gameStyle, gameType, time, gameCategories){
+      
+        this.title = title;
         this.minPlayer = minPlayer;
         this.maxPlayer = maxPlayer;
         this.description = description;
@@ -17,7 +17,7 @@ static all = []
     fetchGames() {
         fetch(`${basicUrl}/games`)
         .then(resp =>resp.json())
-        .then(data =>this.renderGames(data))
+        .then(data =>Game.renderGames(data))
       };
     
     fetchGame(id) {
@@ -33,7 +33,7 @@ static all = []
         })
     };
 
-    renderGames(data){ 
+    static renderGames(data){ 
         return data.map(r => {
             const newGame = new Game(r)
             newGame.renderGame(r)
@@ -41,9 +41,10 @@ static all = []
     }
     
     renderGame(data){
+        console.log(data)
         // console.log(this)
         // let gameTitle = document.createElement('h2')
-        // gameTitle.innerHTML = data.game-title
+        // gameTitle.innerHTML = data.gameTitle
      
         // gameCard.hidden = false            
         // let gameDescription = document.createElement('p')
