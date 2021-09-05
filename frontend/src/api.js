@@ -10,14 +10,14 @@ class Api{
       };
     
     fetchGame(id) {
-        gameCard.innerHTML = ""
-        fetch(`${basicUrl}/games/${id}`)
+        // gameCard.innerHTML = ""
+        fetch(`${this.basicUrl}/${id}`)
         .then(resp =>resp.json())
         .then(data =>Game.renderGame(data))
     };
 
     fetchCategory(id) {
-        fetch(`${basicUrl}/categories/${id}`)
+        fetch(`${this.basicUrl}/${id}`)
         .then(resp =>resp.json())
         .then(data =>Category.renderCategory(data))
       }
