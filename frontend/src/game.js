@@ -1,7 +1,7 @@
 class Game{
 static all = []
 
-    constructor({game_title, min_players, max_players, description, play_style, game_type, max_time, gameCategories}){
+    constructor({game_title, min_players, max_players, description, play_style, game_type, max_time, game_categories}){
         this.gameTitle = game_title;
         this.minPlayer = min_players;
         this.maxPlayer = max_players;
@@ -9,7 +9,14 @@ static all = []
         this.gameStyle = play_style;
         this.gameType = game_type;
         this.time = max_time;
-        this.categories = gameCategories
+        this.categories = []
+
+        game_categories.map(c=>{
+            this.categories.push(c.category_id)
+        }
+            )
+        // console.log(game_categories[0].category_id)
+        // this.categories.push(game_categories)
         Game.all.push(this)
         
     }  
@@ -17,7 +24,6 @@ static all = []
     static renderGames(data){ 
         return data.map(r => {
             const newGame = new Game(r)
-            // console.log(r)
             newGame.renderTitles(r)
         })
     }
@@ -26,7 +32,6 @@ static all = []
         let gameTitle = document.createElement('h2')
         gameTitle.innerHTML = this.gameTitle
         gameCard.append(gameTitle)
-        console.log(gameTitle)
     }
     
     renderGame(){
