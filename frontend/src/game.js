@@ -26,10 +26,10 @@ static all = []
     
     renderGame(){
         // console.log(this.description)
-        console.log(this)
-        // let gameTitle = document.createElement('h2')
-        // gameTitle.innerHTML = this.gameTitle
-        
+        // console.log(this)
+        let gameTitle = document.createElement('h2')
+        gameTitle.innerHTML = this.gameTitle
+        console.log(gameTitle)
      
         // gameCard.hidden = false            
         // let gameDescription = document.createElement('p')
@@ -46,7 +46,7 @@ static all = []
     
         // let gameType = document.createElement('li')
         // gameType.innerHTML = `Game Type: ${data.game_type}`
-        
+        gameCard.append(gameTitle)
         // gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType)
     }
 
