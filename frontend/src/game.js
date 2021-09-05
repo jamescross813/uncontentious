@@ -11,4 +11,23 @@ static all = []
         this.time = time;
         Game.all.push(this)
     }
+
+    fetchGames() {
+        fetch(`${basicUrl}/games`)
+        .then(resp =>resp.json())
+        .then(data =>renderGames(data))
+      };
+    
+    fetchGame(id) {
+        gameCard.innerHTML = ""
+        fetch(`${basicUrl}/games/${id}`)
+        .then(resp =>resp.json())
+        .then(data =>{
+            if(data === 'message: "Game not found, please try again or add the game to the records"'){
+                renderError(data)
+            }else{
+                renderGame(data)
+            }
+        })
+    };
 }
