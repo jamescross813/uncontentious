@@ -1,22 +1,22 @@
-function searchGames(data, input){
-    let typeOfGame = ["card", "dice", "board"]
-        console.log("you're looking for a type of game")
-    if (typeOfGame.includes(input)){
+// function searchGames(data, input){
+//     let typeOfGame = ["card", "dice", "board"]
+//         console.log("you're looking for a type of game")
+//     if (typeOfGame.includes(input)){
         
-    }
-}
+//     }
+// }
 
-function titleCase(title){
-        let words = title.split(" ")
-        let newWords = words.map(word => word[0].toUpperCase() + word.substring(1))
-        let upCaseWords = newWords.join(" ")
-          return upCaseWords
-}
+// function titleCase(title){
+//         let words = title.split(" ")
+//         let newWords = words.map(word => word[0].toUpperCase() + word.substring(1))
+//         let upCaseWords = newWords.join(" ")
+//           return upCaseWords
+// }
 
-function renderError(data){
-    let error = createElement('h2')
-    error.innerHTML = data.value
-}
+// function renderError(data){
+//     let error = createElement('h2')
+//     error.innerHTML = data.value
+// }
 
 
 // function renderForm(){
