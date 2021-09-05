@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // });
 
     addFormButton.addEventListener('click', function () {
-        if(!searchForm.hidden){
-            searchForm.hidden = !searchForm.hidden 
-        } 
+        // if(!searchForm.hidden){
+        //     searchForm.hidden = !searchForm.hidden 
+        // } 
         addForm.hidden = !addForm.hidden
         
     })
