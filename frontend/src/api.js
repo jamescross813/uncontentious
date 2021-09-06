@@ -21,4 +21,10 @@ class Api{
         .then(resp =>resp.json())
         .then(data =>Category.renderCategory(data))
       }
+
+    fetchCategories() {
+        fetch(`${this.basicUrl}/${id}`)
+        .then(resp =>resp.json())
+        .then(data =>console.log(data))
+      }
 }
