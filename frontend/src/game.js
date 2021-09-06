@@ -11,11 +11,11 @@ static all = []
         this.time = max_time;
         this.categories = []
 
-        game_categories.map(c=>{
-            this.categories.push(c.category_id)
+        // game_categories.map(c=>{
+        //     this.categories.push(c.category_id)
             
-        }
-            )
+        // }
+        //     )
         // console.log(game_categories[0].category_id)
         // this.categories.push(game_categories)
         Game.all.push(this)
@@ -36,9 +36,9 @@ static all = []
         
     }
     
-    renderGame(){
-        const newGame = new Game(r)
-        console.log(r)
+    static renderGame(data){
+        const newGame = new Game(data)
+        console.log(data)
         // gameCard.hidden = true          
         // let gameDescription = document.createElement('p')
         // gameDescription.innerHTML = this.description
