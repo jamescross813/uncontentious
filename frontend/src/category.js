@@ -31,6 +31,7 @@ class Category{
         catOptions.innerHTMl = `
         <input type="checkbox" id="category-input-${this.id}" name="category" placeholder="Category" class="input-text"
                     value="${this.name}">${this.name}`
+                    console.log(catOptions)
         catSection.append(catOptions)
         
     }
