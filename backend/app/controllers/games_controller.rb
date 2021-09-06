@@ -5,7 +5,7 @@ class GamesController < ApplicationController
         option = {
             include:[:game_categories]
         }
-        render json: GameSerializer.new(game, option)
+        render json: GameSerializer.new(games, option)
             
     end
     
