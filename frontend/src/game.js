@@ -13,6 +13,7 @@ static all = []
 
         game_categories.map(c=>{
             this.categories.push(c.category_id)
+            
         }
             )
         // console.log(game_categories[0].category_id)
@@ -32,6 +33,9 @@ static all = []
         let gameTitle = document.createElement('h2')
         gameTitle.innerHTML = this.gameTitle
         gameCard.append(gameTitle)
+
+        game_categories.map(c=>
+            Category.fetchCategory(c.category_id))
     }
     
     renderGame(){
