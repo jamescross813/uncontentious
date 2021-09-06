@@ -16,6 +16,6 @@ class Category{
     renderName(){
         let catName = document.createElement('h3')
             catName.innerHTML = this.name
-            gameCard.append(catName)
+            catCard.append(catName)
     }
 }
