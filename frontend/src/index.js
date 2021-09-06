@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         //     searchForm.hidden = !searchForm.hidden 
         // } 
         addForm.hidden = !addForm.hidden
-        catApi.fetchCategories()
+        catApi.fetchCategoriesForForm()
         
     })
 
