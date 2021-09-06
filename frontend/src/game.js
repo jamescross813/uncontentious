@@ -38,29 +38,38 @@ static all = []
     
     static renderGame(data){
         const indGame = new Game(data)
-        indGame.renderTitles()
-        // gameCard.hidden = true          
-        // let gameDescription = document.createElement('p')
-        // gameDescription.innerHTML = this.description
-        // console.log(gameDescription)
-        // let gamePlayers = document.createElement('li')
-        // gamePlayers.innerHTML = `Number of players: ${this.minPlayer} - ${this.maxPlayer}`
-    
-        // let gamePlayStyle = document.createElement('li')
-        // gamePlayStyle.innerHTML = `Play Style: ${this.gameStyle}`
-    
-        // let gameTime = document.createElement('li')
-        // gameTime.innerHTML = `Max Time: ${this.time}`
-    
-        // let gameType = document.createElement('li')
-        // gameType.innerHTML = `Game Type: ${this.gameType}`
-       
-        // gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType)
+        indGame.renderGameInfo()
+        
     }
 
     getCategories(){
         this.categories.map(c=>
             console.log(c))
+    }
+
+    renderGameInfo(){
+        // gameCard.hidden = true   
+        let gameTitle = document.createElement('h2')
+        gameTitle.innerHTML = this.gameTitle
+        gameCard.append(gameTitle)
+
+        let gameDescription = document.createElement('p')
+        gameDescription.innerHTML = this.description
+        console.log(gameDescription)
+        
+        let gamePlayers = document.createElement('li')
+        gamePlayers.innerHTML = `Number of players: ${this.minPlayer} - ${this.maxPlayer}`
+    
+        let gamePlayStyle = document.createElement('li')
+        gamePlayStyle.innerHTML = `Play Style: ${this.gameStyle}`
+    
+        let gameTime = document.createElement('li')
+        gameTime.innerHTML = `Max Time: ${this.time}`
+    
+        let gameType = document.createElement('li')
+        gameType.innerHTML = `Game Type: ${this.gameType}`
+       
+        gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType)
     }
 
     // newGamePost(){
