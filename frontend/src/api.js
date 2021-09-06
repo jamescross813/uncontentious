@@ -4,7 +4,7 @@ class Api{
     }
 
     fetchGames() {
-      gamesCard.innerHTML = ""
+      gamesList.innerHTML = ""
         fetch(this.basicUrl)
         .then(resp =>resp.json())
         .then(data =>Game.renderGames(data))
