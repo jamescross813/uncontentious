@@ -27,7 +27,7 @@ class Category{
     }
 
     renderNewForm(){
-        let catOptions = docuemnt.createElement('h3')
+        let catOptions = document.createElement('h3')
         catOptions.innerHTMl = `<input type="checkbox" id="category-input-${this.id}" name="category" placeholder="Category" class="input-text"
                     value="${this.name}">${this.name}`
         catSection.append(catOptions)
