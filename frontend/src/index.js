@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // })
 
     addSubmit.addEventListener('click', function(){
-       Game.newGamePost()
+       gameApi.newGamePost()
     })
 
     // titleOne.addEventListener('mouseover', function(){
