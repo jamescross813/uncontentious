@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const gameApi = new Api(`${basicUrl}/games`)
-    
+    const catApi = new Api(`${basicUrl}/category`)
     // searchFormButton.addEventListener('click', ()=> {
     //     if(!addForm.hidden){
     //         addForm.hidden = !addForm.hidden 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     catButton.addEventListener('click', ()=>{
-        Category.fetchCategories
+        catApi.fetchCategories()
     })
 
     // searchButton.addEventListener('click', function(){
