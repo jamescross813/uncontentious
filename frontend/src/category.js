@@ -28,14 +28,10 @@ class Category{
     }
 
     renderNewForm(){
-        let catOptions = document.createElement('h3')
-        
+       let catOptions = document.createElement('h3') 
         catOptions.innerHTML = `
         <input type="checkbox" id="category-input-${this.id}" name="category" placeholder="Category" class="input-text"
                     value="${this.name}">${this.name}`
-           
-        
         catSection.append(catOptions)
-        
     }
 }
