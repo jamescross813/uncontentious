@@ -3,15 +3,17 @@ class CategoriesController < ApplicationController
         categories = Category.all
         render json: categories, 
             except: [:created_at, :updated_at],
-            include: [:game_categories]
+            include: [:game_categories],
+            except: [:created_at, :updated_at]
     end
     
     def show
         category = Category.find_by(id: params[:id])
         if category 
             render json: category,
+            exclude: [:created_at, :updated_at],
+            include: [:game_categories],
             except: [:created_at, :updated_at]
-            include: [:game_categories]
         else
             render json: {message: "Category not found"}
         end
