@@ -32,7 +32,7 @@ static all = []
     renderTitles(){
         let gameTitle = document.createElement('h2')
         gameTitle.innerHTML = this.gameTitle
-        gameCard.append(gameTitle)
+        gamesList.append(gameTitle)
         
     }
     

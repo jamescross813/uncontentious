@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     viewButton.addEventListener('click', () =>{
-        gameCard.hidden = !gameCard.hidden
+        gamesList.hidden = !gamesList.hidden
         gameApi.fetchGames()
     })
 
     catButton.addEventListener('click', () =>{
-        gameCard.hidden = !gameCard.hidden
+        gamesList.hidden = !gamesList.hidden
         catApi.fetchCategories()
     })
 
@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // })
 
     addSubmit.addEventListener('click', function(){
-       if(!gameCard.hidden){
-        gameCard.hidden = !gameCard.hidden
+       if(!gamesList.hidden){
+        gamesList.hidden = !gamesList.hidden
        }
         gameApi.newGamePost()
     })

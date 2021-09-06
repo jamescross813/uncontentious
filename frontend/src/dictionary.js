@@ -10,6 +10,6 @@ const addForm = document.getElementById("add-game-form");
 
 const basicUrl= "http://localhost:3000"
 
-const gameList = document.getElementById('game-list');
+const gamesList = document.getElementById('game-list');
 const catCard = document.getElementById('cat-card');
 const gameCard = document.getElementById('game-card');
