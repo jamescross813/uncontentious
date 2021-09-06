@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
        }
               
        gameApi.newGamePost()
-    //    addForm.reset() 
+       addForm.reset() 
     })
 
     // titleOne.addEventListener('mouseover', function(){
