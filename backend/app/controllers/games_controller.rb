@@ -2,10 +2,9 @@ class GamesController < ApplicationController
 
     def index
         games = Game.all
-        option = {
-            include:[:game_categories]
-        }
-        render json: GameSerializer.new(games, option)
+        render json: games, 
+            except: [:created_at, :updated_at],
+            include: [:game_categories]
             
     end
     
