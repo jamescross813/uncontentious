@@ -23,7 +23,7 @@ class Api{
       }
 
     fetchCategories() {
-        fetch(`${this.basicUrl}/${id}`)
+        fetch(basicUrl)
         .then(resp =>resp.json())
         .then(data =>console.log(data))
       }
