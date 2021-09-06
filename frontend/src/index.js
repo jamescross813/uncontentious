@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
     //     searchGames()
     // })
 
-    // addSubmit.addEventListener('click', function(){
-    //     newGamePost()
-    // })
+    addSubmit.addEventListener('click', function(){
+        newGamePost()
+    })
 
     // titleOne.addEventListener('mouseover', function(){
     //     console.log("thing is happening")
