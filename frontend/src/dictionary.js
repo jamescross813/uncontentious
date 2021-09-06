@@ -1,6 +1,7 @@
 const searchFormButton = document.getElementById("search-for");
 const addFormButton = document.getElementById("add");
 const viewButton = document.getElementById("games-list");
+const catButton = document.getElementById("categories")
 const searchButton = document.getElementById("submit-search")
 const addSubmit = document.getElementById("add-submit")
 
