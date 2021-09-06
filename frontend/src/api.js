@@ -30,6 +30,13 @@ class Api{
         .then(data =>Category.renderCategories(data))
       }
 
+      fetchCategoriesForForm() {
+        catSection.innerHTML = ""
+          fetch(this.basicUrl)
+          .then(resp =>resp.json())
+          .then(data =>Category.renderCategoriesForForm(data))
+        }
+
       newGamePost(){
 
         let inputValue = document.getElementsByClassName("input-text");
