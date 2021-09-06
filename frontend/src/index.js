@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", function() {
         gameApi.fetchGames()
     })
 
+    catButton.addEventListener('click', ()=>{
+        Category.fetchCategories
+    })
+
     // searchButton.addEventListener('click', function(){
     //     searchGames()
     // })
