@@ -11,6 +11,7 @@ class CategoriesController < ApplicationController
         if category 
             render json: category,
             except: [:created_at, :updated_at]
+            include: [:game_categories]
         else
             render json: {message: "Category not found"}
         end
