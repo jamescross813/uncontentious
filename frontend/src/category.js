@@ -20,6 +20,7 @@ class Category{
             newFormCat.renderNewForm(r)
         })
     }
+    
     renderName(){
         let catName = document.createElement('h3')
             catName.innerHTML = this.name
@@ -27,7 +28,8 @@ class Category{
     }
 
     renderNewForm(){
-        let catOptions = document.createElement('p')
+        let catOptions = document.createElement('h3')
+        console.log(this)
         catOptions.innerHTMl = `
         <input type="checkbox" id="category-input-${this.id}" name="category" placeholder="Category" class="input-text"
                     value="${this.name}">${this.name}`
