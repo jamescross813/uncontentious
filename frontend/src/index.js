@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     viewButton.addEventListener('click', () =>{
+        if(!gameCard.hidden){
+            gameCard.hidden = !gameCard.hidden
+        }
         gamesList.hidden = !gamesList.hidden
         gameApi.fetchGames()
     })
