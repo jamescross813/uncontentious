@@ -33,7 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // })
 
     addSubmit.addEventListener('click', function(){
-       gameApi.newGamePost()
+       if(!gameCard.hidden){
+        gameCard.hidden = !gameCard.hidden
+       }
+        gameApi.newGamePost()
     })
 
     // titleOne.addEventListener('mouseover', function(){
