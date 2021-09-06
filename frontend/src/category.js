@@ -1,8 +1,8 @@
 class Category{
     static all = []
-    constructor({category_name}){
+    constructor({category_name, id}){
         this.name = category_name;
-        // this.gameId = gameId
+        this.id = id
         Category.all.push(this)
     }
 
@@ -15,7 +15,9 @@ class Category{
 
     renderName(){
         let catName = document.createElement('h3')
-            catName.innerHTML = this.name
+            catName.innerHTML = `
+            <input type="checkbox" id="category-input-${this.id}" name="category" placeholder="Category" class="input-text"
+                    value="${this.name}">${this.name}`
             catCard.append(catName)
     }
 }
