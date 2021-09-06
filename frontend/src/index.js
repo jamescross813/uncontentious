@@ -39,7 +39,9 @@ document.addEventListener("DOMContentLoaded", function() {
        if(!gamesList.hidden){
         gamesList.hidden = !gamesList.hidden
        }
-        gameApi.newGamePost()
+              
+       gameApi.newGamePost()
+       addForm.reset() 
     })
 
     // titleOne.addEventListener('mouseover', function(){
