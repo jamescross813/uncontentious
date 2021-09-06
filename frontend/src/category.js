@@ -18,6 +18,6 @@ class Category{
             catName.innerHTML = `
             <input type="checkbox" id="category-input-${this.id}" name="category" placeholder="Category" class="input-text"
                     value="${this.name}">${this.name}`
-            catCard.append(catName)
+            catSection.append(catName)
     }
 }
