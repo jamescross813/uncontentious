@@ -51,12 +51,10 @@ static all = []
         // gameCard.hidden = true   
         let gameTitle = document.createElement('h2')
         gameTitle.innerHTML = this.gameTitle
-        gameCard.append(gameTitle)
 
         let gameDescription = document.createElement('p')
         gameDescription.innerHTML = this.description
-        console.log(gameDescription)
-        
+
         let gamePlayers = document.createElement('li')
         gamePlayers.innerHTML = `Number of players: ${this.minPlayer} - ${this.maxPlayer}`
     
