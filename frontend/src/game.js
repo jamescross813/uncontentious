@@ -25,7 +25,7 @@ static all = []
     static renderGames(data){ 
         return data.map(r => {
             const newGame = new Game(r)
-            newGame.renderTitles(r)
+            newGame.renderTitles()
         })
     }
 
@@ -37,8 +37,8 @@ static all = []
     }
     
     static renderGame(data){
-        const newGame = new Game(data)
-        console.log(data)
+        const indGame = new Game(data)
+        indGame.renderTitles()
         // gameCard.hidden = true          
         // let gameDescription = document.createElement('p')
         // gameDescription.innerHTML = this.description
