@@ -33,9 +33,7 @@ static all = []
         let gameTitle = document.createElement('h2')
         gameTitle.innerHTML = this.gameTitle
         gameCard.append(gameTitle)
-
-        game_categories.map(c=>
-            Category.fetchCategory(c.category_id))
+        
     }
     
     renderGame(){
@@ -56,6 +54,11 @@ static all = []
         gameType.innerHTML = `Game Type: ${this.gameType}`
        
         gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType)
+    }
+
+    getCategories(){
+        this.categories.map(c=>
+            console.log(c))
     }
 
     async newGamePost(){
