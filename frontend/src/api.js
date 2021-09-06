@@ -4,6 +4,7 @@ class Api{
     }
 
     fetchGames() {
+      gameCard.innerHTML = ""
         fetch(this.basicUrl)
         .then(resp =>resp.json())
         .then(data =>Game.renderGames(data))
@@ -23,6 +24,7 @@ class Api{
       }
 
     fetchCategories() {
+      catCard.innerHTML = ""
         fetch(this.basicUrl)
         .then(resp =>resp.json())
         .then(data =>Category.renderCategories(data))
