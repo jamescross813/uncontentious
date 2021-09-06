@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     catButton.addEventListener('click', () =>{
+        gameCard.hidden = !gameCard.hidden
         catApi.fetchCategories()
     })
 
