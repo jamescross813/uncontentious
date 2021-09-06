@@ -7,7 +7,7 @@ class Category{
         Category.all.push(this)
     }
 
-    static renderCatgories(data){
+    static renderCategories(data){
         console.log(data)
     }
 }
