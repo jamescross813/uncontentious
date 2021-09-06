@@ -38,10 +38,10 @@ class Api{
         }
 
       newGamePost(){
-        console.log(this)
+        let catInput = document.getElementsByClassName("cat-input")
         // let inputValue = document.getElementsByClassName("input-text");
         // let titleInput = document.getElementById('title-input');
-    
+    console.log(catInput)
         // let gameFormData = {
         //     description: inputValue[3].value,
         //     min_players: inputValue[1].value,
