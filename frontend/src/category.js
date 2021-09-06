@@ -16,8 +16,8 @@ class Category{
     static renderCategoriesForForm(data){
         console.log("here in render")
         return data.map(r => {
-            const newCat = new Category(r)
-            newCat.renderNewForm(r)
+            const newFormCat = new Category(r)
+            newFormCat.renderNewForm(r)
         })
     }
     renderName(){
@@ -27,9 +27,10 @@ class Category{
     }
 
     renderNewForm(){
-        console.log("here in other render")
-        catSection.innerHTMl = `<input type="checkbox" id="category-input-${this.id}" name="category" placeholder="Category" class="input-text"
+        let catOptions = docuemnt.createElement('h3')
+        catOptions.innerHTMl = `<input type="checkbox" id="category-input-${this.id}" name="category" placeholder="Category" class="input-text"
                     value="${this.name}">${this.name}`
+        catSection.append(catOptions)
         
     }
 }
