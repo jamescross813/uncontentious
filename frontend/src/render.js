@@ -45,8 +45,8 @@
 // }
 
  
-document.addEventListener("DOMContentLoaded", function() {
-    fetchGames()
+// document.addEventListener("DOMContentLoaded", function() {
+//     fetchGames()
     
     
-})
+// })
