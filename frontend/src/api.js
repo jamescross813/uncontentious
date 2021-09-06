@@ -32,7 +32,6 @@ class Api{
 
       fetchCategoriesForForm() {
         catSection.innerHTML = ""
-        console.log("here in  fetch")
           fetch(this.basicUrl)
           .then(resp =>resp.json())
           .then(data =>Category.renderCategoriesForForm(data))
