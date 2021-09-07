@@ -11,11 +11,6 @@ class Game{
             this.time = max_time;
             this.categories = [];
             this.id = id
-    
-            // game_categories.map(c =>
-            //     this.categories.push(c)
-            // )
-    
             Game.all.push(this)
         }  
     
@@ -72,8 +67,6 @@ class Game{
         //    deleteButton.innerHTML = `<type="button" id ="delete-button">Delete Game`
            
             gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
-    
-           
         }
     
         static renderEditForm(data){
@@ -99,7 +92,7 @@ class Game{
             <label>Description:</label>        
             <input type="text" id="description-input" name="description" class="input-text" value=${data.description}></textarea><br>
                     <button type="button" id="edit-submit">Edit Game</button>`
-                    gameCard.append(editForm)
+            gameCard.append(editForm)
         }
     
     }
