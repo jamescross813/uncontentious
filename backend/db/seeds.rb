@@ -30,7 +30,7 @@ game_phase_10 = Game.create(
     play_style: "competitive",
     game_type: "card",
     max_time: 90,
-    categories: ["family", "chance"])
+    game_categories: ["family", "chance"])
 game_farkle = Game.create(
     game_title: "Farkle",
     min_players: 2, 
@@ -39,7 +39,7 @@ game_farkle = Game.create(
     play_style: "competitive",
     game_type: "dice",
     max_time: 30,
-    categories: ["family", "chance"])
+    game_categories: ["family", "chance"])
 game_bananagrams = Game.create(
     game_title: "Bananagrams", 
     min_players: 1, 
@@ -48,7 +48,7 @@ game_bananagrams = Game.create(
     play_style: "competitive",
     game_type: "tile",
     max_time: 10,
-    categories: ["family", "language"])
+    game_categories: ["family", "language"])
 game_arkham_horror = Game.create(
     game_title: "Arkham Horror", 
     min_players: 1, 
@@ -57,7 +57,7 @@ game_arkham_horror = Game.create(
     play_style: "cooperative",
     game_type: "card",
     max_time: 90,
-    categories: ["horror", "rpg"])
+    game_categories: ["horror", "rpg"])
 game_love_letter = Game.create(
     game_title: "Love Letter", 
     min_players: 2,
@@ -66,7 +66,7 @@ game_love_letter = Game.create(
     play_style: "competitive",
     game_type: "card",
     max_time: 20,
-    categories: ["strategy"])
+    game_categories: ["strategy"])
 game_wingspan = Game.create(
     game_title: "Wingspan",
     min_players: 1, 
@@ -75,7 +75,7 @@ game_wingspan = Game.create(
     play_style: "competitive",
     game_type: "board",
     max_time: 70,
-    categories: ["rpg", "strategy"])
+    game_categories: ["rpg", "strategy"])
 game_ticket_to_ride = Game.create(
     game_title: "Ticket To Ride", 
     min_players: 2, 
@@ -84,7 +84,7 @@ game_ticket_to_ride = Game.create(
     play_style: "competitive",
     game_type: "board",
     max_time: 60,
-    categories: ["family", "chance", "strategy"])
+    game_categories: ["family", "chance", "strategy"])
 game_exit = Game.create(
     game_title: "Exit: The Secret Lab", 
     min_players: 1, 
@@ -93,7 +93,7 @@ game_exit = Game.create(
     play_style: "cooperative",
     game_type: "card",
     max_time: 120,
-    categories: ["escape", "puzzle"])
+    game_categories: ["escape", "puzzle"])
 game_unlock = Game.create(
     game_title: "Unlock: The Island of Cr Goorse", 
     min_players: 1, 
@@ -102,7 +102,7 @@ game_unlock = Game.create(
     play_style: "cooperative",
     game_type: "card",
     max_time: 120,
-    categories: ["escape", "puzzle"])
+    game_categories: ["escape", "puzzle"])
 game_carcasonne = Game.create(
     game_title: "Carcasonne",
     min_players: 2, 
@@ -111,7 +111,7 @@ game_carcasonne = Game.create(
     play_style: "competitive",
     game_type: "tile",
     max_time: 45,
-    categories: ["strategy", "world building"])
+    game_categories: ["strategy", "world building"])
 game_monopoly = Game.create(
     game_title: "Monopoly",
     min_players: 2, 
@@ -120,7 +120,7 @@ game_monopoly = Game.create(
     play_style: "competitive",
     game_type: "board",
     max_time: 180,
-    categories: ["family", "chance", "strategy"])
+    game_categories: ["family", "chance", "strategy"])
 game_oregon_trail = Game.create(
     game_title: "Oregon Trail", 
     min_players: 2, 
@@ -129,7 +129,7 @@ game_oregon_trail = Game.create(
     play_style: "cooperative",
     game_type: "card",
     max_time: 30,
-    categories: ["family", "strategy", "rpg"])
+    game_categories: ["family", "strategy", "rpg"])
 game_cards_against_humanity = Game.create(
     game_title: "Cards Against Humanity", 
     min_players: 4,
@@ -138,7 +138,7 @@ game_cards_against_humanity = Game.create(
     play_style: "competitive",
     game_type: "card",
     max_time: 90,
-    categories: ["humor"])
+    game_categories: ["humor"])
 game_splendor = Game.create(
     game_title: "Splendor",
     min_players: 2, 
@@ -147,7 +147,7 @@ game_splendor = Game.create(
     play_style: "competitive",
     game_type: "baord",
     max_time: 30,
-    categories: ["strategy", "chance"])
+    game_categories: ["strategy", "chance"])
 game_five_crowns = Game.create(
     game_title: "Five Crowns", 
     min_players: 1, 
@@ -156,7 +156,7 @@ game_five_crowns = Game.create(
     play_style: "competitive",
     game_type: "card",
     max_time: 60,
-    categories: ["family", "chance"])
+    game_categories: ["family", "chance"])
 game_quiddler = Game.create(
     game_title: "Quiddler", 
     min_players: 1, 
@@ -165,7 +165,7 @@ game_quiddler = Game.create(
     play_style: "competitive",
     game_type: "card",
     max_time: 30,
-    categories: ["family", "language"])
+    game_categories: ["family", "language"])
 game_shady_pets = Game.create(
     game_title: "Shady Pets", 
     min_players: 2, 
@@ -174,7 +174,7 @@ game_shady_pets = Game.create(
     play_style: "competitive",
     game_type: "card",
     max_time: 20,
-    categories: ["humor"])
+    game_categories: ["humor"])
 game_dracula = Game.create(
     game_title: "Fury of Dracula", 
     min_players: 2, 
@@ -183,7 +183,7 @@ game_dracula = Game.create(
     play_style: "competitive",
     game_type: "board",
     max_time: 180,
-    categories: ["rpg", "mystery"])
+    game_categories: ["rpg", "mystery"])
 game_betrayal = Game.create(
     game_title: "Betrayal at the House on the Hill", 
     min_players: 3, 
@@ -192,7 +192,7 @@ game_betrayal = Game.create(
     play_style: "cooperative",
     game_type: "card",
     max_time: 90,
-    categories: ["mystery"])
+    game_categories: ["mystery"])
 game_gloom = Game.create(
     game_title: "Gloom", 
     min_players: 2, 
@@ -201,7 +201,7 @@ game_gloom = Game.create(
     play_style: "competitive",
     game_type: "card",
     max_time: 30,
-    categories: ["family", "chance"])
+    game_categories: ["family", "chance"])
 game_mysterium = Game.create(
     game_title: "Mysterium", 
     min_players: 2, 
@@ -210,7 +210,7 @@ game_mysterium = Game.create(
     play_style: "competitive",
     game_type: "board",
     max_time: 45,
-    categories: ["mystery"])
+    game_categories: ["mystery"])
 game_pandemic = Game.create(
     game_title: "Pandemic", 
     min_players: 2, 
@@ -219,7 +219,7 @@ game_pandemic = Game.create(
     play_style: "cooperative",
     game_type: "board",
     max_time: 45,
-    categories: ["strategy"])
+    game_categories: ["strategy"])
 game_azul = Game.create(
     game_title: "Azul", 
     min_players: 2, 
@@ -228,7 +228,7 @@ game_azul = Game.create(
     play_style: "competitive",
     game_type: "tile",
     max_time: 45,
-    categories: ["strategy"])
+    game_categories: ["strategy"])
 
     # game_category_phase_10 = GameCategory.create(game: game_phase_10, category: category_family)
     # game_category_farkle = GameCategory.create(game: game_farkle, category: category_chance)

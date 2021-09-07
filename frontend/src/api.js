@@ -30,7 +30,7 @@ class Api{
             play_style: inputValue[4].value,
             game_type: inputValue[3].value,
             game_title: titleInput.value,
-            categories: [inputValue[6].value, inputValue[7].value]
+            game_categories: [inputValue[6].value, inputValue[7].value]
             };
             
         let configObj = {

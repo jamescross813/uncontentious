@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_08_30_014411) do
     t.string "play_style"
     t.integer "max_time"
     t.string "game_type"
-    t.string "categories"
+    t.text "game_categories"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

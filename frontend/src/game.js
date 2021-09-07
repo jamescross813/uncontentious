@@ -1,7 +1,7 @@
 class Game{
 static all = []
 
-    constructor({game_title, min_players, max_players, description, play_style, game_type, max_time, categories}){
+    constructor({game_title, min_players, max_players, description, play_style, game_type, max_time, game_categories}){
         this.gameTitle = game_title;
         this.minPlayer = min_players;
         this.maxPlayer = max_players;
@@ -9,10 +9,10 @@ static all = []
         this.gameStyle = play_style;
         this.gameType = game_type;
         this.time = max_time;
-        this.categories = categories;
+        this.categories = game_categories;
         
         
-        console.log(categories)
+        console.log(this.categories)
         //     )
         // console.log(game_categories[0].category_id)
         // this.categories.push(game_categories)
