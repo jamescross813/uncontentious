@@ -9,13 +9,13 @@ static all = []
         this.gameStyle = play_style;
         this.gameType = game_type;
         this.time = max_time;
-        this.categories = game_categories
+        this.categories = [];
         
-        // game_categories.map(c=>{
-        //     this.categories.push(c.category_id)
+        game_categories.map(c=>{
+            this.categories.push(c.category_id)
             
-        // })
-        console.log(game_categories)
+        })
+        console.log(this.categories)
         //     )
         // console.log(game_categories[0].category_id)
         // this.categories.push(game_categories)
@@ -39,6 +39,7 @@ static all = []
     
     static renderGame(data){
         const indGame = new Game(data)
+        console.log(data)
         indGame.renderGameInfo()
         
     }
