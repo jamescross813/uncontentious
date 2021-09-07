@@ -15,7 +15,7 @@ static all = []
         //     this.categories.push(c.category_id)
             
         // })
-        console.log(this.categories)
+        console.log(game_categories)
         //     )
         // console.log(game_categories[0].category_id)
         // this.categories.push(game_categories)
