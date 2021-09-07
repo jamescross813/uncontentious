@@ -9,12 +9,13 @@ static all = []
         this.gameStyle = play_style;
         this.gameType = game_type;
         this.time = max_time;
-        this.categories = []
-        console.log(this.time)
+        this.categories = game_categories
+        
         // game_categories.map(c=>{
         //     this.categories.push(c.category_id)
             
-        // }
+        // })
+        console.log(this.categories)
         //     )
         // console.log(game_categories[0].category_id)
         // this.categories.push(game_categories)
