@@ -44,9 +44,7 @@ class Api{
     
         fetch(`${basicUrl}/games`, configObj)
         .then(resp => resp.json())
-        .then(data => {Game.renderGame(data);
-            
-        })
+        .then(data => console.log(data))
       }
       
 }
