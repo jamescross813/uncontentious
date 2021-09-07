@@ -2,15 +2,15 @@ class Game{
 static all = []
 
     constructor({game_title, min_players, max_players, description, play_style, game_type, max_time, game_categories}){
-        // this.gameTitle = game_title;
-        // this.minPlayer = min_players;
-        // this.maxPlayer = max_players;
-        // this.description = description;
-        // this.gameStyle = play_style;
-        // this.gameType = game_type;
-        // this.time = max_time;
-        // this.categories = []
-        console.log(max_time)
+        this.gameTitle = game_title;
+        this.minPlayer = min_players;
+        this.maxPlayer = max_players;
+        this.description = description;
+        this.gameStyle = play_style;
+        this.gameType = game_type;
+        this.time = max_time;
+        this.categories = []
+        console.log(this.time)
         // game_categories.map(c=>{
         //     this.categories.push(c.category_id)
             
