@@ -11,7 +11,7 @@ static all = []
         this.time = max_time;
         this.categories = [];
         this.id = id
-        
+
         this.categories.push(game_categories)
 
         Game.all.push(this)
@@ -69,6 +69,12 @@ static all = []
     //    deleteButton.innerHTML = `<type="button" id ="delete-button">Delete Game`
        
         gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
+
+       
+    }
+
+    static renderEditForm(data){
+        console.log(data)
     }
 
 }
