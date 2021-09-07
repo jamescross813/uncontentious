@@ -3,22 +3,6 @@ h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.top-right {
-  float: right;
-}
-
-.bottom-right {
-  text-align: right;
-}
-
-.top-left {
-  text-align: left;
-}
-
-.top-right {
-  text-align: left;
-}
-
 body {
   padding: 0 20px;
 }
