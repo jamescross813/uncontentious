@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }) 
 
     editButton.addEventListener('click', () =>{
-        
+        console.log(editButton)
         
         // editForm.innerHTML = `
         // <input type="text" id="title-input" name="game-title" placeholder="Name that game..." class="input-text"
