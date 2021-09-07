@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     viewButton.addEventListener('click', () =>{
-        if(!gameCard.hidden){
+        if(!gameCard.hidden || !addForm.hidden){
             gameCard.hidden = !gameCard.hidden
+            addForm.hidden = !addForm.hidden
         }
         gamesList.hidden = !gamesList.hidden
         gameApi.fetchGames()
@@ -47,17 +48,14 @@ document.addEventListener("DOMContentLoaded", function() {
         currentGameApi.fetchEditGame()
     })
 
-    // randomize.addEventListener('click', () =>{
-    //     let randomNum
-    //     function randomNumGen(){
-    //         return randomNum = Math.floor(Math.random()* 10)  
-    //     }
-    //    console.log(randomNum)
-    //     if(fetchGame(randomNum)===true){
-    //         renderGame(randomNum)
-    //     }else{
-    //         randomNumGen()
-    //     }
-    // })
+    randomButton.addEventListener('click', () =>{
+
+        if(!gamesList.hidden || !gameCard.hidden || !addForm.hidden){
+            gamesList.hidden = true
+            gameCard.hidden = true
+            addForm.hidden = true
+            }  
+        console.log(Game.all)
+    })
 
 }); 
