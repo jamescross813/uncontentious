@@ -75,7 +75,7 @@ static all = []
     //    deleteButton = document.createElement('button')
     //    deleteButton.innerHTML = `<type="button" id ="delete-button">Delete Game`
        
-        gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
+        gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, editButton)
     }
 
     // newGamePost(){

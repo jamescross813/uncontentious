@@ -45,9 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
        
     })
 
-    editButton.addEventListener('click', function(){
-        console.log("thing is happening")
-    })
+   
 
     // randomize.addEventListener('click', () =>{
     //     let randomNum
