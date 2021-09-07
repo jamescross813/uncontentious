@@ -4,7 +4,7 @@ class GamesController < ApplicationController
         games = Game.all
         render json: games, 
             except: [:created_at, :updated_at],
-            include: :game_categories
+            include: :notes
             
     end
     
@@ -13,7 +13,7 @@ class GamesController < ApplicationController
         if game 
             render json: game,
             except: [:created_at, :updated_at],
-            include: :game_categories
+            include: :notes
         else
             render json: {message: "Game not found, please try again or add the game to the records"}
         end
@@ -24,6 +24,7 @@ class GamesController < ApplicationController
             if game.save
                 render json: game,
                 except: [:created_at, :updated_at]
+                
             else
                 render json: {message: "Try again!"}
             end
