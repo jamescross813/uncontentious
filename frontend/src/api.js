@@ -18,7 +18,7 @@ class Api{
     };
 
       newGamePost(){
-       console.log("doing stuff in here")
+       
         let inputValue = document.getElementsByClassName("input-text");
         let titleInput = document.getElementById('title-input');
     
