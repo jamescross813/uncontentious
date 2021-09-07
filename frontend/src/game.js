@@ -41,6 +41,7 @@ static all = []
     }
 
     renderGameInfo(){
+        addForm.hidden = true
         gameCard.innerHTML = ""   
         let gameTitle = document.createElement('h2')
         gameTitle.innerHTML = this.gameTitle
@@ -74,7 +75,21 @@ static all = []
     }
 
     static renderEditForm(data){
-        console.log(data)
+    
+        editButton.hidden = true
+        let editForm = document.createElement('form')
+        editForm.innerHTML = `
+        <input type="text" id="title-input" name="game-title" class="input-text" value=${data.game_title}><br>
+                <input type="text" id="player-range-min-input" name="player-range-min" class="input-text" value=${data.min_players}><br>
+                <input type="text" id="player-range-max-input" name="player-range-max" class="input-text" value=${data.max_players}><br>
+                <input type="text" id="game-type-input" name="game-type" class="input-text" value=${data.game_type}><br>
+                <input type="text" id="play-style-input" name="play-style" class="input-text" value=${data.play_style}><br>
+                <input type="text" id="play-time-input" name="play-time" value=${data.max_time}><br>
+                <input type="text" id="category-one" name="game-category-one" value=${data.game_categories[0]}><br>
+                <input type="text" id="category-two" name="game-category-two" value=${data.game_categories[1]}><br>
+                <textarea id="description-input" name="description"  class="input-text" value=${data.description}></textarea><br>
+                <button type="button" id="edit-submit">Edit Game</button>`
+                gameCard.append(editForm)
     }
 
 }
