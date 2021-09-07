@@ -1,7 +1,7 @@
 class Game{
 static all = []
 
-    constructor({game_title, min_players, max_players, description, play_style, game_type, max_time, game_categories}){
+    constructor({game_title, min_players, max_players, description, play_style, game_type, max_time, categories}){
         this.gameTitle = game_title;
         this.minPlayer = min_players;
         this.maxPlayer = max_players;
@@ -9,12 +9,9 @@ static all = []
         this.gameStyle = play_style;
         this.gameType = game_type;
         this.time = max_time;
-        this.categories = [];
+        this.categories = categories;
         
-        game_categories.map(c=>{
-            this.categories.push(c.category_id)
-            
-        })
+        
         console.log(this.categories)
         //     )
         // console.log(game_categories[0].category_id)
@@ -68,8 +65,11 @@ static all = []
     
         let gameType = document.createElement('li')
         gameType.innerHTML = `Game Type: ${this.gameType}`
+
+        let gameCat = document.createElement('li')
+        gameCat.innerHTML = `Category: ${this.categories}`
        
-        gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType)
+        gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
     }
 
     // newGamePost(){
