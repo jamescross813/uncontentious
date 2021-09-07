@@ -32,7 +32,7 @@ class Api{
             game_title: titleInput.value,
             game_categories: [inputValue[6].value, inputValue[7].value]
             };
-          
+            
         let configObj = {
             method: "POST",
             headers:{
