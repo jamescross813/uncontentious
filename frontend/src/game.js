@@ -75,7 +75,9 @@ static all = []
     }
 
     static renderEditForm(data){
-    console.log(data.description)
+    
+    console.log(data.game_categories)
+   
         editButton.hidden = true
         let editForm = document.createElement('form')
         editForm.innerHTML = `
@@ -92,13 +94,17 @@ static all = []
         <label>Max Play Time:</label>        
         <input type="text" id="play-time-input" name="play-time" value=${data.max_time}><br>
         <label>Category</label>        
-        <input type="text" id="category-one" name="game-category-one" value=${data.game_categories[0]}><br>
-        <label>Additional Category:</label>        
-        <input type="text" id="category-two" name="game-category-two" value=${data.game_categories[2]}><br>
+        <input type="text" id="category-one" name="game-category-one" value="${data.game_categories}"><br>
+        // <label>Additional Category:</label>        
+        // <input type="text" id="category-two" name="game-category-two" value=""><br>
         <label>Description:</label>        
         <input type="text" id="description-input" name="description" class="input-text" value=${data.description}></textarea><br>
                 <button type="button" id="edit-submit">Edit Game</button>`
                 gameCard.append(editForm)
     }
 
+    catSplit(cats){ 
+        let splitCats = cats.split("")
+        console.log(splitCats)
+    }
 }
