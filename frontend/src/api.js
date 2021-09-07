@@ -23,14 +23,15 @@ class Api{
         let titleInput = document.getElementById('title-input');
     
         let gameFormData = {
+            game_categories: inputValue[6].value,
             description: inputValue[8].value,
             min_players: inputValue[1].value,
             max_players: inputValue[2].value,
             max_time: inputValue[5].value,
             play_style: inputValue[4].value,
             game_type: inputValue[3].value,
-            game_title: titleInput.value,
-            game_categories: inputValue[6].value
+            game_title: titleInput.value
+            
             };
             
         let configObj = {
@@ -44,7 +45,7 @@ class Api{
     
         fetch(`${basicUrl}/games`, configObj)
         .then(resp => resp.json())
-        .then(data => console.log(data))
+        .then(data => Game.renderGame(data))
       }
       
 }
