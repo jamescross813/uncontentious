@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const gameApi = new Api(`${basicUrl}/games`)
-    
+    // const gameSpecificApi = new Api(`${basicUrl}/games/${id}`)
     // searchFormButton.addEventListener('click', ()=> {
     //     if(!addForm.hidden){
     //         addForm.hidden = !addForm.hidden 
@@ -40,7 +40,29 @@ document.addEventListener("DOMContentLoaded", function() {
     }) 
 
     editButton.addEventListener('click', () =>{
-        console.log("hello there")
+        console.log(Game)
+        
+        // editForm.innerHTML = `
+        // <input type="text" id="title-input" name="game-title" placeholder="Name that game..." class="input-text"
+        //             value=""><br>
+        //         <input type="text" id="player-range-min-input" name="player-range-min" placeholder="Min players.."
+        //             class="input-text" value=""><br>
+        //         <input type="text" id="player-range-max-input" name="player-range-max" placeholder="Max players.."
+        //             class="input-text" value=""><br>
+
+        //         <input type="text" id="game-type-input" name="game-type" placeholder="Card, Board or Tile...?"
+        //             class="input-text" value=""><br>
+        //         <input type="text" id="play-style-input" name="play-style" placeholder="Competitive, Co-op or Party...?"
+        //             class="input-text" value=""><br>
+        //         <input type="text" id="play-time-input" name="play-time" placeholder="10, 20, 30?" class="input-text"
+        //             value=""><br>
+        //         <input type="text" id="category-one" name="game-category-one" placeholder="Category?" class="input-text"
+        //             value=""><br>
+        //         <input type="text" id="category-two" name="game-category-two" placeholder="Category?" class="input-text"
+        //             value=""><br>
+        //         <textarea id="description-input" name="description" placeholder="Description..." class="input-text"
+        //             value=""></textarea><br>
+        //         <button type="button" id="add-submit">Add Game</button>`
     })
 
     // randomize.addEventListener('click', () =>{
