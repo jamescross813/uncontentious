@@ -14,4 +14,4 @@ const basicUrl= "http://localhost:3000"
 const gamesList = document.getElementById('game-list');
 const catCard = document.getElementById('cat-card');
 const gameCard = document.getElementById('game-card');
-const catSection = document.getElementById('cat-options')
+const gameSection = document.getElementById('game-section')
