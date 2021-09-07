@@ -25,6 +25,7 @@ class Game{
             let gameTitle = document.createElement('h2')
             gameTitle.innerHTML = this.gameTitle
             gamesList.append(gameTitle)
+            gameTitle.name = this.id
         }
         
         static renderGame(data){
