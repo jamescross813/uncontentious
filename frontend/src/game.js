@@ -12,7 +12,7 @@ static all = []
         this.categories = categories;
         
         
-        console.log(this.categories)
+        console.log(categories)
         //     )
         // console.log(game_categories[0].category_id)
         // this.categories.push(game_categories)
@@ -36,7 +36,7 @@ static all = []
     
     static renderGame(data){
         const indGame = new Game(data)
-        console.log(data)
+        console.log(indGame)
         indGame.renderGameInfo()
         
     }
