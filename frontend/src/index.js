@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", function() {
        addForm.reset() 
     }) 
 
+    editButton.addEventListener('click', () =>{
+        console.log("hello there")
+    })
+
     // randomize.addEventListener('click', () =>{
     //     let randomNum
     //     function randomNumGen(){
