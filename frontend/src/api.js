@@ -17,28 +17,8 @@ class Api{
         .then(data =>Game.renderGame(data))
     };
 
-    fetchCategory(id) {
-        fetch(`${this.basicUrl}/${id}`)
-        .then(resp =>resp.json())
-        .then(data =>Category.renderCategory(data))
-      }
-
-    fetchCategories() {
-      catCard.innerHTML = ""
-        fetch(this.basicUrl)
-        .then(resp =>resp.json())
-        .then(data =>Category.renderCategories(data))
-      }
-
-      fetchCategoriesForForm() {
-        catSection.innerHTML = ""
-          fetch(this.basicUrl)
-          .then(resp =>resp.json())
-          .then(data =>Category.renderCategoriesForForm(data))
-        }
-
       newGamePost(){
-        // let catInput = document.getElementsByClassName("cat-input")
+       
         let inputValue = document.getElementsByClassName("input-text");
         let titleInput = document.getElementById('title-input');
     

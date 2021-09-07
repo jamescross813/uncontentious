@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const gameApi = new Api(`${basicUrl}/games`)
-    const catApi = new Api(`${basicUrl}/categories`)
+    
     // searchFormButton.addEventListener('click', ()=> {
     //     if(!addForm.hidden){
     //         addForm.hidden = !addForm.hidden 
@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
         gameApi.fetchGames()
     })
 
-    catButton.addEventListener('click', () =>{
-        gamesList.hidden = !gamesList.hidden
-        catApi.fetchCategories()
-    })
+    // catButton.addEventListener('click', () =>{
+    //     gamesList.hidden = !gamesList.hidden
+    //     catApi.fetchCategories()
+    // })
 
     // searchButton.addEventListener('click', function(){
     //     searchGames()
