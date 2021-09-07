@@ -1,19 +1,8 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const gameApi = new Api(`${basicUrl}/games`)
-    // const gameSpecificApi = new Api(`${basicUrl}/games/${id}`)
-    // searchFormButton.addEventListener('click', ()=> {
-    //     if(!addForm.hidden){
-    //         addForm.hidden = !addForm.hidden 
-    //        console.log("done")
-    //     } 
-    //     searchForm.hidden = !searchForm.hidden
-    // });
 
     addFormButton.addEventListener('click', function () {
-        // if(!searchForm.hidden){
-        //     searchForm.hidden = !searchForm.hidden 
-        // } 
         if(!gamesList.hidden){
             gamesList.hidden = !gamesList.hidden
         }
@@ -22,21 +11,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     viewButton.addEventListener('click', () =>{
         if(!gameCard.hidden || !addForm.hidden){
-            gameCard.hidden = !gameCard.hidden
-            addForm.hidden = !addForm.hidden
+            gameCard.hidden = true
+            addForm.hidden = true
         }
         gamesList.hidden = !gamesList.hidden
         gameApi.fetchGames()
     })  
 
-    // searchButton.addEventListener('click', function(){
-    //     searchGames()
-    // })
-
-    addSubmit.addEventListener('click', function(){
-       if(!gamesList.hidden){
-        gamesList.hidden = !gamesList.hidden
-        }    
+    addSubmit.addEventListener('click', function(){   
        gameApi.newGamePost()
        gameSection.hidden = !gameSection.hidden
        addForm.reset() 
@@ -52,15 +34,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if(!gamesList.hidden || !addForm.hidden){
             gamesList.hidden = true
-            // gameCard.hidden = true
             addForm.hidden = true
             }  
-            let num = Math.floor(Math.random()*10)
 
+            let num = Math.floor(Math.random()*10)
             currentGameApi = new Api(`${basicUrl}/games/${num}`)
             currentGameApi.fetchGame()
             
-
     })
 
 }); 
