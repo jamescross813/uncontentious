@@ -50,16 +50,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     randomButton.addEventListener('click', () =>{
 
-        if(!gamesList.hidden || !gameCard.hidden || !addForm.hidden){
+        if(!gamesList.hidden || !addForm.hidden){
             gamesList.hidden = true
-            gameCard.hidden = true
+            // gameCard.hidden = true
             addForm.hidden = true
             }  
             let num = Math.floor(Math.random()*10)
 
             currentGameApi = new Api(`${basicUrl}/games/${num}`)
             currentGameApi.fetchGame()
-            console.log(`${basicUrl}/games/${num}`)
+            
 
     })
 
