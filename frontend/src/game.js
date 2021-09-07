@@ -42,7 +42,7 @@ static all = []
 
     getCategories(){
         this.categories.map(c=>
-            console.log(c))
+            cat = c)
     }
 
     renderGameInfo(){
@@ -66,8 +66,9 @@ static all = []
         gameType.innerHTML = `Game Type: ${this.gameType}`
 
         let gameCat = document.createElement('li')
-        this.categories.getCategories()
-        // gameCat.innerHTML = `Category: ${this.categories}`
+        this.categories.map(c=>
+            gameCat.innerHTML = `Category: ${this.categories}`)
+        
        
         gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
     }
