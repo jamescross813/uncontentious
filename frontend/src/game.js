@@ -69,8 +69,9 @@ static all = []
         this.categories.map(c=>
             gameCat.innerHTML = `Category: ${this.categories}`)
         
-       
-        gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
+       let editButton = document.createElement('button')
+       editButton.innerHTML = `<type="button" id ="edit-button">Edit Game`
+        gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, editButton)
     }
 
     // newGamePost(){
