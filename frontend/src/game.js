@@ -69,11 +69,12 @@ static all = []
         this.categories.map(c=>
             gameCat.innerHTML = `Category: ${this.categories}`)
         
-       let editButton = document.createElement('button')
-       editButton.innerHTML = `<type="button" id ="edit-button">Edit Game`
+        let editButton = document.createElement('button')
+        editButton.innerHTML = `<type="button" id ="edit-button">Edit Game`
 
-       let deleteButton = document.createElement('button')
-       deleteButton.innerHTML = `<type="button" id ="delete-button">Delete Game`
+        let deleteButton = document.createElement('button')
+        deleteButton.innerHTML = `<type="button" id ="delete-button">Delete Game`
+
         gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, editButton, deleteButton)
     }
 
