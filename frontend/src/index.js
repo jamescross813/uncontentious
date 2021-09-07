@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function() {
        
     })
 
-    // titleOne.addEventListener('mouseover', function(){
-    //     console.log("thing is happening")
-    // })
+    editButton.addEventListener('click', function(){
+        console.log("thing is happening")
+    })
 
     // randomize.addEventListener('click', () =>{
     //     let randomNum
