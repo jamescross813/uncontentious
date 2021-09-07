@@ -71,7 +71,10 @@ static all = []
         
        let editButton = document.createElement('button')
        editButton.innerHTML = `<type="button" id ="edit-button">Edit Game`
-        gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, editButton)
+
+       let deleteButton = document.createElement('button')
+       deleteButton.innerHTML = `<type="button" id ="delete-button">Delete Game`
+        gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, editButton, deleteButton)
     }
 
     // newGamePost(){
