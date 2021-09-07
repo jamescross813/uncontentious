@@ -14,9 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // if(!searchForm.hidden){
         //     searchForm.hidden = !searchForm.hidden 
         // } 
-        addForm.hidden = !addForm.hidden
-       
-        
+        addForm.hidden = !addForm.hidden       
     })
 
     viewButton.addEventListener('click', () =>{
@@ -25,9 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         gamesList.hidden = !gamesList.hidden
         gameApi.fetchGames()
-    })
-
-    
+    })  
 
     // searchButton.addEventListener('click', function(){
     //     searchGames()
@@ -40,12 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
               
        gameApi.newGamePost()
        addForm.reset() 
-       gameCard.hidden = !gameCard.hidden
-      
-       
-    })
-
-   
+    }) 
 
     // randomize.addEventListener('click', () =>{
     //     let randomNum
@@ -58,9 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
     //     }else{
     //         randomNumGen()
     //     }
-        
-
     // })
-    
 
 }); 
