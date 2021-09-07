@@ -32,7 +32,7 @@ class Api{
             game_title: titleInput.value,
             categories: [inputValue[6].value, inputValue[7].value]
             };
-            console.log(gameFormData)
+            
         let configObj = {
             method: "POST",
             headers:{
@@ -44,7 +44,7 @@ class Api{
     
         fetch(`${basicUrl}/games`, configObj)
         .then(resp => resp.json())
-        .then(data => console.log(data))
+        .then(data => Game.renderGame(data))
       }
       
 }
