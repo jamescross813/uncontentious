@@ -18,18 +18,19 @@ class Api{
     };
 
       newGamePost(){
-       
+       console.log("doing stuff in here")
         let inputValue = document.getElementsByClassName("input-text");
         let titleInput = document.getElementById('title-input');
     
         let gameFormData = {
-            description: inputValue[3].value,
+            description: inputValue[8].value,
             min_players: inputValue[1].value,
             max_players: inputValue[2].value,
-            max_time: inputValue[7].value,
-            play_style: inputValue[6].value,
-            game_type: inputValue[4].value,
-            game_title: titleInput.value
+            max_time: inputValue[5].value,
+            play_style: inputValue[4].value,
+            game_type: inputValue[3].value,
+            game_title: titleInput.value,
+            game_categories: [inputValue[6].value, inputValue[7].value]
             };
     
         let configObj = {
