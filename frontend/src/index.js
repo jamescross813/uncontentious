@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
        }
               
        gameApi.newGamePost()
+       gameSection.hidden = !gameSection.hidden
        addForm.reset() 
     }) 
 
