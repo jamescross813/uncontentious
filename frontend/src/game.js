@@ -39,7 +39,7 @@ class Game{
         }
     
         renderGameInfo(){
-            addForm.hidden = true
+                       
             gameCard.innerHTML = ""   
             let gameTitle = document.createElement('h2')
             gameTitle.innerHTML = this.gameTitle
