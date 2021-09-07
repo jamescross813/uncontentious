@@ -69,7 +69,7 @@ static all = []
             gameCat.innerHTML = `Category: ${this.categories}`)
         
         // let editButton = document.createElement('button')
-        // editButton.innerHTML = `<type="button" id ="edit-button">Edit Game`
+        editButton.innerHTML = `<type="button" id ="edit-button" name="${this.id}">Edit Game`
 
     //    deleteButton = document.createElement('button')
     //    deleteButton.innerHTML = `<type="button" id ="delete-button">Delete Game`
