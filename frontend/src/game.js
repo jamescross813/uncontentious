@@ -9,13 +9,12 @@ static all = []
         this.gameStyle = play_style;
         this.gameType = game_type;
         this.time = max_time;
-        this.categories = game_categories;
-        
-        
-        console.log(this.categories)
+        this.categories = [];
+    
         //     )
         // console.log(game_categories[0].category_id)
-        // this.categories.push(game_categories)
+        this.categories.push(game_categories)
+
         Game.all.push(this)
         
     }  
@@ -67,7 +66,8 @@ static all = []
         gameType.innerHTML = `Game Type: ${this.gameType}`
 
         let gameCat = document.createElement('li')
-        gameCat.innerHTML = `Category: ${this.categories}`
+        this.categories.getCategories()
+        // gameCat.innerHTML = `Category: ${this.categories}`
        
         gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
     }

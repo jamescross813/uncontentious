@@ -23,7 +23,7 @@ class Api{
         let titleInput = document.getElementById('title-input');
     
         let gameFormData = {
-            game_categories: inputValue[6].value,
+            game_categories: `${inputValue[6].value}, ${inputValue[7].value}`,
             description: inputValue[8].value,
             min_players: inputValue[1].value,
             max_players: inputValue[2].value,
