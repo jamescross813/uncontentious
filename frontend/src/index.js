@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // if(!searchForm.hidden){
         //     searchForm.hidden = !searchForm.hidden 
         // } 
+        if(!gamesList.hidden){
+            gamesList.hidden = !gamesList.hidden
+        }
         addForm.hidden = !addForm.hidden       
     })
 
