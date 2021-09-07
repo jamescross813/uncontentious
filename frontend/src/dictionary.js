@@ -15,3 +15,5 @@ const gamesList = document.getElementById('game-list');
 const catCard = document.getElementById('cat-card');
 const gameCard = document.getElementById('game-card');
 const gameSection = document.getElementById('game-section')
+
+const title = document.getElementsByTagName("h2")
