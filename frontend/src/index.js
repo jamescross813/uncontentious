@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
               
        gameApi.newGamePost()
        addForm.reset() 
+       gameCard.hidden = !gameCard.hidden
       
        
     })
