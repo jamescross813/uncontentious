@@ -10,11 +10,10 @@ class Api{
         .then(data =>Game.renderGames(data))
       };
     
-    fetchGame(id) {
-        // gameCard.innerHTML = ""
-        fetch(`${this.basicUrl}/${id}`)
-        .then(resp =>resp.json())
-        .then(data =>Game.renderGame(data))
+    fetchGame() {
+      fetch(this.basicUrl)
+      .then(resp =>resp.json())
+      .then(data =>Game.renderGame(data))
     };
 
     fetchEditGame() {
