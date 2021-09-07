@@ -63,7 +63,7 @@ class Game{
             let gameCat = document.createElement('li')
             this.categories.map(c=>
                 gameCat.innerHTML = `Category: ${this.categories}`)
-            
+            editButton.hidden = false
             editButton.name = `${this.id}`
         //    deleteButton = document.createElement('button')
         //    deleteButton.innerHTML = `<type="button" id ="delete-button">Delete Game`
