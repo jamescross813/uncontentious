@@ -40,7 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }) 
 
     editButton.addEventListener('click', () =>{
-        console.log(editButton)
+       let game_id = editButton.name
+       const currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
+        currentGameApi.fetchEditGame()
         
         // editForm.innerHTML = `
         // <input type="text" id="title-input" name="game-title" placeholder="Name that game..." class="input-text"

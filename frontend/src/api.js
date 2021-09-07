@@ -17,6 +17,13 @@ class Api{
         .then(data =>Game.renderGame(data))
     };
 
+    fetchEditGame(id) {
+      // gameCard.innerHTML = ""
+      fetch(`${this.basicUrl}/${id}`)
+      .then(resp =>resp.json())
+      .then(data =>console.log(data))
+  };
+
       newGamePost(){
        
         let inputValue = document.getElementsByClassName("input-text");
