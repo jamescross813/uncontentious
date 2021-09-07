@@ -27,10 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         gameApi.fetchGames()
     })
 
-    // catButton.addEventListener('click', () =>{
-    //     gamesList.hidden = !gamesList.hidden
-    //     catApi.fetchCategories()
-    // })
+    
 
     // searchButton.addEventListener('click', function(){
     //     searchGames()
@@ -43,6 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
               
        gameApi.newGamePost()
        addForm.reset() 
+      
+       
     })
 
     // titleOne.addEventListener('mouseover', function(){
