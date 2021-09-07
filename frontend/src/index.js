@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     editButton.addEventListener('click', () =>{
        let game_id = editButton.name
-       const currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
+       let currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
         currentGameApi.fetchEditGame()
     })
 
@@ -55,7 +55,12 @@ document.addEventListener("DOMContentLoaded", function() {
             gameCard.hidden = true
             addForm.hidden = true
             }  
-        console.log(Game.all)
+            let num = Math.floor(Math.random()*10)
+
+            currentGameApi = new Api(`${basicUrl}/games/${num}`)
+            currentGameApi.fetchGame()
+            console.log(`${basicUrl}/games/${num}`)
+
     })
 
 }); 
