@@ -28,12 +28,13 @@ document.addEventListener("DOMContentLoaded", function() {
        let game_id = editButton.name
        let currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
         currentGameApi.fetchEditGame()
+
+       
+
+        
     })
 
-    editSubmit.addEventListener('click', ()=>{
-        currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
-        currentGameApi.editGamePatch()
-    })
+    
 
     randomButton.addEventListener('click', () =>{
 
