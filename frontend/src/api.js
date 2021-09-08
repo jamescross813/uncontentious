@@ -56,7 +56,7 @@ class Api{
       }
 
       editGamePatch(){
-       console.log("clicked")
+       event.preventDefault()
         let inputValue = document.getElementsByClassName("input-text");
         let titleInput = document.getElementById('title-input');
     
@@ -81,9 +81,8 @@ class Api{
             body: JSON.stringify(gameFormData)
         };
     
-        fetch(`${basicUrl}/games`, configObj)
-        .then(resp => resp.json())
-        .then(data => Game.renderGame(data))
+        fetch(`${this.basicUrl}`, configObj)
+        .then(resp => console.log(resp))
       }
 
       
