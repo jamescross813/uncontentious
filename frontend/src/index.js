@@ -43,6 +43,12 @@ document.addEventListener("DOMContentLoaded", function() {
             
     })
 
-    
+   
 
 }); 
+ // for(let i = 0; i<title.length;i++){
+    let phase = document.getElementById("1")
+    console.log(phase)
+    // phase.addEventListener("mouseover", ()=>{
+    // console.log("thing is working")
+// })
