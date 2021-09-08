@@ -11,7 +11,10 @@ class Game{
             this.time = max_time;
             this.categories = [];
             this.id = id
+
+            this.categories.push(game_categories)
             Game.all.push(this)
+            console.log(this)
         }  
     
         static renderGames(data){ 
@@ -34,11 +37,6 @@ class Game{
         static renderGame(data){
             const indGame = new Game(data)
             indGame.renderGameInfo()
-        }
-    
-        getCategories(){
-            this.categories.map(c=>
-                cat = c)
         }
     
         renderGameInfo(){
