@@ -15,11 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             addForm.hidden = true
         }
         gamesList.hidden = !gamesList.hidden
-        gameApi.fetchGames()
-        
-    
-        
-    
+        gameApi.fetchGames()   
     })  
 
     addSubmit.addEventListener('click', function(){   
@@ -34,7 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
         currentGameApi.fetchEditGame()
     })
 
-    
+    editSubmit.addEventListener('click', ()=>{
+        currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
+        currentGameApi.editGamePost()
+    })
 
     randomButton.addEventListener('click', () =>{
 
