@@ -50,8 +50,4 @@ document.addEventListener("DOMContentLoaded", function() {
    
 
 }); 
- // for(let i = 0; i<title.length;i++){
-    
-    // phase.addEventListener("mouseover", ()=>{
-    // console.log("thing is working")
-// })
+ 

@@ -22,11 +22,14 @@ class Game{
         }
     
         renderTitles(){
+            // let id = parseInt(this.id, 10)
             let gameTitle = document.createElement('span')
             gameTitle.innerHTML = `<a href ="${this.gameTitle}">${this.gameTitle}<br>`
             gamesList.append(gameTitle)
-            gameTitle.id = `title-${this.id}`
-            
+            gameTitle.id = `title-${this.id}` 
+            title[this.id-1].addEventListener("mouseover", ()=>{
+                
+            })
         }
         
         static renderGame(data){
