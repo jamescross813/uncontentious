@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
         currentGameApi.fetchEditGame()
     })
 
+    
+
     randomButton.addEventListener('click', () =>{
 
         if(!gamesList.hidden || !addForm.hidden){

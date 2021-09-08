@@ -5,6 +5,7 @@ const searchButton = document.getElementById("submit-search")
 const addSubmit = document.getElementById("add-submit")
 const editButton = document.getElementById("edit-game")
 const randomButton = document.getElementById("randomize")
+const editSubmit = document.getElementById('edit-submit')
 
 const searchForm = document.getElementById("search-games");
 const addForm = document.getElementById("add-game-form");
