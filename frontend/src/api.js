@@ -55,7 +55,7 @@ class Api{
         .then(data => Game.renderGame(data))
       }
 
-      editGamePost(){
+      editGamePatch(){
        
         let inputValue = document.getElementsByClassName("input-text");
         let titleInput = document.getElementById('title-input');

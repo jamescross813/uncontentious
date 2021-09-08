@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     editSubmit.addEventListener('click', ()=>{
         currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
-        currentGameApi.editGamePost()
+        currentGameApi.editGamePatch()
     })
 
     randomButton.addEventListener('click', () =>{
