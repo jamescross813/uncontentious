@@ -98,12 +98,12 @@ class Game{
                     <button type="button" id="edit-submit">Edit Game</button>`
             gameCard.append(editForm)
 
-            // const editSubmit = document.getElementById('edit-submit')
-            // editSubmit.addEventListener('click', ()=>{
-              
-            //     currentGameApi = new Api(`${basicUrl}/games/${data.id}`)
-            //     currentGameApi.editGamePatch()
-            // })
+            const editSubmit = document.getElementById('edit-submit')
+            editSubmit.addEventListener('click', ()=>{
+                console.log("working this far")
+         let currentGameApi = new Api(`${basicUrl}/games/${data.id}`)
+          currentGameApi.editGamePatch()
+      })
         }
     
     }

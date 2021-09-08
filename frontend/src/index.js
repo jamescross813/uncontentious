@@ -28,10 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
        let game_id = editButton.name
        let currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
         currentGameApi.fetchEditGame()
-
-       
-
-        
     })
 
     
