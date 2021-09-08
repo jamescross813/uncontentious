@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         gamesList.hidden = !gamesList.hidden
         gameApi.fetchGames()
+        let phase = document.getElementById("1")
+    console.log(phase)
     })  
 
     addSubmit.addEventListener('click', function(){   
@@ -42,13 +44,12 @@ document.addEventListener("DOMContentLoaded", function() {
             currentGameApi.fetchGame()
             
     })
-
+    
    
 
 }); 
  // for(let i = 0; i<title.length;i++){
-    let phase = document.getElementById("1")
-    console.log(phase)
+    
     // phase.addEventListener("mouseover", ()=>{
     // console.log("thing is working")
 // })
