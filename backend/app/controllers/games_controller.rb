@@ -32,7 +32,7 @@ class GamesController < ApplicationController
     end
 
     def update
-        game = Game.find(params[:id])
+        game = Game.find_by(id: params[:id])
         game.update(game_params)
         if game.save
             render json: game,

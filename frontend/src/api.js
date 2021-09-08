@@ -38,7 +38,6 @@ class Api{
             play_style: inputValue[4].value,
             game_type: inputValue[3].value,
             game_title: titleInput.value
-            
             };
             
         let configObj = {
@@ -69,8 +68,8 @@ class Api{
             play_style: inputValue[4].value,
             game_type: inputValue[3].value,
             game_title: titleInput.value
-            
             };
+            console.log(inputValue)
             
         let configObj = {
             method: "PATCH",
@@ -82,7 +81,8 @@ class Api{
         };
     
         fetch(`${this.basicUrl}`, configObj)
-        .then(resp => console.log(resp))
+        .then(resp => resp.json())
+        .then(data => console.log(data))
       }
 
       
