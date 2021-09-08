@@ -25,7 +25,7 @@ class Game{
             let gameTitle = document.createElement('h2')
             gameTitle.innerHTML = this.gameTitle
             gamesList.append(gameTitle)
-            gameTitle.id = this.id
+            gameTitle.id = `title-${this.id}`
             
         }
         
