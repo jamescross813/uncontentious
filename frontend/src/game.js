@@ -9,19 +9,24 @@ class Game{
             this.gameStyle = play_style;
             this.gameType = game_type;
             this.time = max_time;
-            this.categories = [];
+            this.categories = []
             this.id = id
-
+           
             this.categories.push(game_categories)
             Game.all.push(this)
-            console.log(this)
+            
         }  
-    
+
         static renderGames(data){ 
             return data.map(r => {
                 const newGame = new Game(r)
                 newGame.renderTitles()
             })
+        }
+
+        static renderGame(data){
+            const indGame = new Game(data)
+            indGame.renderGameInfo()
         }
     
         renderTitles(){
@@ -34,11 +39,6 @@ class Game{
             })
         }
         
-        static renderGame(data){
-            const indGame = new Game(data)
-            indGame.renderGameInfo()
-        }
-    
         renderGameInfo(){
             addForm.hidden = true
             
@@ -62,7 +62,7 @@ class Game{
             gameType.innerHTML = `Game Type: ${this.gameType}`
     
             let gameCat = document.createElement('li')
-            console.log(data)
+            
             gameCat.innerHTML = `Category: ${this.categories}`
             editButton.hidden = false
             editButton.name = `${this.id}`
