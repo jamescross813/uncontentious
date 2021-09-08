@@ -16,8 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         gamesList.hidden = !gamesList.hidden
         gameApi.fetchGames()
-        let phase = document.getElementById("1")
-    console.log(phase)
+        
+    
+        
+    
     })  
 
     addSubmit.addEventListener('click', function(){   

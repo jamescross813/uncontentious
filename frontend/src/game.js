@@ -22,8 +22,8 @@ class Game{
         }
     
         renderTitles(){
-            let gameTitle = document.createElement('h2')
-            gameTitle.innerHTML = this.gameTitle
+            let gameTitle = document.createElement('span')
+            gameTitle.innerHTML = `<a href ="${this.gameTitle}">${this.gameTitle}<br>`
             gamesList.append(gameTitle)
             gameTitle.id = `title-${this.id}`
             
