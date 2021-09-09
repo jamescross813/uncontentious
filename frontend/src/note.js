@@ -5,15 +5,20 @@ class Note{
     }
 
     static renderNoteForm(){
-        let user =document.getElementById("user-welcome")
-        let text = user.innerText
-        let splitText =text.split(" ")
-        let username = splitText[1]
-        console.log(user)
+        // let username
+        // let user = document.getElementById("user-welcome")
+        // if (!user === false){        
+        //     let text = user.innerText
+        //     let splitText = text.split(" ")
+        //     username = splitText[1]
+        // }else{
+        //     username = ""
+        // }
+        // console.log(username)
         let noteForm = document.createElement('form')
         noteForm.innerHTML = `
         <label>Username</label>
-        <input type="text" id="note-input" value="${username}"></input>
+        <input type="text" id="note-input" value=""></input>
         <label>Note</label>
         <input type="text" id="note-input"></input>
         <button type="button" id="note-submit">Submit</button>
