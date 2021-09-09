@@ -128,7 +128,7 @@ class Api{
     
         fetch(`${this.basicUrl}`, configObj)
         .then(resp => resp.json())
-        .then(data => console.log(data))
+        .then(data => renderNote(data))
       }
 
 
