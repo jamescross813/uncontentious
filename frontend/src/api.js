@@ -102,12 +102,12 @@ class Api{
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify(gameFormData)
+            body: JSON.stringify(userFormData)
         };
     
         fetch(`${this.basicUrl}`, configObj)
         .then(resp => resp.json())
-        .then(data => Game.renderGame(data))
+        .then(data => console.log(data))
       }
 
       
