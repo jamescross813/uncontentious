@@ -27,6 +27,7 @@ class Game{
         static renderGame(data){
             const indGame = new Game(data)
             indGame.renderGameInfo()
+            
         }
     
         renderTitles(){
@@ -40,8 +41,9 @@ class Game{
         }
         
         renderGameInfo(){
+            console.log("this")
             addForm.hidden = true
-            gameCard.hidden =false
+            gameSection.hidden = !gameSection.hidden
             gameCard.innerHTML = ""   
             let gameTitle = document.createElement('h2')
             gameTitle.innerHTML = this.gameTitle
@@ -75,7 +77,7 @@ class Game{
         static renderEditForm(data){
             console.log(data)
             editButton.hidden = true
-            gameCard.hidden = !gameCard.hidden
+            gameSection.hidden = !gameSection.hidden
             let editForm = document.createElement('form')
             editForm.innerHTML = `
             <label>Title:</label>

@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     viewButton.addEventListener('click', () =>{
-        if(!gameCard.hidden || !addForm.hidden){
-            gameCard.hidden = true
+        if(!gameSection.hidden || !addForm.hidden){
+            gameSection.hidden = true
             addForm.hidden = true
         }
         gamesList.hidden = !gamesList.hidden
@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
        let currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
         currentGameApi.fetchEditGame()
     })
-
-    
 
     randomButton.addEventListener('click', () =>{
 

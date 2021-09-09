@@ -11,6 +11,7 @@ class Api{
       };
     
     fetchGame() {
+      
       fetch(this.basicUrl)
       .then(resp =>resp.json())
       .then(data =>Game.renderGame(data))
