@@ -75,6 +75,7 @@ class Game{
         static renderEditForm(data){
             console.log(data)
             editButton.hidden = true
+            gameCard.hidden = !gameCard.hidden
             let editForm = document.createElement('form')
             editForm.innerHTML = `
             <label>Title:</label>
