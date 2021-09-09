@@ -113,8 +113,7 @@ class Api{
        
         let noteFormData = {
            game_id: 1,
-           content: contentInput.value,
-           user_id: 1
+           content: contentInput.value
             };
             
         let configObj = {
