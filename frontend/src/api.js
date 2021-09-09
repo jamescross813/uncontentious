@@ -111,9 +111,10 @@ class Api{
         let usernameInput = document.getElementById("username-input");
         let contentInput = document.getElementById("note-content-input")
        
-        let userFormData = {
+        let noteFormData = {
            game_id: 1,
-           content: contentInput.value
+           content: contentInput.value,
+           user_id: 1
             };
             
         let configObj = {
@@ -122,7 +123,7 @@ class Api{
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify(userFormData)
+            body: JSON.stringify(noteFormData)
         };
     
         fetch(`${this.basicUrl}`, configObj)
