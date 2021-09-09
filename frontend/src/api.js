@@ -109,10 +109,11 @@ class Api{
       newNotePost(){
        
         let usernameInput = document.getElementById("username-input");
-        let contentInput = document.getElementById("note-content-input")
+        let contentInput = document.getElementById("note-content-input");
+        let gameId = gameCard.id  
        
         let noteFormData = {
-           game_id: 1,
+           game_id: gameId,
            content: contentInput.value
             };
             
