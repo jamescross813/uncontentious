@@ -41,9 +41,11 @@ class Game{
         }
         
         renderGameInfo(){
-            console.log("this")
+            if (gameSection.hidden){
+                gameSection.hidden = !gameSection.hidden
+            }
             addForm.hidden = true
-            gameSection.hidden = !gameSection.hidden
+            
             gameCard.innerHTML = ""   
             let gameTitle = document.createElement('h2')
             gameTitle.innerHTML = this.gameTitle
@@ -64,14 +66,19 @@ class Game{
             gameType.innerHTML = `Game Type: ${this.gameType}`
     
             let gameCat = document.createElement('li')
+
+            let noteButton = document.createElement('button')
+            noteButton.innerHTML = `<type = "button" id = 'add-note'>Add Note`
             
             gameCat.innerHTML = `Category: ${this.categories}`
             editButton.hidden = false
             editButton.name = `${this.id}`
-        //    deleteButton = document.createElement('button')
-        //    deleteButton.innerHTML = `<type="button" id ="delete-button">Delete Game`
            
-            gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
+            gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, noteButton)
+
+            noteButton.addEventListener('click', ()=>{
+                Note.renderNoteFrom()
+            })
         }
     
         static renderEditForm(data){
