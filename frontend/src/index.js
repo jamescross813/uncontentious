@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             let signUpForm = document.getElementById("sign-up-form")
             signUpForm.reset()
             signUpForm.remove()
+            
         })
     })
     

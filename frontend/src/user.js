@@ -1,9 +1,7 @@
 class User{
 
-    constructor({username, password_digest, id}){
+    constructor({username, }){
         this.username = username;
-        this.password_digest = password_digest;
-        this.id = id
     }
 
     static renderForm(){
@@ -11,8 +9,6 @@ class User{
         signUpForm.innerHTML = `
         <label>Username:</label>
         <input type="text" id="username-input" value="">
-        <label>Password:</label>
-        <input type="password" id="user_password" value=""></input>
         <button type="button" id="login-submit">Submit</button>`
         signUpForm.id = "sign-up-form"
         navBar.append(signUpForm)
