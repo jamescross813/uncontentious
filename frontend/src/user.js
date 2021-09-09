@@ -18,7 +18,6 @@ class User{
         
         const userInfo = new User(data)
         
-        loginButton.hidden = true
         signUpButton.hidden = true
         let intro = document.createElement('h2')
         intro.innerHTML = `Welcome ${data.username}`
