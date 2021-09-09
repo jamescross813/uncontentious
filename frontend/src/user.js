@@ -14,6 +14,7 @@ class User{
         <label>Password:</label>
         <input type="password" id="user_password" value=""></input>
         <button type="button" id="login-submit">Submit</button>`
+        signUpForm.id = "sign-up-form"
         navBar.append(signUpForm)
     }
 
