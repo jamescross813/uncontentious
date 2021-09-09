@@ -18,8 +18,6 @@ class Api{
     };
 
     fetchEditGame() {
-      // gameCard.innerHTML = ""
-      // console.log(this.basicUrl)
       fetch(this.basicUrl)
       .then(resp =>resp.json())
       .then(data =>Game.renderEditForm(data))
@@ -58,7 +56,6 @@ class Api{
       editGamePatch(){
        event.preventDefault()
         let editInputValue = document.getElementsByClassName("input-text-edit");
-        // let titleInput = document.getElementById('title-input');
     
         let gameFormData = {
             game_categories: `${editInputValue[6].value}, ${editInputValue[7].value}`,
