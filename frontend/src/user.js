@@ -5,13 +5,14 @@ class User{
         this.password_digest = password_digst;
     }
 
-    renderForm(){
+    static renderForm(){
         let signUpForm = document.createElement("form")
-        signUpFrom.innerHTML = `
+        signUpForm.innerHTML = `
         <label>Username:</label>
-        <input type="text" id="username-input" value="${this.username}">
+        <input type="text" id="username-input" value="">
         <label>Password:</label>
         <input type="password" id="user_password" value=""></input>
         <button type="button" id="login-submit">Submit</button>`
+        navBar.append(signUpForm)
     }
 }
