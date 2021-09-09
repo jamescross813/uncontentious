@@ -42,6 +42,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
             currentGameApi.fetchGame()
             
     })
+
+    signUpButton.addEventListener('click', ()=>{
+        User.renderForm()
+    })
     
    
 
