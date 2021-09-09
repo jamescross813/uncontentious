@@ -45,7 +45,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     signUpButton.addEventListener('click', ()=>{
         User.renderForm()
+        
+        const signUpSubmit = document.getElementById("login-submit")
+        signUpSubmit.addEventListener('click', ()=>{
+            console.log("this works")
+        })
     })
+    
     
    
 
