@@ -89,11 +89,10 @@ class Api{
       newUserPost(){
        
         let usernameInput = document.getElementById("username-input");
-        let passwordInput = document.getElementById("user_password");
+        ;
     
         let userFormData = {
-           username: usernameInput.value,
-           password_digest: passwordInput.value
+           username: usernameInput.value
             };
             
         let configObj = {
