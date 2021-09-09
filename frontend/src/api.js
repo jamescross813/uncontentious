@@ -86,7 +86,7 @@ class Api{
       newUserPost(){
        
         let usernameInput = document.getElementById("username-input");
-        ;
+        
     
         let userFormData = {
            username: usernameInput.value
@@ -105,6 +105,31 @@ class Api{
         .then(resp => resp.json())
         .then(data => User.renderIntro(data))
       }
+
+      newNotePost(){
+       
+        let usernameInput = document.getElementById("username-input");
+        let contentInput = document.getElementById("note-content-input")
+       
+        let userFormData = {
+           game_id: 1,
+           content: contentInput.value
+            };
+            
+        let configObj = {
+            method: "POST",
+            headers:{
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(userFormData)
+        };
+    
+        fetch(`${this.basicUrl}`, configObj)
+        .then(resp => resp.json())
+        .then(data => console.log(data))
+      }
+
 
       
 }

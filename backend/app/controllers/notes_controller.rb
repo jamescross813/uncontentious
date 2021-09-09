@@ -28,7 +28,7 @@ class NotesController < ApplicationController
         note = Note.find(params[:id])
         note.update(note_params)
         if note.save
-            render json: note,
+            render json: note
         else
             render json: {message: "Unable to edit game"}
         end

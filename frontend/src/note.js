@@ -18,11 +18,18 @@ class Note{
         let noteForm = document.createElement('form')
         noteForm.innerHTML = `
         <label>Username</label>
-        <input type="text" id="note-input" value=""></input>
+        <input type="text" id="username-input" value=""></input>
         <label>Note</label>
-        <input type="text" id="note-input"></input>
+        <input type="text" id="note-content-input"></input>
         <button type="button" id="note-submit">Submit</button>
         `
         gameCard.append(noteForm)
+
+        const noteSubmit = document.getElementById("note-submit")
+
+        noteSubmit.addEventListener('click', ()=>{
+            const noteApi = new Api(`${basicUrl}/notes`)
+            noteApi.newNotePost()
+        })
     }
 }
