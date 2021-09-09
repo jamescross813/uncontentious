@@ -1,6 +1,6 @@
 class User{
 
-    constructor({username, }){
+    constructor({username}){
         this.username = username;
     }
 
@@ -22,5 +22,6 @@ class User{
         let intro = document.createElement('h2')
         intro.innerHTML = `Welcome ${data.username}`
         navBar.append(intro)
+        return userInfo
     }
 }
