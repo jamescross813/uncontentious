@@ -46,7 +46,9 @@ class Game{
             }
             addForm.hidden = true
             
-            gameCard.innerHTML = ""   
+            gameCard.innerHTML = "" 
+            
+            console.log(gameCard.id)
             let gameTitle = document.createElement('h2')
             gameTitle.innerHTML = this.gameTitle
     
