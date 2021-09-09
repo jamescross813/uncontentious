@@ -20,7 +20,7 @@ class NotesController < ApplicationController
         if note.save
             render json: note
         else
-            render json: {messgae: "Try again!"}
+            render json: {message: "Try again!"}
         end
     end
 
