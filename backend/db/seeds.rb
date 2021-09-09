@@ -6,21 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user_one = User.create(username: "James", password_digest: "1234")
-user_two = User.create(username: "Jason", password_digest: "1234")
-
-# category_worker = Category.create(category_name: "worker placement")
-# category_chance = Category.create(category_name: "chance")
-# category_horror = Category.create(category_name: "horror")
-# category_escape = Category.create(category_name: "escape")
-# category_puzzle = Category.create(category_name: "puzzle")
-# category_family = Category.create(category_name: "family")
-# category_humor = Category.create(category_name: "humor")
-# category_language = Category.create(category_name: "language")
-# category_mystery = Category.create(category_name: "mystery")
-# category_rpg = Category.create(category_name: "rpg")
-# category_strategy = Category.create(category_name: "strategy")
-
 
 game_phase_10 = Game.create(
     game_title: "Phase 10", 
