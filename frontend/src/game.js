@@ -77,7 +77,7 @@ class Game{
             gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, noteButton)
 
             noteButton.addEventListener('click', ()=>{
-                Note.renderNoteFrom(this)
+                Note.renderNoteForm(this)
             })
         }
     
