@@ -86,5 +86,29 @@ class Api{
         .then(data => Game.renderGame(data))
       }
 
+      newUserPost(){
+       
+        let usernameInput = document.getElementById("username-input");
+        let passwordInput = document.getElementById("user_password");
+    
+        let userFormData = {
+           username: usernameInput.value,
+           password_digest: passwordInput.value
+            };
+            
+        let configObj = {
+            method: "POST",
+            headers:{
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(gameFormData)
+        };
+    
+        fetch(`${this.basicUrl}`, configObj)
+        .then(resp => resp.json())
+        .then(data => Game.renderGame(data))
+      }
+
       
 }

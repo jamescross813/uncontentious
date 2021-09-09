@@ -1,6 +1,8 @@
 
 document.addEventListener("DOMContentLoaded", ()=>{
     const gameApi = new Api(`${basicUrl}/games`)
+    const userApi = new Api(`${basicUrl}/users`)
+
 
     addFormButton.addEventListener('click', ()=>{
         if(!gamesList.hidden){
@@ -45,10 +47,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     signUpButton.addEventListener('click', ()=>{
         User.renderForm()
-        
+
         const signUpSubmit = document.getElementById("login-submit")
         signUpSubmit.addEventListener('click', ()=>{
-            console.log("this works")
+            userApi.newUserPost()
         })
     })
     
