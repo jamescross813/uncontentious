@@ -68,7 +68,7 @@ class Game{
             let gameCat = document.createElement('li')
 
             let noteButton = document.createElement('button')
-            noteButton.innerHTML = `<type = "button" id = 'add-note'>Add Note`
+            noteButton.innerHTML = `<type="button" id='add-note'>Add Note`
             
             gameCat.innerHTML = `Category: ${this.categories}`
             editButton.hidden = false
@@ -77,7 +77,7 @@ class Game{
             gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, noteButton)
 
             noteButton.addEventListener('click', ()=>{
-                Note.renderNoteForm(this)
+                Note.renderNoteForm()
             })
         }
     

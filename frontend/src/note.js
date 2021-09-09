@@ -4,11 +4,11 @@ class Note{
         this.userId = userId;
     }
 
-    static renderNoteForm(info){
+    static renderNoteForm(){
         let noteForm = document.createElement('form')
         noteForm.innerHTML = `
         <label>Username</label>
-        <input type="text" id="${info.id}-input" value="${info.username}"></input>
+        <input type="text" id="note-input" value=""></input>
         <label>Note</label>
         <input type="text" id="note-input"></input>
         <button type="button" id="note-submit">Submit</button>
