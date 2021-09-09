@@ -28,11 +28,9 @@ ActiveRecord::Schema.define(version: 2021_08_30_014411) do
   create_table "notes", force: :cascade do |t|
     t.text "content"
     t.integer "game_id", null: false
-    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["game_id"], name: "index_notes_on_game_id"
-    t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "user_games", force: :cascade do |t|
@@ -51,7 +49,6 @@ ActiveRecord::Schema.define(version: 2021_08_30_014411) do
   end
 
   add_foreign_key "notes", "games"
-  add_foreign_key "notes", "users"
   add_foreign_key "user_games", "games"
   add_foreign_key "user_games", "users"
 end
