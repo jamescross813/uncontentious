@@ -120,7 +120,7 @@ game_monopoly = Game.create(
     play_style: "competitive",
     game_type: "board",
     max_time: 180,
-    game_categories: "family, chance", "strategy")
+    game_categories: "family, chance, strategy")
 game_oregon_trail = Game.create(
     game_title: "Oregon Trail", 
     min_players: 2, 
