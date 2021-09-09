@@ -32,4 +32,15 @@ class Note{
             noteApi.newNotePost()
         })
     }
+
+    static renderNote(data){
+        let noteContent = document.createElement('p')
+        noteContent.id = "note"
+        noteContent.innerHTML = data.content
+        
+        // let noteUsername = document.createElement('h6')
+        // noteUsername.innderHTML = data.username
+
+        gameCard.append(noteContent)
+    }
 }
