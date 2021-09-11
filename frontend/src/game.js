@@ -128,14 +128,24 @@ class Game{
             <label>Description:</label>        
             <input type="text" id="description-input" name="description" class="input-text-edit" value="${data.description}"></textarea><br>
                     <button type="button" id="edit-submit">Edit Game</button>`
+
             gameCard.append(editForm)
 
             const editSubmit = document.getElementById('edit-submit')
-            editSubmit.addEventListener('click', ()=>{
-            let currentGameApi = new Api(`${basicUrl}/games/${data.id}`)
-            currentGameApi.editGamePatch()
-            })
+
+                editSubmit.addEventListener('click', ()=>{
+                let currentGameApi = new Api(`${basicUrl}/games/${data.id}`)
+                currentGameApi.editGamePatch()
+                })
         }
+
+        // static renderErrorMessage(data){
+           
+        //     let errorMsg = document.createElement('h3')
+        //     errorMsg.innerHTML = data.message
+
+        //     gameCard.append(errorMsg)
+        // }
     
     }
     
