@@ -22,3 +22,4 @@ const navBar = document.getElementById("nav-bar")
 
 let randomizer
 
+

@@ -1,7 +1,8 @@
 class Note{
-    constructor(content, userId){
+    constructor(content, userId, id){
         this.content = content;
         this.userId = userId;
+        this.id = id
     }
 
     static renderNoteForm(){
@@ -25,17 +26,20 @@ class Note{
         `
         gameCard.append(noteForm)
 
-        const noteSubmit = document.getElementById("note-submit")
+        let noteSubmit = document.getElementById("note-submit")
 
         noteSubmit.addEventListener('click', ()=>{
             const noteApi = new Api(`${basicUrl}/notes`)
             noteApi.newNotePost()
+            noteForm.reset()
+            // noteFrom.remove()
         })
     }
 
     static renderNote(data){
+        
         let noteContent = document.createElement('p')
-        noteContent.id = "note"
+        noteContent.id = `note-${data.id}`
         noteContent.innerHTML = data.content
         
         // let noteUsername = document.createElement('h6')
