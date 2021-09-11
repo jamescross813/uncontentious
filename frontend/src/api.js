@@ -11,11 +11,9 @@ class Api{
       };
     
     fetchGame() {
-      
       fetch(this.basicUrl)
       .then(resp =>resp.json())
       .then(data =>{
-        console.log(data)
         if (data.hasOwnProperty('message')){
           randomizer()
         }else{

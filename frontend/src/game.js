@@ -74,6 +74,8 @@ class Game{
 
             let noteButton = document.createElement('button')
             noteButton.innerHTML = `<type="button" id='add-note'>Add Note`
+console.log(this)
+            // let noteList = document.createElement(`<a href = "${this}`)
                         
             if(gamesList.hidden === true){
                 let normalGameRender = ()=>{
