@@ -69,20 +69,35 @@ class Game{
             gameType.innerHTML = `Game Type: ${this.gameType}`
     
             let gameCat = document.createElement('li')
+            gameCat.innerHTML = `Category: ${this.categories}`
 
             let noteButton = document.createElement('button')
             noteButton.innerHTML = `<type="button" id='add-note'>Add Note`
-            
-            gameCat.innerHTML = `Category: ${this.categories}`
-            editButton.hidden = false
-            editButton.name = `${this.id}`
-           
-            gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, noteButton)
-
-            noteButton.addEventListener('click', ()=>{
-                Note.renderNoteForm()
-            })
+                        
+            if(gamesList.hidden === true){
+                let normalGameRender = ()=>{
+                    
+                    editButton.hidden = false
+                    editButton.name = `${this.id}`
+                   
+                    gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, noteButton)
+        
+                    noteButton.addEventListener('click', ()=>{
+                        Note.renderNoteForm()
+                    }
+                )
+                }
+                normalGameRender()
+                
+            }else{
+                this.renderGameFlash()
+            }
         }
+
+
+        // renderGameFlash(){
+        //     console.log("we're in here")
+        // }
     
         static renderEditForm(data){
             console.log(data)
