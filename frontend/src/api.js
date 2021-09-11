@@ -117,10 +117,11 @@ class Api{
         let usernameInput = document.getElementById("username-input");
         let contentInput = document.getElementById("note-content-input");
         let gameId = gameCard.id  
-       
+      
         let noteFormData = {
-           game_id: gameId,
-           content: contentInput.value
+            username: usernameInput.value,
+            game_id: gameId,
+            content: contentInput.value
             };
             
         let configObj = {

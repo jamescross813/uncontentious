@@ -1,7 +1,7 @@
 class Note{
-    constructor(content, userId, id){
+    constructor(content, gameId, username, id){
         this.content = content;
-        this.userId = userId;
+        this.username = username;
         this.id = id
     }
 
@@ -19,7 +19,7 @@ class Note{
         let noteForm = document.createElement('form')
         noteForm.innerHTML = `
             <label>Username</label>
-            <input type="text" id="username-input" value=""></input>
+            <input type="text" id="username-input"></input>
             <label>Note</label>
             <input type="text" id="note-content-input"></input>
             <button type="button" id="note-submit">Submit</button>
@@ -37,14 +37,14 @@ class Note{
     }
 
     static renderNote(data){
-        
+       
         let noteContent = document.createElement('p')
         noteContent.id = `note-${data.id}`
         noteContent.innerHTML = data.content
         
-        // let noteUsername = document.createElement('h6')
-        // noteUsername.innderHTML = data.username
+        let noteUsername = document.createElement('h6')
+        noteUsername.innerHTML = `Poster by: ${data.username}`
 
-        gameCard.append(noteContent)
+        gameCard.append(noteContent, noteUsername)
     }
 }
