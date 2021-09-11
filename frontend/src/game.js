@@ -35,8 +35,9 @@ class Game{
             gameTitle.innerHTML = `<a href ="${this.gameTitle}">${this.gameTitle}<br>`
             gamesList.append(gameTitle)
             gameTitle.id = `title-${this.id}` 
+           
             title[this.id-1].addEventListener("mouseover", ()=>{
-
+               this.renderGameInfo()
             })
         }
         

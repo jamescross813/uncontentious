@@ -2,10 +2,10 @@ const searchFormButton = document.getElementById("search-for");
 const addFormButton = document.getElementById("add");
 const viewButton = document.getElementById("games-list");
 const searchButton = document.getElementById("submit-search")
-const addSubmit = document.getElementById("add-submit")
 const editButton = document.getElementById("edit-game")
 const randomButton = document.getElementById("randomize")
 const signUpButton = document.getElementById("sign-up")
+const addSubmit = document.getElementById("add-submit")
 
 const searchForm = document.getElementById("search-games");
 const addForm = document.getElementById("add-game-form");
