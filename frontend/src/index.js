@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             gameSection.hidden = true
             addForm.hidden = true
         }
-        gamesList.hidden = !gamesList.hidden
+        gamesList.hidden = false
         gameApi.fetchGames()   
     })  
 
