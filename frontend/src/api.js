@@ -14,7 +14,14 @@ class Api{
       
       fetch(this.basicUrl)
       .then(resp =>resp.json())
-      .then(data =>Game.renderGame(data))
+      .then(data =>{
+        console.log(data)
+        if (data.hasOwnProperty('message')){
+          Game.renderErrorMessage(data)
+        }else{
+          Game.renderGame(data)
+        }
+      })
     };
 
     fetchEditGame() {
@@ -86,8 +93,7 @@ class Api{
       newUserPost(){
        
         let usernameInput = document.getElementById("username-input");
-        
-    
+            
         let userFormData = {
            username: usernameInput.value
             };
