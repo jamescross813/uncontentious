@@ -29,6 +29,14 @@ class Api{
       .then(data =>Game.renderEditForm(data))
   };
 
+  fetchNote() {
+    // gamesList.innerHTML = ""
+    console.log(this)
+      // fetch(this.basicUrl)
+      // .then(resp =>resp.json())
+      // .then(data =>Game.renderGames(data))
+    };
+
       newGamePost(){
        
         let inputValue = document.getElementsByClassName("input-text");
