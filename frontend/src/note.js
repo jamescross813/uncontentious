@@ -47,4 +47,8 @@ class Note{
 
         gameCard.append(noteContent, noteUsername)
     }
+
+    static gameNoteSort(){
+        console.log(this)
+    }
 }

@@ -73,7 +73,10 @@ class Game{
             let gameCat = document.createElement('li')
             gameCat.innerHTML = `Category: ${this.categories}`
 
-            this.notes.noteFetch()
+            let noteButton = document.createElement('button')
+            noteButton.innerHTML = `<type="button" id='add-note'>Add Note`
+
+            Note.gameNoteSort(this.notes)
             // let noteList = document.createElement(`<a href = "${this}`)
                         
             if(gamesList.hidden === true){
