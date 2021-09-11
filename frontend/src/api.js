@@ -17,7 +17,7 @@ class Api{
       .then(data =>{
         console.log(data)
         if (data.hasOwnProperty('message')){
-          Game.renderErrorMessage(data)
+          randomizer()
         }else{
           Game.renderGame(data)
         }

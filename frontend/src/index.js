@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", ()=>{
     const gameApi = new Api(`${basicUrl}/games`)
     const userApi = new Api(`${basicUrl}/users`)
@@ -38,10 +37,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
             gamesList.hidden = true
             addForm.hidden = true
             }  
-
+             randomizer = ()=>{
             let num = Math.floor(Math.random()*10)
             currentGameApi = new Api(`${basicUrl}/games/${num}`)
             currentGameApi.fetchGame()
+            }
+            randomizer()
             
     })
 
