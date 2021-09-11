@@ -32,7 +32,7 @@ class Game{
     
         renderTitles(){
             let gameTitle = document.createElement('span')
-            gameTitle.innerHTML = `<a href ="${this.gameTitle}">${this.gameTitle}<br>`
+            gameTitle.innerHTML = `<a href ="${this.gameTitle}">${this.gameTitle}</a><br>`
             gamesList.append(gameTitle)
             gameTitle.id = `title-${this.id}` 
            
@@ -93,7 +93,8 @@ class Game{
             }else{
                 let renderGameFlash = ()=>{
                     editButton.hidden = true
-                    title[this.id-1].append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
+                    floatGameCard.innerHTML = ""
+                    floatGameCard.append(gameDescription)
                 }
                 renderGameFlash()
             }
