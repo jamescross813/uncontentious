@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <img src="https://as2.ftcdn.net/v2/jpg/02/45/70/11/500_F_245701100_MAEWqeKiPIYlrYR8DTH67eBZ5Ku4TPAf.jpg"
+        alt="header-pic"> -->
 </head>
 
 <body>
-    <header>
+
+    <header id="header">
         <h1>Uncontentious</h1>
     </header>
 
@@ -24,31 +27,31 @@
 
         <div>
             <form id="add-game-form" hidden>
-                <label>Title:</label>
+                <label>Title:</label><br>
                 <input type="text" id="title-input" name="game-title" placeholder="Name that game..." class="input-text"
                     value=""><br>
-                <label>Minimum Players:</label>
+                <label>Minimum Players:</label><br>
                 <input type="text" id="player-range-min-input" name="player-range-min" placeholder="Min players.."
                     class="input-text" value=""><br>
-                <label>Maximum Players:</label>
+                <label>Maximum Players:</label><br>
                 <input type="text" id="player-range-max-input" name="player-range-max" placeholder="Max players.."
                     class="input-text" value=""><br>
-                <label>Game Type:</label>
+                <label>Game Type:</label><br>
                 <input type="text" id="game-type-input" name="game-type" placeholder="Card, Board or Tile...?"
                     class="input-text" value=""><br>
-                <label>Game Style:</label>
+                <label>Game Style:</label><br>
                 <input type="text" id="play-style-input" name="play-style" placeholder="Competitive, Co-op or Party...?"
                     class="input-text" value=""><br>
-                <label>Max Play Time:</label>
+                <label>Max Play Time:</label><br>
                 <input type="text" id="play-time-input" name="play-time" placeholder="10, 20, 30?" class="input-text"
                     value=""><br>
-                <label>Category</label>
+                <label>Category</label><br>
                 <input type="text" id="category-one" name="game-category-one" placeholder="Category?" class="input-text"
                     value=""><br>
-                <label>Additional Category:</label>
+                <label>Additional Category:</label><br>
                 <input type="text" id="category-two" name="game-category-two" placeholder="Category?" class="input-text"
                     value=""><br>
-                <label>Description:</label>
+                <label>Description:</label><br>
                 <input type="text" id="description-input" name="description" placeholder="Description..."
                     class="input-text" value=""></textarea><br>
                 <button type="button" id="add-submit">Add Game</button>

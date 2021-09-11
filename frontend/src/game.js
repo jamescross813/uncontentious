@@ -79,8 +79,7 @@ class Game{
             if(this.notes.length > 0){
                 Note.gameNoteSort(this.notes)
             }
-            
-                        
+               
             if(gamesList.hidden === true){
                 let normalGameRender = ()=>{
                     floatGameCard.hidden = true
@@ -93,18 +92,14 @@ class Game{
                         Note.renderNoteForm()
                     })
                 }
-
-                normalGameRender()
-                
+                normalGameRender() 
             }else{
                 let renderGameFlash = ()=>{
                     editButton.hidden = true
                     floatGameCard.innerHTML = ""
                     floatGameCard.append(gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
                 }
-
                 renderGameFlash()
-
             }
         }
 
@@ -144,14 +139,6 @@ class Game{
                 currentGameApi.editGamePatch()
                 })
         }
-
-        // static renderErrorMessage(data){
-           
-        //     let errorMsg = document.createElement('h3')
-        //     errorMsg.innerHTML = data.message
-
-        //     gameCard.append(errorMsg)
-        // }
     
     }
     
