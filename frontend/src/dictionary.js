@@ -13,9 +13,9 @@ const addForm = document.getElementById("add-game-form");
 const basicUrl= "http://localhost:3000"
 
 const gamesList = document.getElementById('game-list');
-const catCard = document.getElementById('cat-card');
 const gameCard = document.getElementById('game-card');
 const gameSection = document.getElementById('game-section')
+const floatGameCard = document.getElementById("float-card")
 
 const title = document.getElementsByTagName("a")
 const navBar = document.getElementById("nav-bar")

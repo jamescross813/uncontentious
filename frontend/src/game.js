@@ -36,7 +36,8 @@ class Game{
             gamesList.append(gameTitle)
             gameTitle.id = `title-${this.id}` 
            
-            title[this.id-1].addEventListener("mouseover", ()=>{
+            title[this.id-1].addEventListener("click", ()=>{
+                event.preventDefault()
                this.renderGameInfo()
             })
         }
@@ -90,7 +91,11 @@ class Game{
                 normalGameRender()
                 
             }else{
-                this.renderGameFlash()
+                let renderGameFlash = ()=>{
+                    editButton.hidden = true
+                    title[this.id-1].append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
+                }
+                renderGameFlash()
             }
         }
 
