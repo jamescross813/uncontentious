@@ -85,9 +85,9 @@ class Game{
         
                     noteButton.addEventListener('click', ()=>{
                         Note.renderNoteForm()
-                    }
-                )
+                    })
                 }
+
                 normalGameRender()
                 
             }else{
@@ -96,7 +96,9 @@ class Game{
                     floatGameCard.innerHTML = ""
                     floatGameCard.append(gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
                 }
+
                 renderGameFlash()
+
             }
         }
 
@@ -130,10 +132,9 @@ class Game{
 
             const editSubmit = document.getElementById('edit-submit')
             editSubmit.addEventListener('click', ()=>{
-                console.log("working this far")
-         let currentGameApi = new Api(`${basicUrl}/games/${data.id}`)
-          currentGameApi.editGamePatch()
-      })
+            let currentGameApi = new Api(`${basicUrl}/games/${data.id}`)
+            currentGameApi.editGamePatch()
+            })
         }
     
     }
