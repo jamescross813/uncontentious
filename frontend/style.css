@@ -14,8 +14,8 @@ nav {
 
 #float-card {
   position: relative;
-  left: 400px;
-  top: -400px;
+  left: 500px;
+  top: -425px;
   padding: 0 20px;
-  width: 400px;
+  width: 500px;
 }
