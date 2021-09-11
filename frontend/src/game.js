@@ -75,9 +75,12 @@ class Game{
 
             let noteButton = document.createElement('button')
             noteButton.innerHTML = `<type="button" id='add-note'>Add Note`
-
+            
+            if(this.notes.length > 0){
+                // console.log("there are notes here")
             Note.gameNoteSort(this.notes)
-            // let noteList = document.createElement(`<a href = "${this}`)
+            }
+            
                         
             if(gamesList.hidden === true){
                 let normalGameRender = ()=>{
