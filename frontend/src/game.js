@@ -99,11 +99,7 @@ class Game{
             }
         }
 
-
-        // renderGameFlash(){
-        //     console.log("we're in here")
-        // }
-    
+  
         static renderEditForm(data){
             console.log(data)
             editButton.hidden = true
