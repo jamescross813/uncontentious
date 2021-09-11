@@ -94,7 +94,7 @@ class Game{
                 let renderGameFlash = ()=>{
                     editButton.hidden = true
                     floatGameCard.innerHTML = ""
-                    floatGameCard.append(gameDescription)
+                    floatGameCard.append(gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
                 }
                 renderGameFlash()
             }
