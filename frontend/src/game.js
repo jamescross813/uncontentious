@@ -77,7 +77,7 @@ class Game{
                         
             if(gamesList.hidden === true){
                 let normalGameRender = ()=>{
-                    
+                    floatGameCard.hidden = true
                     editButton.hidden = false
                     editButton.name = `${this.id}`
                    
