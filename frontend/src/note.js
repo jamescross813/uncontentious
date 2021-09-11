@@ -44,7 +44,7 @@ class Note{
         noteContent.innerHTML = data.content
         
         let noteUsername = document.createElement('h6')
-        noteUsername.innerHTML = `Poster by: ${data.username}`
+        noteUsername.innerHTML = `Posted by: ${data.username}`
 
         gameCard.append(noteContent, noteUsername)
     }
