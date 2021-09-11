@@ -1,7 +1,7 @@
 class Game{
     static all = []
     
-        constructor({game_title, min_players, max_players, description, play_style, game_type, max_time, game_categories, id}){
+        constructor({game_title, min_players, max_players, description, play_style, game_type, max_time, game_categories, id, notes}){
             this.gameTitle = game_title;
             this.minPlayer = min_players;
             this.maxPlayer = max_players;
@@ -11,6 +11,7 @@ class Game{
             this.time = max_time;
             this.categories = []
             this.id = id
+            this.notes = notes
            
             this.categories.push(game_categories)
             Game.all.push(this)
@@ -72,9 +73,7 @@ class Game{
             let gameCat = document.createElement('li')
             gameCat.innerHTML = `Category: ${this.categories}`
 
-            let noteButton = document.createElement('button')
-            noteButton.innerHTML = `<type="button" id='add-note'>Add Note`
-console.log(this)
+            this.notes.noteFetch()
             // let noteList = document.createElement(`<a href = "${this}`)
                         
             if(gamesList.hidden === true){

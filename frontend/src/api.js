@@ -17,6 +17,7 @@ class Api{
         if (data.hasOwnProperty('message')){
           randomizer()
         }else{
+          // console.log(data)
           Game.renderGame(data)
         }
       })

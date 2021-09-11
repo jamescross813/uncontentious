@@ -244,4 +244,9 @@ game_azul = Game.create(
     # game_category_pandemic = GameCategory.create(game: game_pandemic, category: category_strategy)
     # game_category_azul = GameCategory.create(game: game_azul, category: category_puzzle)
 
-    new_note = Note.create(content:"some stuff", game: game_pandemic, username: "Jeff")
+    new_note_1 = Note.create(content:"some stuff", game: game_pandemic, username: "Jeff")
+    new_note_2 = Note.create(content:"some stuff", game: game_farkle, username: "Jeff")
+    new_note_3 = Note.create(content:"some stuff", game: game_exit, username: "Jeff")
+    new_note_4 = Note.create(content:"some stuff", game: game_bananagrams, username: "Jeff")
+    new_note_5 = Note.create(content:"some stuff", game: game_unlock, username: "Jeff")
+    new_note_6 = Note.create(content:"some stuff", game: game_love_letter, username: "Jeff")
