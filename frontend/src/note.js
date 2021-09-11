@@ -1,8 +1,9 @@
 class Note{
-    constructor(content, gameId, username, id){
+    constructor(content, game_id, username, id){
         this.content = content;
         this.username = username;
-        this.id = id
+        this.id = id;
+        this.gameId = game_id
     }
 
     static renderNoteForm(){
@@ -48,7 +49,23 @@ class Note{
         gameCard.append(noteContent, noteUsername)
     }
 
-    static gameNoteSort(){
-        console.log(this)
+    renderNewNote(){
+    //    console.log(this)
+        let noteContent = document.createElement('p')
+        noteContent.id = `note-${this.id}`
+        noteContent.innerHTML = this.content
+        
+        let noteUsername = document.createElement('h6')
+        noteUsername.innerHTML = `Poster by: ${this.username}`
+
+        gameCard.append(noteContent, noteUsername)
+    }
+
+    static gameNoteSort(data){
+        // console.log(data)
+        data.map(n => {
+            const noteApi = new Api(`${n.id}/notes`)
+            noteApi.fetchNote()
+        })
     }
 }
