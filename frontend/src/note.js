@@ -18,12 +18,12 @@ class Note{
         // console.log(username)
         let noteForm = document.createElement('form')
         noteForm.innerHTML = `
-        <label>Username</label>
-        <input type="text" id="username-input" value=""></input>
-        <label>Note</label>
-        <input type="text" id="note-content-input"></input>
-        <button type="button" id="note-submit">Submit</button>
-        `
+            <label>Username</label>
+            <input type="text" id="username-input" value=""></input>
+            <label>Note</label>
+            <input type="text" id="note-content-input"></input>
+            <button type="button" id="note-submit">Submit</button>
+            `
         gameCard.append(noteForm)
 
         let noteSubmit = document.getElementById("note-submit")
@@ -32,7 +32,7 @@ class Note{
             const noteApi = new Api(`${basicUrl}/notes`)
             noteApi.newNotePost()
             noteForm.reset()
-            // noteFrom.remove()
+            noteForm.remove()
         })
     }
 
