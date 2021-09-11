@@ -77,8 +77,7 @@ class Game{
             noteButton.innerHTML = `<type="button" id='add-note'>Add Note`
             
             if(this.notes.length > 0){
-                // console.log("there are notes here")
-            Note.gameNoteSort(this.notes)
+                Note.gameNoteSort(this.notes)
             }
             
                         
