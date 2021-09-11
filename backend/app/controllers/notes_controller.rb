@@ -7,9 +7,9 @@ class NotesController < ApplicationController
     end
     
     def show
-        notes = Note.find_by(id: params[:id])
+        note = Note.find_by(id: params[:id])
         if note
-            render json: notes
+            render json: note
         else
             render json: {message: "Note not found"}
         end

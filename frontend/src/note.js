@@ -64,7 +64,8 @@ class Note{
     static gameNoteSort(data){
         // console.log(data)
         data.map(n => {
-            const noteApi = new Api(`${n.id}/notes`)
+            console.log(n.id)
+            const noteApi = new Api(`${basicUrl}/notes/${n.id}`)
             noteApi.fetchNote()
         })
     }

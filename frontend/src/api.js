@@ -31,10 +31,10 @@ class Api{
 
   fetchNote() {
     // gamesList.innerHTML = ""
-    console.log(this)
-      // fetch(this.basicUrl)
-      // .then(resp =>resp.json())
-      // .then(data =>Game.renderGames(data))
+    // console.log(this.basicUrl)
+      fetch(this.basicUrl)
+      .then(resp =>resp.json())
+      .then(data =>console.log(data))
     };
 
       newGamePost(){
