@@ -92,6 +92,12 @@ form {
   font-size: small;
 }
 
+#note-form {
+  position: relative;
+  top: 15px;
+  left: 0px;
+}
+
 #sign-up-form {
   width: 500px;
 }

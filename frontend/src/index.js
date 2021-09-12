@@ -22,9 +22,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })  
 
     randomButton.addEventListener('click', ()=>{
-        if(!gamesList.hidden || !addForm.hidden){
+        if(!gamesList.hidden || !addForm.hidden || gameCard.hidden){
             gamesList.hidden = true
             addForm.hidden = true
+            gameCard.hidden = false
+            gameSection.hidden = false
             }  
              randomizer = ()=>{
             let num = Math.floor(Math.random()*10)
