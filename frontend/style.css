@@ -80,6 +80,12 @@ form {
   left: 0px;
   top: 10px;
 }
+
 .note {
-  color: palevioletred;
+  position: relative;
+  top: 10px;
+}
+
+.note p#username {
+  font-size: small;
 }

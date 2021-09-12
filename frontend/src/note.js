@@ -39,6 +39,7 @@ class Note{
         
         let noteUsername = document.createElement('p')
         noteUsername.innerHTML = `Posted by: ${data.username}`
+        noteUsername.id = "username"
 
         noteCard.append(noteContent, noteUsername)
         
