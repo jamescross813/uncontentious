@@ -118,6 +118,8 @@ class Game{
         addNewForm(){
             let newThing = "new"
             this.formRender(newThing)
+
+            const addSubmit = document.getElementById("new-submit")
             
             let addFormEvent = ()=>{
                 addSubmit.addEventListener('click', ()=>{   
