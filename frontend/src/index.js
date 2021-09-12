@@ -49,8 +49,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })
 
     signUpButton.addEventListener('click', ()=>{
-        User.renderForm()
-
+        signUpForm.hidden = false
         const signUpSubmit = document.getElementById("login-submit")
         signUpSubmit.addEventListener('click', ()=>{
             userApi.newUserPost()

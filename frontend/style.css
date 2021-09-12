@@ -34,10 +34,12 @@ nav {
 
 h1 {
   /* color: white; */
-  text-align: center;
   position: relative;
-  top: 50px;
+  left: 500px;
+  top: 100px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: seashell;
+  width: 275px;
 }
 
 #header {
@@ -88,4 +90,12 @@ form {
 
 .note p#username {
   font-size: small;
+}
+
+#sign-up-form {
+  width: 500px;
+}
+
+#login-submit {
+  margin-top: 10px;
 }

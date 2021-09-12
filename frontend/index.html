@@ -25,36 +25,17 @@
             <button type="button" id="randomize">Randomize</button>
         </nav>
 
-        <div>
+        <div id="username-add">
+            <form id="sign-up-form" hidden>
+                <label>Username:</label><br>
+                <input type="text" id="username-input" value=""><br>
+                <button type="button" id="login-submit">Submit</button>`
+            </form>
+        </div>
+
+        <div id="add-game-form">
             <form id="add-game-form" hidden>
-                <label>Title:</label><br>
-                <input type="text" id="title-input" name="game-title" placeholder="Name that game..." class="input-text"
-                    value=""><br>
-                <label>Minimum Players:</label><br>
-                <input type="text" id="player-range-min-input" name="player-range-min" placeholder="Min players.."
-                    class="input-text" value=""><br>
-                <label>Maximum Players:</label><br>
-                <input type="text" id="player-range-max-input" name="player-range-max" placeholder="Max players.."
-                    class="input-text" value=""><br>
-                <label>Game Type:</label><br>
-                <input type="text" id="game-type-input" name="game-type" placeholder="Card, Board or Tile...?"
-                    class="input-text" value=""><br>
-                <label>Game Style:</label><br>
-                <input type="text" id="play-style-input" name="play-style" placeholder="Competitive, Co-op or Party...?"
-                    class="input-text" value=""><br>
-                <label>Max Play Time:</label><br>
-                <input type="text" id="play-time-input" name="play-time" placeholder="10, 20, 30?" class="input-text"
-                    value=""><br>
-                <label>Category</label><br>
-                <input type="text" id="category-one" name="game-category-one" placeholder="Category?" class="input-text"
-                    value=""><br>
-                <label>Additional Category:</label><br>
-                <input type="text" id="category-two" name="game-category-two" placeholder="Category?" class="input-text"
-                    value=""><br>
-                <label>Description:</label><br>
-                <input type="text" id="description-input" name="description" placeholder="Description..."
-                    class="input-text" value=""></textarea><br>
-                <button type="button" id="add-submit">Add Game</button>
+
             </form>
         </div>
 
