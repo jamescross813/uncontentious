@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     addFormButton.addEventListener('click', ()=>{
         if(!gamesList.hidden){
             gamesList.hidden = !gamesList.hidden
+            floatGameCard.hidden = true
         }
         addForm.hidden = !addForm.hidden       
     })
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     addSubmit.addEventListener('click', ()=>{   
        gameApi.newGamePost()
        gameSection.hidden = !gameSection.hidden
+       
        addForm.reset() 
     }) 
 
