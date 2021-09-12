@@ -2,13 +2,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const gameApi = new Api(`${basicUrl}/games`)
     const userApi = new Api(`${basicUrl}/users`)
 
-
     addFormButton.addEventListener('click', ()=>{
         if(!gamesList.hidden){
             gamesList.hidden = !gamesList.hidden
             floatGameCard.hidden = true
         }
-        addForm.hidden = !addForm.hidden       
+        Game.addForm()      
     })
 
     viewButton.addEventListener('click', () =>{
@@ -20,21 +19,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
         gameApi.fetchGames()   
     })  
 
-    addSubmit.addEventListener('click', ()=>{   
-       gameApi.newGamePost()
-       gameSection.hidden = !gameSection.hidden
-       
-       addForm.reset() 
-    }) 
-
     editButton.addEventListener('click', ()=>{
        let game_id = editButton.name
+       addForm.hidden = false
+       gameCard.hidden = true
        let currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
         currentGameApi.fetchEditGame()
     })
 
     randomButton.addEventListener('click', ()=>{
-
         if(!gamesList.hidden || !addForm.hidden){
             gamesList.hidden = true
             addForm.hidden = true
@@ -44,8 +37,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             currentGameApi = new Api(`${basicUrl}/games/${num}`)
             currentGameApi.fetchGame()
             }
-            randomizer()
-            
+            randomizer() 
     })
 
     signUpButton.addEventListener('click', ()=>{
@@ -56,12 +48,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
             let signUpForm = document.getElementById("sign-up-form")
             signUpForm.reset()
             signUpForm.remove()
-            
         })
     })
     
-    
-   
-
 }); 
  

@@ -143,16 +143,41 @@ class Game{
                 class="input-text" value=""></textarea><br>
             <button type="button" id="add-submit">Add Game</button>`
             addForm.append(renderAddForm)
+            
+            let addFormEvent = ()=>{
+                addSubmit.addEventListener('click', ()=>{   
+                gameApi.newGamePost()
+                gameSection.hidden = !gameSection.hidden
+                addForm.reset() 
+             }) 
+            }
+            addFormEvent()
         }
 
   
         editForm(){
             editButton.hidden = true
-            gameSection.hidden = false
+           
+            let thing = 'edit'
+            this.formHtml(thing)
 
-            let editForm = document.createElement('form')
-            editForm.id = "edit-form"
-            editForm.innerHTML = `
+            let editSubmit = document.getElementById('edit-submit')
+
+            let editEvent = ()=>{
+                editSubmit.addEventListener('click', ()=>{
+                let currentGameApi = new Api(`${basicUrl}/games/${this.id}`)
+                currentGameApi.editGamePatch()
+                })
+            }
+            editEvent()
+
+        }
+
+        formHtml(thing){
+            
+            let gameForm = document.createElement('form')
+            gameForm.id = "game-form"
+            gameForm.innerHTML = `
             <label>Title:</label><br>
                 <input type="text" id="title-input" name="game-title" class="input-text-edit" value="${this.gameTitle}"><br>
             <label>Minimum Players:</label><br>
@@ -171,20 +196,9 @@ class Game{
                 <input type="text" id="category-two" class="input-text-edit" name="game-category-two" value=""><br>
             <label>Description:</label><br>        
                 <input type="text" id="description-input" name="description" class="input-text-edit" value="${this.description}"></textarea><br>
-                    <button type="button" id="edit-submit">Edit Game</button>`
+                    <button type="button" id="${thing}-submit">${thing}</button>`
 
-            gameCard.append(editForm)
-
-            let editSubmit = document.getElementById('edit-submit')
-
-            let editEvent = ()=>{
-                editSubmit.addEventListener('click', ()=>{
-                let currentGameApi = new Api(`${basicUrl}/games/${this.id}`)
-                currentGameApi.editGamePatch()
-                })
-            }
-            editEvent()
-
+            return addForm.append(gameForm)
         }
     
     }
