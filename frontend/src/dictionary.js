@@ -2,7 +2,6 @@ const searchFormButton = document.getElementById("search-for");
 const addFormButton = document.getElementById("add");
 const viewButton = document.getElementById("games-list");
 const searchButton = document.getElementById("submit-search")
-const editButton = document.getElementById("edit-game")
 const randomButton = document.getElementById("randomize")
 const signUpButton = document.getElementById("sign-up")
 const signUpForm = document.getElementById("sign-up-form")
@@ -22,5 +21,6 @@ const navBar = document.getElementById("nav-bar")
 
 let randomizer
 let gameForm
+let editButton
 
 

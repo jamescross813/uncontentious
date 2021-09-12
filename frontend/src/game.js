@@ -78,6 +78,9 @@ class Game{
 
             let noteButton = document.createElement('button')
             noteButton.innerHTML = `<type="button" id='add-note'>Add Note`
+
+            editButton = document.createElement('button')
+            editButton.innerHTML = `<type="button" id="edit-game">Edit`
             
             if(this.notes){
                 Note.gameNoteSort(this.notes)
@@ -85,7 +88,7 @@ class Game{
             
             if(gamesList.hidden === true){
                 let normalGameRender = ()=>{
-                    if (gameSection.hidden){
+                    if (gameSection.hidden === true){
                         gameSection.hidden = !gameSection.hidden
                     }
                     addForm.hidden = true
@@ -93,17 +96,26 @@ class Game{
                     gameCard.innerHTML = "" 
                     gameCard.id = this.id
                     floatGameCard.hidden = true
-                    editButton.hidden = false
                     editButton.name = `${this.id}`
                    
-                    gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, noteButton)
+                    gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, noteButton, editButton)
         
                    let noteFormRender = ()=>{ 
                        noteButton.addEventListener('click', ()=>{
                         Note.renderNoteForm()
                     })
                 }
+                    let editFormRender = ()=>{
+                        editButton.addEventListener('click', ()=>{
+                            let game_id = editButton.name
+                            addForm.hidden = false
+                            gameCard.hidden = true
+                            let currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
+                             currentGameApi.fetchEditGame()
+                         })
+                    }
                 noteFormRender()
+                editFormRender()
             }
                 normalGameRender() 
             }else{
@@ -133,7 +145,6 @@ class Game{
             addFormEvent()
         }
 
-  
         editForm(){
             editButton.hidden = true;
            
@@ -146,6 +157,7 @@ class Game{
                 editSubmit.addEventListener('click', ()=>{
                 let currentGameApi = new Api(`${basicUrl}/games/${this.id}`)
                 currentGameApi.editGamePatch()
+                gameCard.hidden = false
                 gameForm.reset()
                 gameForm.remove()
                 })
