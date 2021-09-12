@@ -24,12 +24,13 @@ nav {
 }
 
 #float-card {
-  position: relative;
-  left: 500px;
-  top: -750px;
+  position: absolute;
+  left: 550px;
+  top: 315px;
   padding: 0 20px;
   width: 500px;
-  border: midnightblue;
+  font-size: large;
+  text-align: justify;
 }
 
 h1 {
@@ -52,7 +53,7 @@ h1 {
 
 #game-list {
   position: relative;
-  left: 175px;
+  left: 200px;
   top: -160px;
   font-size: large;
 }
@@ -70,10 +71,10 @@ form {
 
 #game-section {
   position: relative;
-  left: 175px;
+  left: 250px;
   top: -160px;
   font-size: large;
-  width: 1000px;
+  width: 500px;
   text-align: justify;
 }
 
@@ -85,7 +86,8 @@ form {
 
 .note {
   position: relative;
-  top: 10px;
+  top: -275px;
+  left: 550px;
 }
 
 .note p#username {
@@ -104,4 +106,10 @@ form {
 
 #login-submit {
   margin-top: 10px;
+}
+
+#game-section button {
+  margin-top: 20px;
+  margin-right: 10px;
+  width: 100px;
 }
