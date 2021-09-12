@@ -3,14 +3,14 @@ class Api{
         this.basicUrl = basicUrl;
     }
 
-  fetchGames() {
+  async fetchGames() {
       gamesList.innerHTML = ""
         fetch(this.basicUrl)
         .then(resp =>resp.json())
         .then(data =>Game.renderGames(data))
   };
     
-  fetchGame() {
+  async fetchGame() {
       fetch(this.basicUrl)
       .then(resp =>resp.json())
       .then(data =>{
@@ -22,19 +22,19 @@ class Api{
       })
   };
 
-  fetchEditGame() {
+  async fetchEditGame() {
       fetch(this.basicUrl)
       .then(resp =>resp.json())
       .then(data =>Game.renderEditForm(data))
   };
 
-  fetchNote() {
+  async fetchNote() {
       fetch(this.basicUrl)
       .then(resp =>resp.json())
       .then(data =>Note.renderNote(data))
     };
 
-  newGamePost(){
+  async newGamePost(){
       let inputValue = document.getElementsByClassName("input-text");
       let titleInput = document.getElementById('title-input');
       
@@ -63,7 +63,7 @@ class Api{
       .then(data => Game.renderGame(data))
   }
 
-  editGamePatch(){
+  async editGamePatch(){
       event.preventDefault()
       let editInputValue = document.getElementsByClassName("input-text");
     
@@ -92,7 +92,7 @@ class Api{
       .then(data => Game.renderGame(data))
   }
 
-  newUserPost(){
+  async newUserPost(){
       let usernameInput = document.getElementById("username-input");
             
       let userFormData = {
@@ -113,7 +113,7 @@ class Api{
       .then(data => User.renderIntro(data))
    }
 
-  newNotePost(){ 
+  async newNotePost(){ 
       let inputValue = document.getElementsByClassName("input-text");
       let gameId = gameCard.className  
     

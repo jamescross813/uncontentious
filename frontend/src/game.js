@@ -1,6 +1,5 @@
 class Game{
-    static all = []
-    
+       
         constructor({game_title, min_players, max_players, description, play_style, game_type, max_time, game_categories, id, notes}){
             this.gameTitle = game_title;
             this.minPlayer = min_players;
@@ -14,7 +13,6 @@ class Game{
             this.notes = notes
            
             this.categories.push(game_categories)
-            Game.all.push(this)
         }  
 
         static renderGames(data){ 
