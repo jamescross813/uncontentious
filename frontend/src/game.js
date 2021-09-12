@@ -33,7 +33,12 @@ class Game{
             const gameToEdit = new Game(data)
             gameToEdit.editForm()
         }
-    
+
+        static renderNewForm(data){
+            const gameToCreate = new Game(data)
+            gameToCreate.addNewForm()
+        }
+
         renderTitles(){
             let gameTitle = document.createElement('span')
             gameTitle.innerHTML = `<a href ="${this.gameTitle}">${this.gameTitle}</a><br>`
@@ -75,7 +80,7 @@ class Game{
             noteButton.innerHTML = `<type="button" id='add-note'>Add Note`
             
             if(this.notes){
-            Note.gameNoteSort(this.notes)
+                Note.gameNoteSort(this.notes)
             }
             
             if(gamesList.hidden === true){
@@ -99,7 +104,7 @@ class Game{
                     })
                 }
                 noteFormRender()
-                }
+            }
                 normalGameRender() 
             }else{
                 let renderGameFlash = ()=>{
@@ -110,39 +115,9 @@ class Game{
             }
         }
 
-        static addForm(){
-            let renderAddForm = document.createElement('form')
-            renderAddForm.id = "add-game-form"
-            renderAddForm.innerHTML = `
-            <label>Title:</label><br>
-            <input type="text" id="title-input" name="game-title" placeholder="Name that game..." class="input-text"
-                value=""><br>
-            <label>Minimum Players:</label><br>
-            <input type="text" id="player-range-min-input" name="player-range-min" placeholder="Min players.."
-                class="input-text" value=""><br>
-            <label>Maximum Players:</label><br>
-            <input type="text" id="player-range-max-input" name="player-range-max" placeholder="Max players.."
-                class="input-text" value=""><br>
-            <label>Game Type:</label><br>
-            <input type="text" id="game-type-input" name="game-type" placeholder="Card, Board or Tile...?"
-                class="input-text" value=""><br>
-            <label>Game Style:</label><br>
-            <input type="text" id="play-style-input" name="play-style" placeholder="Competitive, Co-op or Party...?"
-                class="input-text" value=""><br>
-            <label>Max Play Time:</label><br>
-            <input type="text" id="play-time-input" name="play-time" placeholder="10, 20, 30?" class="input-text"
-                value=""><br>
-            <label>Category</label><br>
-            <input type="text" id="category-one" name="game-category-one" placeholder="Category?" class="input-text"
-                value=""><br>
-            <label>Additional Category:</label><br>
-            <input type="text" id="category-two" name="game-category-two" placeholder="Category?" class="input-text"
-                value=""><br>
-            <label>Description:</label><br>
-            <input type="text" id="description-input" name="description" placeholder="Description..."
-                class="input-text" value=""></textarea><br>
-            <button type="button" id="add-submit">Add Game</button>`
-            addForm.append(renderAddForm)
+        addNewForm(){
+            let newThing = "new"
+            this.formRender(newThing)
             
             let addFormEvent = ()=>{
                 addSubmit.addEventListener('click', ()=>{   
@@ -156,12 +131,12 @@ class Game{
 
   
         editForm(){
-            editButton.hidden = true
+            editButton.hidden = true;
            
-            let thing = 'edit'
-            this.formHtml(thing)
+            let thing = 'edit';
+            this.formRender(thing);
 
-            let editSubmit = document.getElementById('edit-submit')
+            let editSubmit = document.getElementById('edit-submit');
 
             let editEvent = ()=>{
                 editSubmit.addEventListener('click', ()=>{
@@ -170,13 +145,25 @@ class Game{
                 })
             }
             editEvent()
-
         }
 
-        formHtml(thing){
-            
+        formRender(thing){
+            console.log(thing)
             let gameForm = document.createElement('form')
             gameForm.id = "game-form"
+            if(thing === "new"){
+                this.gameTitle = "";
+                this.minPlayer = "";
+                this.maxPlayer = "";
+                this.description = "";
+                this.gameStyle = "";
+                this.gameType = "";
+                this.time = "";
+                this.categories = []
+                this.id = ""
+                this.notes = ""
+            }
+            
             gameForm.innerHTML = `
             <label>Title:</label><br>
                 <input type="text" id="title-input" name="game-title" class="input-text-edit" value="${this.gameTitle}"><br>
@@ -200,6 +187,7 @@ class Game{
 
             return addForm.append(gameForm)
         }
-    
+
+
     }
     
