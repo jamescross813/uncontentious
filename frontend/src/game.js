@@ -15,7 +15,6 @@ class Game{
            
             this.categories.push(game_categories)
             Game.all.push(this)
-            
         }  
 
         static renderGames(data){ 
@@ -28,7 +27,6 @@ class Game{
         static renderGame(data){
             const indGame = new Game(data)
             indGame.renderGameInfo()
-            
         }
     
         renderTitles(){
@@ -37,21 +35,16 @@ class Game{
             gamesList.append(gameTitle)
             gameTitle.id = `title-${this.id}` 
            
-            title[this.id-1].addEventListener("click", ()=>{
+            let titleEvent = ()=>{
+                title[this.id-1].addEventListener("click", ()=>{
                 event.preventDefault()
                this.renderGameInfo()
             })
         }
+            titleEvent()
+        }
         
-        renderGameInfo(){
-            if (gameSection.hidden){
-                gameSection.hidden = !gameSection.hidden
-            }
-            addForm.hidden = true
-            
-            gameCard.innerHTML = "" 
-            gameCard.id = this.id  
-            
+        gameInfo(){            
             let gameTitle = document.createElement('h2')
             gameTitle.innerHTML = this.gameTitle
     
@@ -82,6 +75,13 @@ class Game{
                
             if(gamesList.hidden === true){
                 let normalGameRender = ()=>{
+                    if (gameSection.hidden){
+                        gameSection.hidden = !gameSection.hidden
+                    }
+                    addForm.hidden = true
+                    
+                    gameCard.innerHTML = "" 
+                    gameCard.id = this.id
                     floatGameCard.hidden = true
                     editButton.hidden = false
                     editButton.name = `${this.id}`
@@ -95,7 +95,7 @@ class Game{
                 normalGameRender() 
             }else{
                 let renderGameFlash = ()=>{
-                    editButton.hidden = true
+                   
                     floatGameCard.innerHTML = ""
                     floatGameCard.append(gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
                 }
