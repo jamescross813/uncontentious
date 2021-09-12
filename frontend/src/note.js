@@ -30,17 +30,22 @@ class Note{
     }
 
     static renderNote(data){
+        let noteCard = document.createElement('span')
+        noteCard.className = "note"
+
         let noteContent = document.createElement('p')
         noteContent.id = `note-${data.id}`
         noteContent.innerHTML = data.content
         
-        let noteUsername = document.createElement('h6')
+        let noteUsername = document.createElement('p')
         noteUsername.innerHTML = `Posted by: ${data.username}`
+
+        noteCard.append(noteContent, noteUsername)
         
         if(gameSection.hidden === true){
-            floatGameCard.append(noteContent, noteUsername)
+            floatGameCard.append(noteCard)
         }else{
-            gameCard.append(noteContent, noteUsername)
+            gameCard.append(noteCard)
         }
     }
 
