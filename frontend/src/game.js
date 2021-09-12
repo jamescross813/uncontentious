@@ -44,7 +44,7 @@ class Game{
             titleEvent()
         }
         
-        gameInfo(){            
+        renderGameInfo(){            
             let gameTitle = document.createElement('h2')
             gameTitle.innerHTML = this.gameTitle
     
@@ -88,9 +88,11 @@ class Game{
                    
                     gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, noteButton)
         
-                    noteButton.addEventListener('click', ()=>{
+                   let noteFormRender = ()=>{ noteButton.addEventListener('click', ()=>{
                         Note.renderNoteForm()
                     })
+                }
+                noteFormRender()
                 }
                 normalGameRender() 
             }else{
@@ -108,6 +110,7 @@ class Game{
             console.log(data)
             editButton.hidden = true
             gameSection.hidden = !gameSection.hidden
+
             let editForm = document.createElement('form')
             editForm.innerHTML = `
             <label>Title:</label>
@@ -132,12 +135,16 @@ class Game{
 
             gameCard.append(editForm)
 
-            const editSubmit = document.getElementById('edit-submit')
+            let editSubmit = document.getElementById('edit-submit')
 
+                let editEvent = ()=>{
                 editSubmit.addEventListener('click', ()=>{
                 let currentGameApi = new Api(`${basicUrl}/games/${data.id}`)
                 currentGameApi.editGamePatch()
                 })
+            }
+            editEvent()
+
         }
     
     }
