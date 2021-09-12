@@ -38,7 +38,6 @@ class Api{
       let inputValue = document.getElementsByClassName("input-text");
       let titleInput = document.getElementById('title-input');
       
-    
       let gameFormData = {
           game_categories: `${inputValue[6].value}, ${inputValue[7].value}`,
           description: inputValue[8].value,

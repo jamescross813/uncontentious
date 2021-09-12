@@ -1,12 +1,12 @@
-const searchFormButton = document.getElementById("search-for");
+// const searchFormButton = document.getElementById("search-for");
 const addFormButton = document.getElementById("add");
 const viewButton = document.getElementById("games-list");
-const searchButton = document.getElementById("submit-search")
+// const searchButton = document.getElementById("submit-search")
 const randomButton = document.getElementById("randomize")
 const signUpButton = document.getElementById("sign-up")
 const signUpForm = document.getElementById("sign-up-form")
 
-const searchForm = document.getElementById("search-games");
+// const searchForm = document.getElementById("search-games");
 const addForm = document.getElementById("add-game-form");
 
 const basicUrl= "http://localhost:3000"
