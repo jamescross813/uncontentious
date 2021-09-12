@@ -48,6 +48,7 @@ class Game{
             let titleEvent = ()=>{
                 title[this.id-1].addEventListener("click", ()=>{
                 event.preventDefault()
+                floatGameCard.hidden = false
                this.renderGameInfo()
             })
         }
@@ -91,7 +92,7 @@ class Game{
                 let normalGameRender = ()=>{
                     gameCard.innerHTML = "" 
                     gameCard.name = this.id
-                    // floatGameCard.hidden = true
+                    floatGameCard.hidden = true
                     editButton.name = `${this.id}`
                    
                     gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, noteButton, editButton)
@@ -104,8 +105,8 @@ class Game{
                     let editFormRender = ()=>{
                         editButton.addEventListener('click', ()=>{
                             let game_id = editButton.name
-                            // addForm.hidden = false
-                            // gameCard.hidden = true
+                            addForm.hidden = false
+                            gameCard.hidden = true
                             let currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
                              currentGameApi.fetchEditGame()
                          })
@@ -133,7 +134,8 @@ class Game{
                 addSubmit.addEventListener('click', ()=>{   
                 let gameApi = new Api(`${basicUrl}/games`)
                 gameApi.newGamePost()
-                // gameCard.hidden = false
+                gameSection.hidden = false
+                gameCard.hidden = false
                 gameForm.reset()
                 gameForm.remove()
              }) 
@@ -153,7 +155,8 @@ class Game{
                 editSubmit.addEventListener('click', ()=>{
                 let currentGameApi = new Api(`${basicUrl}/games/${this.id}`)
                 currentGameApi.editGamePatch()
-                // gameCard.hidden = false
+                gameSection.hidden = false
+                gameCard.hidden = false
                 gameForm.reset()
                 gameForm.remove()
                 })

@@ -3,42 +3,40 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const userApi = new Api(`${basicUrl}/users`)
 
     addFormButton.addEventListener('click', ()=>{
-        // if(!gamesList.hidden){
-        //     gamesList.hidden = !gamesList.hidden
-        //     floatGameCard.hidden = true
-        // }
-        // gameCard.hidden = true
-        // addForm.hidden = false
+       
+        gamesList.hidden = true
+        floatGameCard.hidden = true
+        gameCard.hidden = true
+        addForm.hidden = false
         let data = ""
         Game.renderNewForm(data)      
     })
 
     viewButton.addEventListener('click', () =>{
-        // if(!gameSection.hidden || !addForm.hidden){
-        //     gameSection.hidden = true
-        //     addForm.hidden = true
-        // }
-        // gamesList.hidden = false
+        
+        gameSection.hidden = true
+        addForm.hidden = true
+        gamesList.hidden = false
         gameApi.fetchGames()   
     })  
 
     randomButton.addEventListener('click', ()=>{
-        // if(!gamesList.hidden || !addForm.hidden || gameCard.hidden){
-        //     gamesList.hidden = true
-        //     addForm.hidden = true
-        //     gameCard.hidden = false
-        //     gameSection.hidden = true
-        //     }  
-             randomizer = ()=>{
+
+        gamesList.hidden = true
+        addForm.hidden = true
+        gameSection.hidden = false
+        floatGameCard.hidden = true
+        
+        randomizer = ()=>{
             let num = Math.floor(Math.random()*10)
             currentGameApi = new Api(`${basicUrl}/games/${num}`)
             currentGameApi.fetchGame()
-            }
-            randomizer() 
+        }
+        randomizer() 
     })
 
     signUpButton.addEventListener('click', ()=>{
-        // signUpForm.hidden = false
+        signUpForm.hidden = false
         const signUpSubmit = document.getElementById("login-submit")
         signUpSubmit.addEventListener('click', ()=>{
             userApi.newUserPost()
