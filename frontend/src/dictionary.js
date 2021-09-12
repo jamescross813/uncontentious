@@ -1,12 +1,10 @@
-// const searchFormButton = document.getElementById("search-for");
 const addFormButton = document.getElementById("add");
 const viewButton = document.getElementById("games-list");
-// const searchButton = document.getElementById("submit-search")
 const randomButton = document.getElementById("randomize")
 const signUpButton = document.getElementById("sign-up")
 const signUpForm = document.getElementById("sign-up-form")
+const signUpSubmit = document.getElementById("login-submit")
 
-// const searchForm = document.getElementById("search-games");
 const addForm = document.getElementById("add-game-form");
 
 const basicUrl= "http://localhost:3000"
@@ -18,6 +16,7 @@ const floatGameCard = document.getElementById("float-card")
 
 const title = document.getElementsByTagName("a")
 const navBar = document.getElementById("nav-bar")
+const welcome = document.getElementById("welcome-user")
 
 let randomizer
 let gameForm

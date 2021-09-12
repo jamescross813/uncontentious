@@ -6,11 +6,11 @@ class User{
 
     static renderIntro(data){
         const userInfo = new User(data)
-        signUpForm.remove()
+        // signUpForm.remove()
         let intro = document.createElement('h2')
         intro.innerHTML = `Welcome ${data.username}`
         intro.id = "user-welcome"
-        navBar.append(intro)
+        welcome.append(intro)
         return userInfo
     }
 }

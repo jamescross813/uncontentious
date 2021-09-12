@@ -54,7 +54,7 @@ h1 {
 #game-list {
   position: relative;
   left: 200px;
-  top: -160px;
+  top: -150px;
   font-size: large;
 }
 
@@ -85,9 +85,10 @@ form {
 }
 
 .note {
-  position: relative;
-  top: -275px;
+  position: absolute;
+  top: 0px;
   left: 550px;
+  width: auto;
 }
 
 .note p#username {
@@ -112,4 +113,10 @@ form {
   margin-top: 20px;
   margin-right: 10px;
   width: 100px;
+}
+
+#welcome-user {
+  width: 100px;
+  position: relative;
+  left: 10px;
 }

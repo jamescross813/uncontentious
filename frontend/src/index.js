@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })  
 
     randomButton.addEventListener('click', ()=>{
-
+        gameCard.hidden = false
         gamesList.hidden = true
         addForm.hidden = true
         gameSection.hidden = false
@@ -37,13 +37,20 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     signUpButton.addEventListener('click', ()=>{
         signUpForm.hidden = false
-        const signUpSubmit = document.getElementById("login-submit")
-        signUpSubmit.addEventListener('click', ()=>{
-            userApi.newUserPost()
-            let signUpForm = document.getElementById("sign-up-form")
-            signUpForm.reset()
-            signUpForm.remove()
-        })
+        gameCard.hidden = true
+        gamesList.hidden = true
+        addForm.hidden = true
+        gameSection.hidden = true
+        floatGameCard.hidden = true
+
+        
+    })
+
+    signUpSubmit.addEventListener('click', ()=>{
+        userApi.newUserPost()
+        
+        signUpForm.reset()
+        signUpForm.hidden = true
     })
     
 }); 
