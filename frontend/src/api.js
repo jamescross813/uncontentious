@@ -115,14 +115,13 @@ class Api{
    }
 
   newNotePost(){ 
-      let usernameInput = document.getElementById("username-input");
-      let contentInput = document.getElementById("note-content-input");
-      let gameId = gameCard.id  
-      
+      let inputValue = document.getElementsByClassName("input-text");
+      let gameId = gameCard.className  
+    
       let noteFormData = {
-          username: usernameInput.value,
+          username: inputValue[0].value,
           game_id: gameId,
-          content: contentInput.value
+          content: inputValue[1].value
           };
             
       let configObj = {

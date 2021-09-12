@@ -54,7 +54,8 @@ class Game{
             titleEvent()
         }
         
-        renderGameInfo(){            
+        renderGameInfo(){     
+            gameCard.className = this.id       
             let gameTitle = document.createElement('h2')
             gameTitle.innerHTML = this.gameTitle
     

@@ -11,16 +11,17 @@ class Note{
         noteForm.id = "note-form"
         noteForm.innerHTML = `
             <label>Username</label><br>
-            <input type="text" id="username-input"></input><br>
+            <input type="text" id="username-input" value="" class="input-text"><br>
             <label>Note</label><br>
-            <input type="text" id="note-content-input"></input><br>
+            <input type="text" id="note-content-input" value="" class="input-text"><br>
             <button type="button" id="note-submit">Submit</button>
             `
         gameCard.append(noteForm)
 
         let noteSubmit = document.getElementById("note-submit")
 
-        let noteEvent = ()=>{noteSubmit.addEventListener('click', ()=>{
+        let noteEvent = ()=>{
+            noteSubmit.addEventListener('click', ()=>{
             const noteApi = new Api(`${basicUrl}/notes`)
             noteApi.newNotePost()
             noteForm.reset()
@@ -54,7 +55,6 @@ class Note{
 
     static gameNoteSort(data){
         data.map(n => {
-            console.log(n.id)
             const noteApi = new Api(`${basicUrl}/notes/${n.id}`)
             noteApi.fetchNote()
         })
