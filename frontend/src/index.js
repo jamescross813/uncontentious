@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             gamesList.hidden = !gamesList.hidden
             floatGameCard.hidden = true
         }
+        gameCard.hidden = true
         let data = ""
         Game.renderNewForm(data)      
     })

@@ -88,13 +88,8 @@ class Game{
             
             if(gamesList.hidden === true){
                 let normalGameRender = ()=>{
-                    if (gameSection.hidden === true){
-                        gameSection.hidden = !gameSection.hidden
-                    }
-                    addForm.hidden = true
-                    
                     gameCard.innerHTML = "" 
-                    gameCard.id = this.id
+                    gameCard.name = this.id
                     floatGameCard.hidden = true
                     editButton.name = `${this.id}`
                    
@@ -137,7 +132,7 @@ class Game{
                 addSubmit.addEventListener('click', ()=>{   
                 let gameApi = new Api(`${basicUrl}/games`)
                 gameApi.newGamePost()
-                gameSection.hidden = !gameSection.hidden
+                gameCard.hidden = false
                 gameForm.reset()
                 gameForm.remove()
              }) 
