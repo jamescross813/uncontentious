@@ -28,6 +28,11 @@ class Game{
             const indGame = new Game(data)
             indGame.renderGameInfo()
         }
+
+        static renderEditForm(data){
+            const gameToEdit = new Game(data)
+            gameToEdit.editForm()
+        }
     
         renderTitles(){
             let gameTitle = document.createElement('span')
@@ -69,10 +74,10 @@ class Game{
             let noteButton = document.createElement('button')
             noteButton.innerHTML = `<type="button" id='add-note'>Add Note`
             
-            if(this.notes.length > 0){
-                Note.gameNoteSort(this.notes)
+            if(this.notes){
+            Note.gameNoteSort(this.notes)
             }
-               
+            
             if(gamesList.hidden === true){
                 let normalGameRender = ()=>{
                     if (gameSection.hidden){
@@ -88,7 +93,8 @@ class Game{
                    
                     gameCard.append(gameTitle, gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat, noteButton)
         
-                   let noteFormRender = ()=>{ noteButton.addEventListener('click', ()=>{
+                   let noteFormRender = ()=>{ 
+                       noteButton.addEventListener('click', ()=>{
                         Note.renderNoteForm()
                     })
                 }
@@ -97,7 +103,6 @@ class Game{
                 normalGameRender() 
             }else{
                 let renderGameFlash = ()=>{
-                   
                     floatGameCard.innerHTML = ""
                     floatGameCard.append(gameDescription, gamePlayers, gamePlayStyle, gameTime, gameType, gameCat)
                 }
@@ -106,40 +111,39 @@ class Game{
         }
 
   
-        static renderEditForm(data){
-            console.log(data)
+        editForm(){
             editButton.hidden = true
-            gameSection.hidden = !gameSection.hidden
-
+            gameSection.hidden = false
+// console.log(this.gameTitle)
             let editForm = document.createElement('form')
             editForm.innerHTML = `
             <label>Title:</label>
-            <input type="text" id="title-input" name="game-title" class="input-text-edit" value="${data.game_title}"><br>
+            <input type="text" id="title-input" name="game-title" class="input-text-edit" value="${this.gameTitle}"><br>
             <label>Minimum Players:</label>
-            <input type="text" id="player-range-min-input" name="player-range-min" class="input-text-edit" value="${data.min_players}"><br>
+            <input type="text" id="player-range-min-input" name="player-range-min" class="input-text-edit" value="${this.minPlayer}"><br>
             <label>Maximum Players:</label>        
-            <input type="text" id="player-range-max-input" name="player-range-max" class="input-text-edit" value="${data.max_players}"><br>
+            <input type="text" id="player-range-max-input" name="player-range-max" class="input-text-edit" value="${this.maxPlayer}"><br>
             <label>Game Type:</label>        
-            <input type="text" id="game-type-input" name="game-type" class="input-text-edit" value="${data.game_type}"><br>
+            <input type="text" id="game-type-input" name="game-type" class="input-text-edit" value="${this.gameType}"><br>
             <label>Game Style:</label>        
-            <input type="text" id="play-style-input" name="play-style" class="input-text-edit" value="${data.play_style}"><br>
+            <input type="text" id="play-style-input" name="play-style" class="input-text-edit" value="${this.gameStyle}"><br>
             <label>Max Play Time:</label>        
-            <input type="text" id="play-time-input" name="play-time" class="input-text-edit" value="${data.max_time}"><br>
+            <input type="text" id="play-time-input" name="play-time" class="input-text-edit" value="${this.time}"><br>
             <label>Category</label>        
-            <input type="text" id="category-one" class="input-text-edit" name="game-category-one" value="${data.game_categories}"><br>
+            <input type="text" id="category-one" class="input-text-edit" name="game-category-one" value="${this.categories}"><br>
             <label>Additional Category:</label>        
             <input type="text" id="category-two" class="input-text-edit" name="game-category-two" value=""><br>
             <label>Description:</label>        
-            <input type="text" id="description-input" name="description" class="input-text-edit" value="${data.description}"></textarea><br>
+            <input type="text" id="description-input" name="description" class="input-text-edit" value="${this.description}"></textarea><br>
                     <button type="button" id="edit-submit">Edit Game</button>`
 
             gameCard.append(editForm)
 
             let editSubmit = document.getElementById('edit-submit')
 
-                let editEvent = ()=>{
+            let editEvent = ()=>{
                 editSubmit.addEventListener('click', ()=>{
-                let currentGameApi = new Api(`${basicUrl}/games/${data.id}`)
+                let currentGameApi = new Api(`${basicUrl}/games/${this.id}`)
                 currentGameApi.editGamePatch()
                 })
             }
