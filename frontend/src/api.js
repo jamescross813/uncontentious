@@ -3,14 +3,14 @@ class Api{
         this.basicUrl = basicUrl;
     }
 
-    fetchGames() {
+  fetchGames() {
       gamesList.innerHTML = ""
         fetch(this.basicUrl)
         .then(resp =>resp.json())
         .then(data =>Game.renderGames(data))
-      };
+  };
     
-    fetchGame() {
+  fetchGame() {
       fetch(this.basicUrl)
       .then(resp =>resp.json())
       .then(data =>{
@@ -20,9 +20,9 @@ class Api{
           Game.renderGame(data)
         }
       })
-    };
+  };
 
-    fetchEditGame() {
+  fetchEditGame() {
       fetch(this.basicUrl)
       .then(resp =>resp.json())
       .then(data =>Game.renderEditForm(data))
@@ -35,7 +35,6 @@ class Api{
     };
 
   newGamePost(){
-       
       let inputValue = document.getElementsByClassName("input-text");
       let titleInput = document.getElementById('title-input');
     
@@ -94,7 +93,6 @@ class Api{
   }
 
   newUserPost(){
-       
       let usernameInput = document.getElementById("username-input");
             
       let userFormData = {
@@ -115,8 +113,7 @@ class Api{
       .then(data => User.renderIntro(data))
    }
 
-  newNotePost(){
-       
+  newNotePost(){ 
       let usernameInput = document.getElementById("username-input");
       let contentInput = document.getElementById("note-content-input");
       let gameId = gameCard.id  
