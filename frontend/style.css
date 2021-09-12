@@ -74,3 +74,9 @@ form {
   width: 1000px;
   text-align: justify;
 }
+
+#edit-form {
+  position: relative;
+  left: 0px;
+  top: 10px;
+}
