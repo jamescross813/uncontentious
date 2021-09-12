@@ -114,28 +114,28 @@ class Game{
         editForm(){
             editButton.hidden = true
             gameSection.hidden = false
-// console.log(this.gameTitle)
+
             let editForm = document.createElement('form')
             editForm.id = "edit-form"
             editForm.innerHTML = `
             <label>Title:</label><br>
-            <input type="text" id="title-input" name="game-title" class="input-text-edit" value="${this.gameTitle}"><br>
+                <input type="text" id="title-input" name="game-title" class="input-text-edit" value="${this.gameTitle}"><br>
             <label>Minimum Players:</label><br>
-            <input type="text" id="player-range-min-input" name="player-range-min" class="input-text-edit" value="${this.minPlayer}"><br>
+                <input type="text" id="player-range-min-input" name="player-range-min" class="input-text-edit" value="${this.minPlayer}"><br>
             <label>Maximum Players:</label><br>    
-            <input type="text" id="player-range-max-input" name="player-range-max" class="input-text-edit" value="${this.maxPlayer}"><br>
+                <input type="text" id="player-range-max-input" name="player-range-max" class="input-text-edit" value="${this.maxPlayer}"><br>
             <label>Game Type:</label><br>        
-            <input type="text" id="game-type-input" name="game-type" class="input-text-edit" value="${this.gameType}"><br>
+                <input type="text" id="game-type-input" name="game-type" class="input-text-edit" value="${this.gameType}"><br>
             <label>Game Style:</label><br>        
-            <input type="text" id="play-style-input" name="play-style" class="input-text-edit" value="${this.gameStyle}"><br>
+                <input type="text" id="play-style-input" name="play-style" class="input-text-edit" value="${this.gameStyle}"><br>
             <label>Max Play Time:</label><br>       
-            <input type="text" id="play-time-input" name="play-time" class="input-text-edit" value="${this.time}"><br>
+                <input type="text" id="play-time-input" name="play-time" class="input-text-edit" value="${this.time}"><br>
             <label>Category</label><br>        
-            <input type="text" id="category-one" class="input-text-edit" name="game-category-one" value="${this.categories}"><br>
+                <input type="text" id="category-one" class="input-text-edit" name="game-category-one" value="${this.categories}"><br>
             <label>Additional Category:</label><br>        
-            <input type="text" id="category-two" class="input-text-edit" name="game-category-two" value=""><br>
+                <input type="text" id="category-two" class="input-text-edit" name="game-category-two" value=""><br>
             <label>Description:</label><br>        
-            <input type="text" id="description-input" name="description" class="input-text-edit" value="${this.description}"></textarea><br>
+                <input type="text" id="description-input" name="description" class="input-text-edit" value="${this.description}"></textarea><br>
                     <button type="button" id="edit-submit">Edit Game</button>`
 
             gameCard.append(editForm)
