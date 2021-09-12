@@ -21,6 +21,6 @@ const title = document.getElementsByTagName("a")
 const navBar = document.getElementById("nav-bar")
 
 let randomizer
-
+let gameForm
 
 

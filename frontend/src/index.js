@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     editButton.addEventListener('click', ()=>{
        let game_id = editButton.name
+       addForm.hidden = false
        gameCard.hidden = true
        let currentGameApi = new Api(`${basicUrl}/games/${game_id}`)
         currentGameApi.fetchEditGame()

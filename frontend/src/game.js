@@ -154,7 +154,7 @@ class Game{
         }
 
         formRender(thing){
-            let gameForm = document.createElement('form')
+            gameForm = document.createElement('form')
             gameForm.id = "game-form"
             if(thing === "new"){
                 this.gameTitle = "";
