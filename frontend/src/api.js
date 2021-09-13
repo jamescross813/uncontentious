@@ -8,10 +8,9 @@ class Api{
         fetch(this.basicUrl)
         .then(resp =>resp.json())
         .then(data =>Game.renderGames(data))
-        .catch(function(error) {
-            alert("Server is taking a nap, please try back later!");
-            console.log(error.message);
-          })
+        .catch(()=>{
+            alert("Server is taking a nap, please try back later!")
+        })
   };
     
   async fetchGame() {
@@ -24,9 +23,8 @@ class Api{
           Game.renderGame(data)
         }
       })
-      .catch(function(error) {
-        alert("Server is taking a nap, please try back later!");
-        console.log(error.message);
+      .catch(()=>{
+        alert("Server is taking a nap, please try back later!")
       })
   };
 
@@ -34,9 +32,8 @@ class Api{
       fetch(this.basicUrl)
       .then(resp =>resp.json())
       .then(data =>Game.renderEditForm(data))
-      .catch(function(error) {
-        alert("Server is taking a nap, please try back later!");
-        console.log(error.message);
+      .catch(()=>{
+        alert("Server is taking a nap, please try back later!")
       })
   };
 
@@ -44,9 +41,8 @@ class Api{
       fetch(this.basicUrl)
       .then(resp =>resp.json())
       .then(data =>Note.renderNote(data))
-      .catch(function(error) {
-        alert("Server is taking a nap, please try back later!");
-        console.log(error.message);
+      .catch(()=>{
+        alert("Server is taking a nap, please try back later!")
       })
     };
 
@@ -77,9 +73,8 @@ class Api{
       fetch(`${basicUrl}/games`, configObj)
       .then(resp => resp.json())
       .then(data => Game.renderGame(data))
-      .catch(function(error) {
-        alert("Server is taking a nap, please try back later!");
-        console.log(error.message);
+      .catch(()=>{
+        alert("Server is taking a nap, please try back later!")
       })
   }
 
@@ -110,9 +105,8 @@ class Api{
       fetch(`${this.basicUrl}`, configObj)
       .then(resp => resp.json())
       .then(data => Game.renderGame(data))
-      .catch(function(error) {
-        alert("Server is taking a nap, please try back later!");
-        console.log(error.message);
+      .catch(()=>{
+        alert("Server is taking a nap, please try back later!")
       })
   }
 
@@ -135,9 +129,8 @@ class Api{
       fetch(`${this.basicUrl}`, configObj)
       .then(resp => resp.json())
       .then(data => User.renderIntro(data))
-      .catch(function(error) {
-        alert("Server is taking a nap, please try back later!");
-        console.log(error.message);
+      .catch(()=>{
+        alert("Server is taking a nap, please try back later!")
       })
    }
 
@@ -163,9 +156,8 @@ class Api{
       fetch(`${this.basicUrl}`, configObj)
       .then(resp => resp.json())
       .then(data => Note.renderNote(data))
-      .catch(function(error) {
-        alert("Server is taking a nap, please try back later!");
-        console.log(error.message);
+      .catch(()=>{
+        alert("Server is taking a nap, please try back later!")
       })
   }
 }
