@@ -4,6 +4,7 @@ const randomButton = document.getElementById("randomize")
 const signUpButton = document.getElementById("sign-up")
 const signUpForm = document.getElementById("sign-up-form")
 const signUpSubmit = document.getElementById("login-submit")
+const dark = document.getElementById('dark-mode')
 
 const addForm = document.getElementById("add-game-form");
 

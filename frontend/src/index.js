@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
         gameSection.hidden = true
         floatGameCard.hidden = true
 
-        
     })
 
     signUpSubmit.addEventListener('click', ()=>{
@@ -51,6 +50,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
         
         signUpForm.reset()
         signUpForm.hidden = true
+    })
+
+    dark.addEventListener('click', ()=>{
+        if (document.body.style.backgroundColor === "black"){
+            document.body.style.backgroundColor = "white"
+        }else{
+            document.body.style.backgroundColor = "black"
+        }
     })
     
 }); 
